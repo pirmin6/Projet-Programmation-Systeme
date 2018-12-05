@@ -1,4 +1,4 @@
 package com.gabz.projetcuisine.model.cuisine.lavage;
 
-public class StockLavage {
+public class StockALaver {
 }
