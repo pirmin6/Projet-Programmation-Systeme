@@ -9,7 +9,7 @@ public class FrigoTravail extends Materiel {
     FrigoTravail() throws InterruptedException {
         super();
         this.nbrInstance.acquire();
-        this.tempsLavage = 60;
+        this.tempsLavage = 0;
     }
 
     @Override

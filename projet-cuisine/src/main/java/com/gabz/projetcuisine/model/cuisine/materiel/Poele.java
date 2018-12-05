@@ -9,7 +9,7 @@ public class Poele extends Materiel {
     Poele() throws InterruptedException {
         super();
         this.nbrInstance.acquire();
-        this.tempsLavage = 1;
+        this.tempsLavage = 60;
     }
 
     @Override
