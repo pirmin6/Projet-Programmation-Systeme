@@ -7,6 +7,7 @@ Bridge
 	Cette interface est implémentée par deux classes pouvant ainsi proposer des implémentations différentes au cas ou le programme venait à évoluer.
 	La classe abstraiteSocketConnexion possède un attribut de type IEncode qui nous permet de choisir notre implémentation des méthodes à la volée.
 	Les classes SocketConnexionIn (pour la connexion entrante) et SocketConnexionOut (pour celle sortante) hérite de la classe SocketConnexion et utilisent les méthodes encode() ou decode().
+	Grâce à ce design pattern, nous avons séparé l'implémentation de l'abstraction ce qui permet une meilleure réusabilité du code.
 
 Singleton
 
@@ -28,3 +29,8 @@ Factory
 	On a donc dans la classe de notre Factory (qui est souvent associée avec un Singleton) une méthode qui possède un type de renvoi de l'interface précédemment citée, cette méthode renvoie des instances d'objets impélmentant la fameuse interface en fonction du paramètre passé à cette méthode.
 	On utilise dans notre programme ce design pattern afin d'instancier plusieurs classes de clients différents.
 
+Strategy
+
+	On utilise ce design pattern pour changer l'implémentation au cours de l'exécution: une inteface propose une certaine méthode, et est implémentée par plusieurs classes qui proposent donc toutes un code différent pour cette méthode.
+	Cela permet de choisir quelle type d'implémentation on souhaite utiliser au cours de l'exécution d'un programme.
+	Il est dans notre cas utilisé lorsque le chef doit décider comment organiser la préparation des différents plats pour la commande reçue.
