@@ -1,8 +1,5 @@
 package com.gabz.projetcuisine.model.cuisine.materiel;
 
-import com.gabz.projetcuisine.model.cuisine.Ingredient;
-
-import java.util.List;
 import java.util.concurrent.Semaphore;
 
 public class CuillereBois extends Materiel{

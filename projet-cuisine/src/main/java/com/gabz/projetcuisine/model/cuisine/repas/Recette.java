@@ -1,4 +1,4 @@
-package com.gabz.projetcuisine.model.cuisine;
+package com.gabz.projetcuisine.model.cuisine.repas;
 
 import java.util.List;
 

@@ -2,7 +2,7 @@ package com.gabz.projetcuisine.model.cuisine.materiel;
 
 import java.util.concurrent.Semaphore;
 
-public class FeuCuisson extends Materiel{
+public class FeuCuisson extends Materiel {
 
     private static Semaphore nbrInstance = new Semaphore(5);
 
