@@ -16,4 +16,6 @@ public abstract class Materiel {
     public void laverMateriel() throws InterruptedException {
         Thread.sleep((long) tempsLavage * 1000);
     }
+
+    public abstract void remettreEnService();
 }

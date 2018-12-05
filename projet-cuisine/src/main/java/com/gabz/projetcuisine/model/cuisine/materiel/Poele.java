@@ -12,6 +12,7 @@ public class Poele extends Materiel {
         this.tempsLavage = 1;
     }
 
+    @Override
     public void remettreEnService() {
         if (this.propre == true) {
             this.nbrInstance.release();

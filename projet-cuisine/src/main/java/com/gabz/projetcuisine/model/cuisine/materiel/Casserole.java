@@ -12,6 +12,7 @@ public class Casserole  extends Materiel {
         this.tempsLavage = 60;
     }
 
+    @Override
     public void remettreEnService() {
         if (this.propre == true) {
             this.nbrInstance.release();
