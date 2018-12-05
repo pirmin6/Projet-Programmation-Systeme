@@ -12,6 +12,7 @@ public class CuillereBois extends Materiel{
         this.tempsLavage = 30;
     }
 
+    @Override
     public void remettreEnService() {
         if (this.propre == true) {
             this.nbrInstance.release();
