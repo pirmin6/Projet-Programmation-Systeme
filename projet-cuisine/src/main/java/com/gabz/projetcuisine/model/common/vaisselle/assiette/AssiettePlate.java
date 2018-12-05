@@ -1,4 +1,8 @@
 package com.gabz.projetcuisine.model.common.vaisselle.assiette;
 
-public class AssiettePlate {
+import java.util.concurrent.Semaphore;
+
+public class AssiettePlate extends Assiette {
+
+    private static Semaphore nbrInstance = new Semaphore(150);
 }
