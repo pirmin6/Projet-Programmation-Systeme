@@ -1,4 +1,4 @@
 package com.gabz.projetcuisine.model.cuisine.stockage;
 
-public class ChambreFroide {
+public class ChambreFroide extends Stockage {
 }
