@@ -6,7 +6,43 @@ using System.Threading.Tasks;
 
 namespace Salle.Model.Salle
 {
-    class Serveur
+    public class Serveur : Observer
     {
+        public int stockPain;
+        public int stockEau;
+
+        public Serveur()
+        {
+        }
+
+        public void ramasserAssietteCouverts()
+        {
+
+        }
+
+        public void servirClients()
+        {
+
+        }
+
+        public void debarrasserTable()
+        {
+
+        }
+
+        public void servirPain()
+        {
+
+        }
+
+        public void servirEau()
+        {
+
+        }
+
+        public void servirVin()
+        {
+
+        }
     }
 }
