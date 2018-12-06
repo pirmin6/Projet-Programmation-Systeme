@@ -25,7 +25,6 @@ public class TestPlongeur {
     public void setEnvironnement() throws InterruptedException {
 
         stockSale = StockageVaisselleTextile.getInstance();
-        Nappe nappe = new Nappe();
         stockSale.addTextile(new Nappe());
         stockSale.addVaisselle(new AssietteEntree());
     }
@@ -57,7 +56,10 @@ public class TestPlongeur {
         this.plongeur = Plongeur.getInstance();
         plongeur.chargerLaveLinge(stockSale);
         plongeur.chargerLaveVaisselle(stockSale);
-        plongeur.
+
+        Assert.assertTrue(plongeur.laverTextile().get(0).isPropre());
+        Assert.assertTrue(plongeur.laverVaisselle().get(0).isPropre());
+
     }
 
 }
