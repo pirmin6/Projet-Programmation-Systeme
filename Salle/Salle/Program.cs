@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Salle.Model.Commun
+namespace Salle
 {
-    class VerreEau : Verre
+    class Program
     {
+        static void Main(string[] args)
+        {
+        }
     }
 }
