@@ -1,0 +1,36 @@
+Détails sur les design Pattern utilisés:
+
+Bridge
+
+	Nous avons utilisé le design pattern Bridge au niveau de l'encodage pour les communications entre les deux programmes.
+	Nous avons une interface IEncodage ayant des méthodes permettant d'encoder et de décoder les informations reçues et envoyées via le socket.
+	Cette interface est implémentée par deux classes pouvant ainsi proposer des implémentations différentes au cas ou le programme venait à évoluer.
+	La classe abstraiteSocketConnexion possède un attribut de type IEncode qui nous permet de choisir notre implémentation des méthodes à la volée.
+	Les classes SocketConnexionIn (pour la connexion entrante) et SocketConnexionOut (pour celle sortante) hérite de la classe SocketConnexion et utilisent les méthodes encode() ou decode().
+	Grâce à ce design pattern, nous avons séparé l'implémentation de l'abstraction ce qui permet une meilleure réusabilité du code.
+
+Singleton
+
+	Le singleton est utlisé pour s'assurer que l'on peut seulement instancier une classe une seule fois. Il sera utilisé à plusieurs reprises dans le programme pour tous les objets présent en une seule fois dans le restaurant.
+	Nous n'avons pas détaillé chaque classe utilisant le design pattern Singleton mais des exemples sont disponibles pour les classes LaveLinge et LaveVaisselle dans le diagramme de classes du programme prenant en charge la cuisine.
+	Pour utiliser ce design pattern, on utilise un attribut de type "private static TYPECLASSE" qui est déjà instancié dans la définition de la classe, on passe le constructeur de cette classe en "private" et on ajoute une méthode static getInstance() qui renvoie donc l'attribut qui est l'intance de cette même classe.
+	Il existe plusieurs façon de faire ce design pattern, dont le Lazy Loading.
+
+Observer
+
+	Design Pattern qui permet à une classe d'être notifié des changements de valeurs ou des évènements d'une autre classe. La classe que l'on Observe hérite d'une classe abstraite Observable qui possède un attribut correspondant à la liste des objets qui l'observent.
+	Elle possède également une méthode permettant d'ajouter un observer à sa liste et une autre méthode que l'on appelera notifyall(), qui a pour fonction de parcourir l'ensemble des observers et d'appeler leur méthode update.
+	Cette méthode update provient du fait que les observers implémentent l'interface Observer qui possède la méthode update().
+	Elle est par exemple utilisée dans notre programme dans le cadre ou le controller observe la connexion entrante des sockets. La classe SocketConnexionIn hérite donc de la classe abstraite Observer et notifie le controlleur au besoin.
+
+Factory
+
+	Il permet de déléguer l'instanciation des classes à une classe en particulier. Pour le mettre en place, les différentes classes qu'il sera possible d'instancier via cette Factory implémentent une interface communne.
+	On a donc dans la classe de notre Factory (qui est souvent associée avec un Singleton) une méthode qui possède un type de renvoi de l'interface précédemment citée, cette méthode renvoie des instances d'objets impélmentant la fameuse interface en fonction du paramètre passé à cette méthode.
+	On utilise dans notre programme ce design pattern afin d'instancier plusieurs classes de clients différents.
+
+Strategy
+
+	On utilise ce design pattern pour changer l'implémentation au cours de l'exécution: une inteface propose une certaine méthode, et est implémentée par plusieurs classes qui proposent donc toutes un code différent pour cette méthode.
+	Cela permet de choisir quelle type d'implémentation on souhaite utiliser au cours de l'exécution d'un programme.
+	Il est dans notre cas utilisé lorsque le chef doit décider comment organiser la préparation des différents plats pour la commande reçue.

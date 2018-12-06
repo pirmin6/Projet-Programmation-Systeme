@@ -1,0 +1,23 @@
+Salle de restaurant:
+2 Salles : salle de restauration et cuisine 
+1 Maitre d'hotel fixe par salle -> attribue une table au client et appelle le chef de rang pour le placement sur la table
+1 Chef de rang par carré -> distribue les cartes et prend les commandes ( déplace dans la salle entre le poste du maitre d’hôtel et son carré. 
+S’il n’y a aucune tâche à faire, il peut soit donner un coup de main à l’autre chef de rang )
+2 serveur par carré -> commande sert les pats débarasse assiestte et couverts et les mets dans endroit de stockage (Le serveur se déplace seulement dans son carré. S’il n’y a pas de clients dans son carré, il peut donner un coup de main aux autres carrés
+1 commis par restaurant -> servir le pain, les boissons et s’assurer qu’il ne manque rien au client pour pouvoir manger. 
+
+Cuisine :
+1 chef de cuisine -> de cuisine coordonne, dirige et supervise l'ensemble de l'activité de la cuisine. Il dispatche les tâches aux chefs de parties
+2 chef de parties -> sont spécialisés dans leur « partie » et ont la responsabilité de leurs commis, apprentis et/ou stagiaires respectifs
+2 commis de cuisine ->
+1 plongeur -> vaiselle
+
+Matériel commun :
+•	Assiettes – 150 petites pour les entrées, 150 plates, 30 creuses, 150 pour les desserts.  
+•	Couverts – 150 fourchettes, 150 couteaux, 150 cuillères à soupe, 150 cuillères à café. 
+•	Verres – 150 à eau, 150 à vin, 150 flûtes à champagne (à consommer avec modération ?!)
+•	Jeux de tasses et assiettes à café - 50
+•	Serviettes en tissu – 150 
+•	Nappes – 40 de taille unique servant pour tout type de table (pour simplification)
+
+Lave-vaiselle : 24 assiettes/verres/couverts -> en marche toutes les 10 mins
