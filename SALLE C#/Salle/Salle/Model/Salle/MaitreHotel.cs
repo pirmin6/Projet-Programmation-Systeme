@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Salle.Model.Salle
 {
-    class MaitreHotel
+    class MaitreHotel : Observable
     {
         public MaitreHotel()
         {

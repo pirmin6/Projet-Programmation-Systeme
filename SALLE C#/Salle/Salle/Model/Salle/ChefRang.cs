@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Salle.Model.Salle
 {
-    class ChefRang : Observable
+    class ChefRang : Observable, Observer
     {
         public ChefRang()
         {

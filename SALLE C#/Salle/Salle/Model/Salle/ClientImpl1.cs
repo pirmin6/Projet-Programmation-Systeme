@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Salle.Model.Salle
 {
-    class ClientImpl1
+    class ClientImpl1 : IClient
     {
+        public 
     }
 }
