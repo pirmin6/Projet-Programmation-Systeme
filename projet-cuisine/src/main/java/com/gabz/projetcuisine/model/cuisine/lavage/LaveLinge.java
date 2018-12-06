@@ -15,7 +15,15 @@ public class LaveLinge {
 
     }
 
+    public void demarrerLavage() {
+
+    }
+
     public static LaveLinge getInstance() {
         return instance;
+    }
+
+    public List<Textile> getTextileList() {
+        return textileList;
     }
 }

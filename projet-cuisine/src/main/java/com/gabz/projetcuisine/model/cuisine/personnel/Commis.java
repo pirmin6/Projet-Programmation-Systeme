@@ -2,7 +2,7 @@ package com.gabz.projetcuisine.model.cuisine.personnel;
 
 import com.gabz.projetcuisine.model.common.repas.Plat;
 import com.gabz.projetcuisine.model.cuisine.repas.Ingredient;
-import com.gabz.projetcuisine.model.cuisine.stockage.ComptoirPlatAttente;
+import com.gabz.projetcuisine.model.common.repas.ComptoirPlatAttente;
 import com.gabz.projetcuisine.model.cuisine.stockage.Stockage;
 
 import java.util.List;

@@ -20,11 +20,4 @@ public class TestStockage {
         congelateur = new Congelateur();
         zone = new ZoneDenrees();
     }
-
-    @Test
-    public void testTemperature() {
-
-        Assert.assertTrue(chambreFroide.getTemperature() <= 4 && chambreFroide.getTemperature() >= 1);
-        Assert.assertTrue(congelateur.getTemperature() < 0);
-    }
 }

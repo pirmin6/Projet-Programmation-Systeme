@@ -4,7 +4,6 @@ import com.gabz.projetcuisine.model.common.StockageVaisselleTextile;
 import com.gabz.projetcuisine.model.cuisine.lavage.Evier;
 import com.gabz.projetcuisine.model.cuisine.lavage.LaveLinge;
 import com.gabz.projetcuisine.model.cuisine.lavage.LaveVaisselle;
-import com.gabz.projetcuisine.model.cuisine.lavage.StockALaver;
 import com.gabz.projetcuisine.model.cuisine.repas.Ingredient;
 
 public class Plongeur implements IPersonnelBasique {
@@ -13,8 +12,6 @@ public class Plongeur implements IPersonnelBasique {
     private Evier evier;
     private LaveLinge laveLinge;
     private LaveVaisselle laveVaisselle;
-    private StockALaver stockVaisselleEtTextileSale;
-    private StockageVaisselleTextile stockageVaisselleTextile;
 
     private Plongeur() {
     }
@@ -23,43 +20,15 @@ public class Plongeur implements IPersonnelBasique {
         return evier;
     }
 
-    public void setEvier(Evier evier) {
-        this.evier = evier;
-    }
-
     public LaveLinge getLaveLinge() {
         return laveLinge;
-    }
-
-    public void setLaveLinge(LaveLinge laveLinge) {
-        this.laveLinge = laveLinge;
     }
 
     public LaveVaisselle getLaveVaisselle() {
         return laveVaisselle;
     }
 
-    public void setLaveVaisselle(LaveVaisselle laveVaisselle) {
-        this.laveVaisselle = laveVaisselle;
-    }
-
-    public StockALaver getStockVaisselleEtTextileSale() {
-        return stockVaisselleEtTextileSale;
-    }
-
-    public void setStockVaisselleEtTextileSale(StockALaver stockVaisselleEtTextileSale) {
-        this.stockVaisselleEtTextileSale = stockVaisselleEtTextileSale;
-    }
-
-    public StockageVaisselleTextile getStockageVaisselleTextile() {
-        return stockageVaisselleTextile;
-    }
-
-    public void setStockageVaisselleTextile(StockageVaisselleTextile stockageVaisselleTextile) {
-        this.stockageVaisselleTextile = stockageVaisselleTextile;
-    }
-
-    public Plongeur getInstace() {
+    public static Plongeur getInstance() {
         return instance;
     }
 
@@ -80,11 +49,11 @@ public class Plongeur implements IPersonnelBasique {
 
     }
 
-    public void chargerLaveVaisseele() {
+    public void chargerLaveVaisselle(StockageVaisselleTextile stock) {
 
     }
 
-    public void chargerLaveLinge() {
+    public void chargerLaveLinge(StockageVaisselleTextile stock) {
 
     }
 }

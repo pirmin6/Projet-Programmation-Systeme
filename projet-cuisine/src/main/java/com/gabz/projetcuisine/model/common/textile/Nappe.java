@@ -6,7 +6,7 @@ public class Nappe extends Textile {
 
     private static Semaphore nbrInstance = new Semaphore(40);
 
-    Nappe() throws InterruptedException {
+    public Nappe() throws InterruptedException {
         super();
         this.nbrInstance.acquire();
     }
