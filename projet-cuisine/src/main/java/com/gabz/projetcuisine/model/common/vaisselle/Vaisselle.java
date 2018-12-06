@@ -7,4 +7,12 @@ public abstract class Vaisselle {
     public Vaisselle() {
         this.propre = false;
     }
+
+    public boolean isPropre() {
+        return propre;
+    }
+
+    public void setPropre(boolean propre) {
+        this.propre = propre;
+    }
 }

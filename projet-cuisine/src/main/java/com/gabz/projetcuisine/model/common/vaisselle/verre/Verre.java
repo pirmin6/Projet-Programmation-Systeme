@@ -1,4 +1,10 @@
 package com.gabz.projetcuisine.model.common.vaisselle.verre;
 
-public class Verre {
+import com.gabz.projetcuisine.model.common.vaisselle.Vaisselle;
+
+public class Verre extends Vaisselle {
+
+    public Verre() {
+        this.propre = false;
+    }
 }

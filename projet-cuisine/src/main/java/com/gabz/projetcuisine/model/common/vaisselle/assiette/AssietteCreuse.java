@@ -5,4 +5,9 @@ import java.util.concurrent.Semaphore;
 public class AssietteCreuse extends Assiette {
 
     private static Semaphore nbrInstance = new Semaphore(30);
+
+    public AssietteCreuse() throws InterruptedException {
+        super();
+        this.nbrInstance.acquire();
+    }
 }

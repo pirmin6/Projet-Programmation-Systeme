@@ -1,8 +1,8 @@
 package com.gabz.projetcuisine.model.common.vaisselle.assiette;
 
-public abstract class Assiette {
+import com.gabz.projetcuisine.model.common.vaisselle.Vaisselle;
 
-    protected boolean propre = true;
+public abstract class Assiette extends Vaisselle {
 
 
     public Assiette() {
