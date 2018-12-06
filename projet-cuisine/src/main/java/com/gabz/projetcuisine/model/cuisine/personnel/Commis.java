@@ -11,7 +11,7 @@ public class Commis implements IPersonnelBasique{
 
     private static int nbrInstance = 2;
     private static List<Stockage> stockages;
-    private static List<ComptoirPlatAttente> comptoirPlats;
+    private static ComptoirPlatAttente comptoirPlats;
 
     public Commis(List<Stockage> stockage) {
         this.stockages = stockage;
@@ -21,7 +21,7 @@ public class Commis implements IPersonnelBasique{
         return nbrInstance;
     }
 
-    public static List<ComptoirPlatAttente> getComptoirPlats() {
+    public static ComptoirPlatAttente getComptoirPlats() {
         return comptoirPlats;
     }
 

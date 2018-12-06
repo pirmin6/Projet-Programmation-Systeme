@@ -59,7 +59,6 @@ public class TestPlongeur {
 
         Assert.assertTrue(plongeur.laverTextile().get(0).isPropre());
         Assert.assertTrue(plongeur.laverVaisselle().get(0).isPropre());
-
     }
 
 }
