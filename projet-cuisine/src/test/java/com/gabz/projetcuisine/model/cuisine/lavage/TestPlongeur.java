@@ -57,7 +57,6 @@ public class TestPlongeur {
         this.plongeur = Plongeur.getInstance();
         plongeur.chargerLaveLinge(stockSale);
         plongeur.chargerLaveVaisselle(stockSale);
-        plongeur.
     }
 
 }
