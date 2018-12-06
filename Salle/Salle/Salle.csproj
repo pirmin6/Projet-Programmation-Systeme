@@ -43,11 +43,51 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Commun\Assiette - Copie.cs" />
+    <Compile Include="Model\Commun\Assiette.cs" />
+    <Compile Include="Model\Commun\AssietteCreuse.cs" />
+    <Compile Include="Model\Commun\AssietteDessert.cs" />
+    <Compile Include="Model\Commun\AssietteEntree - Copie.cs" />
+    <Compile Include="Model\Commun\AssietteEntree.cs" />
+    <Compile Include="Model\Commun\AssiettePlate.cs" />
+    <Compile Include="Model\Commun\Carte.cs" />
+    <Compile Include="Model\Commun\Couteau.cs" />
+    <Compile Include="Model\Commun\Couvert.cs" />
+    <Compile Include="Model\Commun\CuillereCafe.cs" />
+    <Compile Include="Model\Commun\CuillereSoupe.cs" />
+    <Compile Include="Model\Commun\Fourchette.cs" />
+    <Compile Include="Model\Commun\Plat.cs" />
+    <Compile Include="Model\Commun\StockagePropre.cs" />
+    <Compile Include="Model\Commun\StockageSale.cs" />
+    <Compile Include="Model\Commun\TasseCafe.cs" />
+    <Compile Include="Model\Commun\Textile.cs" />
+    <Compile Include="Model\Commun\Vaiselle.cs" />
+    <Compile Include="Model\Commun\Verre.cs" />
+    <Compile Include="Model\Commun\VerreChampagne.cs" />
+    <Compile Include="Model\Commun\VerreEau.cs" />
+    <Compile Include="Model\Commun\VerreVin.cs" />
+    <Compile Include="Model\Commun\Vin.cs" />
+    <Compile Include="Model\Salle\Carre.cs" />
+    <Compile Include="Model\Salle\ChefRang.cs" />
+    <Compile Include="Model\Salle\ClientFactory.cs" />
+    <Compile Include="Model\Salle\ClientImpl1.cs" />
+    <Compile Include="Model\Salle\GroupeClient.cs" />
+    <Compile Include="Model\Salle\IClient.cs" />
+    <Compile Include="Model\Salle\MaitreHotel.cs" />
+    <Compile Include="Model\Salle\Observable.cs" />
+    <Compile Include="Model\Salle\Observer.cs" />
+    <Compile Include="Model\Salle\Rang.cs" />
+    <Compile Include="Model\Salle\Serveur.cs" />
+    <Compile Include="Model\Salle\Table.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controler\" />
+    <Folder Include="View\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
