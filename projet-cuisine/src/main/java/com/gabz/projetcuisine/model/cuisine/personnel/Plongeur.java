@@ -8,10 +8,18 @@ import com.gabz.projetcuisine.model.cuisine.repas.Ingredient;
 
 public class Plongeur implements IPersonnelBasique {
 
+    private static Plongeur instance = new Plongeur();
     private Evier evier;
     private LaveLinge laveLinge;
     private LaveVaisselle laveVaisselle;
     private StockALaver stockVaisselleEtTextileSale;
+
+    private Plongeur() {
+    }
+
+    public Plongeur getInstace() {
+        return instance;
+    }
 
     @Override
     public void eplucherLegume(Ingredient ingredient) {
