@@ -1,0 +1,7 @@
+D:\Git\Projet-Programmation-Systeme\SALLE C#\Salle\Salle\obj\Debug\Salle.csprojAssemblyReference.cache
+D:\Git\Projet-Programmation-Systeme\SALLE C#\Salle\Salle\obj\Debug\Salle.csproj.CoreCompileInputs.cache
+D:\Git\Projet-Programmation-Systeme\SALLE C#\Salle\Salle\bin\Debug\Salle.exe.config
+D:\Git\Projet-Programmation-Systeme\SALLE C#\Salle\Salle\bin\Debug\Salle.exe
+D:\Git\Projet-Programmation-Systeme\SALLE C#\Salle\Salle\bin\Debug\Salle.pdb
+D:\Git\Projet-Programmation-Systeme\SALLE C#\Salle\Salle\obj\Debug\Salle.exe
+D:\Git\Projet-Programmation-Systeme\SALLE C#\Salle\Salle\obj\Debug\Salle.pdb
