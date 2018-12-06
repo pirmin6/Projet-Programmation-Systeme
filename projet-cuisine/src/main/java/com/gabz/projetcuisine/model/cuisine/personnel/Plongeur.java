@@ -1,5 +1,6 @@
 package com.gabz.projetcuisine.model.cuisine.personnel;
 
+import com.gabz.projetcuisine.model.common.StockageVaisselleTextile;
 import com.gabz.projetcuisine.model.cuisine.lavage.Evier;
 import com.gabz.projetcuisine.model.cuisine.lavage.LaveLinge;
 import com.gabz.projetcuisine.model.cuisine.lavage.LaveVaisselle;
@@ -13,8 +14,49 @@ public class Plongeur implements IPersonnelBasique {
     private LaveLinge laveLinge;
     private LaveVaisselle laveVaisselle;
     private StockALaver stockVaisselleEtTextileSale;
+    private StockageVaisselleTextile stockageVaisselleTextile;
 
     private Plongeur() {
+    }
+
+    public Evier getEvier() {
+        return evier;
+    }
+
+    public void setEvier(Evier evier) {
+        this.evier = evier;
+    }
+
+    public LaveLinge getLaveLinge() {
+        return laveLinge;
+    }
+
+    public void setLaveLinge(LaveLinge laveLinge) {
+        this.laveLinge = laveLinge;
+    }
+
+    public LaveVaisselle getLaveVaisselle() {
+        return laveVaisselle;
+    }
+
+    public void setLaveVaisselle(LaveVaisselle laveVaisselle) {
+        this.laveVaisselle = laveVaisselle;
+    }
+
+    public StockALaver getStockVaisselleEtTextileSale() {
+        return stockVaisselleEtTextileSale;
+    }
+
+    public void setStockVaisselleEtTextileSale(StockALaver stockVaisselleEtTextileSale) {
+        this.stockVaisselleEtTextileSale = stockVaisselleEtTextileSale;
+    }
+
+    public StockageVaisselleTextile getStockageVaisselleTextile() {
+        return stockageVaisselleTextile;
+    }
+
+    public void setStockageVaisselleTextile(StockageVaisselleTextile stockageVaisselleTextile) {
+        this.stockageVaisselleTextile = stockageVaisselleTextile;
     }
 
     public Plongeur getInstace() {
