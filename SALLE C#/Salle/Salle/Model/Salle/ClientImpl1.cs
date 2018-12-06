@@ -8,6 +8,34 @@ namespace Salle.Model.Salle
 {
     class ClientImpl1 : IClient
     {
-        public 
+        public void prendreRepas()
+        {
+
+        }
+
+        public void choisirRepas()
+        {
+
+        }
+
+        public void mangerPlat()
+        {
+
+        }
+
+        public void commanderVin()
+        {
+
+        }
+
+        public void commanderEau()
+        {
+
+        }
+
+        public void commanderPain()
+        {
+
+        }
     }
 }
