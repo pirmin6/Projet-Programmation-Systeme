@@ -8,5 +8,12 @@ namespace Salle.Model.Salle
 {
     interface IClient
     {
+        void prendreRepas();
+        void choisirRepas();
+        void mangerPlat();
+        void commanderVin();
+        void commanderEau();
+        void commanderPain();
+
     }
 }
