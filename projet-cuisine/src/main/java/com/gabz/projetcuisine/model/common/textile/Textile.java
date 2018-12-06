@@ -1,4 +1,14 @@
 package com.gabz.projetcuisine.model.common.textile;
 
-public class Textile {
+public abstract class Textile {
+
+    protected boolean propre = true;
+
+    public Textile() {
+        this.propre = false;
+    }
+
+    public boolean isPropre() {
+        return propre;
+    }
 }
