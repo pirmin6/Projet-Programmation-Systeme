@@ -5,14 +5,15 @@ import com.gabz.projetcuisine.repository.IngredientRepository;
 import com.gabz.projetcuisine.repository.StockRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.List;
 
+@Entity
 public class Stockage {
 
-    @Autowired
-    private StockRepository stockRepository;
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
     private int tempsStockage;
     @OneToMany
     private List<IngredientRecord> ingredients;
@@ -27,7 +28,6 @@ public class Stockage {
 
     public void addIngredientRecordToStockage(IngredientRecord ingredientRecord) {
         this.ingredients.add(ingredientRecord);
-        stockRepository.save(this);
     }
 
 }
