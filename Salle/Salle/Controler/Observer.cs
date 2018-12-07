@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Salle.Model.Salle
+namespace Salle.Controler
 {
-    class ClientFactory
+    interface Observer
     {
-        public void getClient()
-        {
-        }
     }
 }

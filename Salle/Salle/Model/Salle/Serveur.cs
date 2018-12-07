@@ -44,5 +44,10 @@ namespace Salle.Model.Salle
         {
 
         }
+
+        public void update()
+        {
+
+        }
     }
 }

@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Salle.Model.Salle
+namespace Salle.Controler
 {
-    class ClientFactory
+    class SalleSimulationController : Observable, Observer
     {
-        public void getClient()
+        public SalleSimulationController()
         {
         }
     }

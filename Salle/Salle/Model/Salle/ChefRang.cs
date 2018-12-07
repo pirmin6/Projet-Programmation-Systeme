@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Salle.Model.Commun;
 
 namespace Salle.Model.Salle
 {
@@ -10,11 +11,10 @@ namespace Salle.Model.Salle
     {
         private Carre carre;
         private Carte carte;
-        List<GroupeClient> groupesClients;
+        List<Observer> groupesClients;
 
         public ChefRang()
         {
-
         }
 
         public void distribueCartes()
@@ -27,7 +27,7 @@ namespace Salle.Model.Salle
 
         }
 
-        public void placerClient()
+        public void placerClientTable()
         {
 
         }
@@ -37,7 +37,7 @@ namespace Salle.Model.Salle
 
         }
 
-        public void Update()
+        public void update()
         {
 
         }

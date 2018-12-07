@@ -10,10 +10,30 @@ namespace Salle.Model.Salle
     {
         //List<Clients> clients;
         Boolean reservation;
-        private Observer
+        private Observer obs;
+
         public GroupeClient()
         {
-            //ygg
+        }
+
+        public void suivreChefRang()
+        {
+
+        }
+
+        public void clientsCommande()
+        {
+
+        }
+
+        public void quitterTable()
+        {
+
+        }
+
+        public void update()
+        {
+
         }
     }
 }

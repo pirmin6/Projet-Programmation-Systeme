@@ -8,9 +8,6 @@ namespace Salle.Model.Salle
 {
     interface Observer
     {
-        void Update()
-        {
-
-        }
+        void update();
     }
 }
