@@ -7,7 +7,7 @@ using Salle.Model.Commun;
 
 namespace Salle.Model.Salle
 {
-    class ChefRang : Observable, Observer
+    public class ChefRang : Observable, Observer
     {
         private Carre carre;
         private Carte carte;

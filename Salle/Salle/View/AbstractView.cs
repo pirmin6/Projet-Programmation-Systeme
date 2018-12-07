@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Salle.View
 {
-    abstract class AbstractView : EmployeView, ClientView, MaterielView, PlatView
+    public abstract class AbstractView
     {
         void initialiserComposant()
         {

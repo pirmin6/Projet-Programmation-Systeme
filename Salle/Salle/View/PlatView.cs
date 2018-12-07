@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Salle.View
 {
-    class PlatView
+    class PlatView : AbstractView
     {
+        public PlatView()
+        {
+        }
     }
 }

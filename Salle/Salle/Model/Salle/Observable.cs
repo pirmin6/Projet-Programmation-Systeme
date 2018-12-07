@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Salle.Model.Salle
 {
-    class Observable
+    //List<Observer> observers;
+
+    public class Observable
     {
     }
+
 }

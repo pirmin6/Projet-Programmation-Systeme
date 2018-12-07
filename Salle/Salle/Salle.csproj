@@ -43,11 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Commun\Assiette - Copie.cs" />
+    <Compile Include="Controler\Iencodagelmpl1.cs" />
+    <Compile Include="Controler\Iencodagelmpl2.cs" />
+    <Compile Include="Controler\Observable.cs" />
+    <Compile Include="Controler\Observer.cs" />
+    <Compile Include="Controler\SalleSimulationController.cs" />
+    <Compile Include="Controler\SalleSimulatorController.cs" />
+    <Compile Include="Controler\SocketConnectionIn.cs" />
+    <Compile Include="Controler\SocketConnexion.cs" />
+    <Compile Include="Controler\SocketConnexionOut.cs" />
     <Compile Include="Model\Commun\Assiette.cs" />
     <Compile Include="Model\Commun\AssietteCreuse.cs" />
     <Compile Include="Model\Commun\AssietteDessert.cs" />
-    <Compile Include="Model\Commun\AssietteEntree - Copie.cs" />
     <Compile Include="Model\Commun\AssietteEntree.cs" />
     <Compile Include="Model\Commun\AssiettePlate.cs" />
     <Compile Include="Model\Commun\Carte.cs" />
@@ -79,15 +86,33 @@
     <Compile Include="Model\Salle\Rang.cs" />
     <Compile Include="Model\Salle\Serveur.cs" />
     <Compile Include="Model\Salle\Table.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\AbstractView.cs" />
+    <Compile Include="View\ClientView.cs" />
+    <Compile Include="View\EmployeView.cs" />
+    <Compile Include="View\IView.cs" />
+    <Compile Include="View\MaterielView.cs" />
+    <Compile Include="View\PlatView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\Salle.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\Salle.csprojAssemblyReference.cache" />
+    <None Include="obj\Release\Salle.csproj.CoreCompileInputs.cache" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controler\" />
-    <Folder Include="View\" />
+    <Folder Include="Controler\Socket\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="obj\Debug\Salle.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Salle.exe" />
+    <Content Include="obj\Debug\Salle.pdb" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

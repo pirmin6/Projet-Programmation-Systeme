@@ -14,8 +14,6 @@ namespace Salle.Model.Commun
 
         public Carte()
         {
-
-     
         }
     }
 

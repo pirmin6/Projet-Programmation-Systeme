@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Salle.Model.Salle
 {
-    class Rang
+    public class Rang
     {
         List<Table> Tables;
 

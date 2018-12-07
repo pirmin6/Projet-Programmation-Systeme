@@ -8,5 +8,6 @@ namespace Salle.Controler
 {
     interface Observer
     {
+        void update();
     }
 }

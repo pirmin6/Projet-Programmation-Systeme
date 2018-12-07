@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace Salle.Model.Salle
 {
-    class Table
+    public class Table
     {
-        List<int> Chaises;
-        int nbrPlats;
-
         public Table()
         {
         }

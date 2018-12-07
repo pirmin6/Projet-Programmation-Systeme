@@ -8,14 +8,7 @@ namespace Salle.View
 {
     interface IView
     {
-        void initialiserComposant()
-        {
-
-        }
-
-        void update()
-        {
-
-        }
+        void initialiserComposant();
+        void update();
     }
 }

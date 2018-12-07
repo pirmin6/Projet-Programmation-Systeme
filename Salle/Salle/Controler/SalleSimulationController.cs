@@ -11,5 +11,10 @@ namespace Salle.Controler
         public SalleSimulationController()
         {
         }
+
+        public void update()
+        {
+
+        }
     }
 }
