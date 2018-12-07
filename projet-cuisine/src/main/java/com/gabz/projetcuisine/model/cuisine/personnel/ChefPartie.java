@@ -1,5 +1,8 @@
 package com.gabz.projetcuisine.model.cuisine.personnel;
 
+import com.gabz.projetcuisine.model.common.repas.ComptoirPlatAttente;
+import com.gabz.projetcuisine.model.cuisine.repas.Recette;
+
 import java.util.List;
 
 public class ChefPartie {
@@ -36,7 +39,7 @@ public class ChefPartie {
         this.plongeurs = plongeurs;
     }
 
-    public void faireRecette() {
+    public void faireRecette(Recette recette) {
 
     }
 
