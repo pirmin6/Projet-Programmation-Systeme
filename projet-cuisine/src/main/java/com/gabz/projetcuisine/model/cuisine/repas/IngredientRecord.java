@@ -12,7 +12,7 @@ public class IngredientRecord {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    private List<Ingredient> ingredients;
+    private Ingredient ingredient;
     private int quantité;
     private int joursAvantPeremption;
 
@@ -20,14 +20,14 @@ public class IngredientRecord {
         return id;
     }
 
-    public IngredientRecord(List<Ingredient> ingredients, int quantité, int joursAvantPeremption) {
-        this.ingredients = ingredients;
+    public IngredientRecord(Ingredient ingredient, int quantité, int joursAvantPeremption) {
+        this.ingredient = ingredient;
         this.quantité = quantité;
         this.joursAvantPeremption = joursAvantPeremption;
     }
 
-    public List<Ingredient> getIngredients() {
-        return ingredients;
+    public Ingredient getIngredient() {
+        return ingredient;
     }
 
     public int getQuantité() {
