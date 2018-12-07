@@ -127,10 +127,30 @@ public class LaveVaisselle {
 
     public void demarrerLavage() {
 
+        List<Vaisselle> vaisselle = new ArrayList<>();
+        vaisselle.addAll(Arrays.asList(assiettes));
+        vaisselle.addAll(Arrays.asList(verres));
+        vaisselle.addAll(Arrays.asList(fourchettes));
+        vaisselle.addAll(Arrays.asList(cuillereCafes));
+        vaisselle.addAll(Arrays.asList(cuillereSoupes));
+        vaisselle.addAll(Arrays.asList(couteaux));
+
+
+        for (Vaisselle v: vaisselle) {
+            v.setPropre(true);
+        }
     }
 
-    public void viderLaveVaisselle() {
+    public List<Vaisselle> viderLaveVaisselle() {
 
+        List<Vaisselle> vaisselle = new ArrayList<>();
+        vaisselle.addAll(Arrays.asList(assiettes));
+        vaisselle.addAll(Arrays.asList(verres));
+        vaisselle.addAll(Arrays.asList(fourchettes));
+        vaisselle.addAll(Arrays.asList(cuillereCafes));
+        vaisselle.addAll(Arrays.asList(cuillereSoupes));
+        vaisselle.addAll(Arrays.asList(couteaux));
+        return vaisselle;
     }
 
 }

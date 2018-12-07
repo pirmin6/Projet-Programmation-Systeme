@@ -1,11 +1,9 @@
 package com.gabz.projetcuisine.model.cuisine;
 
 import com.gabz.projetcuisine.model.common.vaisselle.Vaisselle;
-import com.gabz.projetcuisine.model.common.vaisselle.assiette.Assiette;
 import com.gabz.projetcuisine.model.common.vaisselle.assiette.AssietteCreuse;
 import com.gabz.projetcuisine.model.common.vaisselle.assiette.AssietteEntree;
 import com.gabz.projetcuisine.model.common.vaisselle.couvert.Couteau;
-import com.gabz.projetcuisine.model.common.vaisselle.couvert.Couvert;
 import com.gabz.projetcuisine.model.common.vaisselle.couvert.Fourchette;
 import com.gabz.projetcuisine.model.common.vaisselle.verre.VerreEau;
 import com.gabz.projetcuisine.model.cuisine.lavage.LaveVaisselle;
@@ -63,5 +61,21 @@ public class TestLaveVaisselle {
 
     }
 
-    
+    @Test
+    public void viderLaveVaisselle() throws InterruptedException, NoSuchFieldException, IllegalAccessException {
+
+        vaisselles.add(new Fourchette());
+        vaisselles.add(new Couteau());
+        vaisselles.add(new AssietteEntree());
+        vaisselles.add(new AssietteCreuse());
+
+        laveVaisselle.remplirLaveVaisselle(vaisselles);
+
+        laveVaisselle.demarrerLavage();
+
+        List<Vaisselle> vaisselle = laveVaisselle.viderLaveVaisselle();
+
+        Assert.assertEquals(4, vaisselle.size());
+    }
+
 }
