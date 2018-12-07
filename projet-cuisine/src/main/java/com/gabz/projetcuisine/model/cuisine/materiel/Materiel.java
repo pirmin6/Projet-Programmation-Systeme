@@ -30,8 +30,8 @@ public abstract class Materiel {
         return propre;
     }
 
-    public void laverMateriel() throws InterruptedException {
-        Thread.sleep((long) tempsLavage * 1000);
+    public void setPropre(boolean propre) throws InterruptedException {
+        this.propre = propre;
     }
 
     public abstract void remettreEnService();

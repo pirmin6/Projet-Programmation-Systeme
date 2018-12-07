@@ -6,7 +6,7 @@ public class Poele extends Materiel {
 
     private static Semaphore nbrInstance = new Semaphore(10);
 
-    Poele() throws InterruptedException {
+    public Poele() throws InterruptedException {
         super();
         this.nbrInstance.acquire();
         this.tempsLavage = 60;

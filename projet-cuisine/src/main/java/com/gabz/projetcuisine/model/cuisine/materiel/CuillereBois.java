@@ -6,7 +6,7 @@ public class CuillereBois extends Materiel{
 
     private static Semaphore nbrInstance = new Semaphore(10);
 
-    CuillereBois() throws InterruptedException {
+    public CuillereBois() throws InterruptedException {
         super();
         this.nbrInstance.acquire();
         this.tempsLavage = 30;
