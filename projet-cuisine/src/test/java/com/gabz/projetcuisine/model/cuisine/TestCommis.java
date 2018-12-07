@@ -2,22 +2,57 @@ package com.gabz.projetcuisine.model.cuisine;
 
 import com.gabz.projetcuisine.model.common.repas.Plat;
 import com.gabz.projetcuisine.model.cuisine.personnel.Commis;
-import com.gabz.projetcuisine.model.cuisine.repas.Recette;
-import com.gabz.projetcuisine.model.cuisine.repas.TypeRecette;
+import com.gabz.projetcuisine.model.cuisine.repas.*;
+import com.gabz.projetcuisine.model.cuisine.stockage.Stockage;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.ArrayList;
 
 public class TestCommis {
-    private Commis mathieu;
+    private Commis commis;
+    private Stockage stockage;
+    private Recette recette;
+    private Ingredient carotte;
 
 
     @Test
     public void testAjouterPlat(){
-        this.mathieu = new Commis(new ArrayList<>());
+        this.commis = new Commis(new ArrayList<>());
 
-        mathieu.amenerPlatComptoir(new Plat(new Recette("roti de porc", new ArrayList<>(), false, TypeRecette.PLAT, 4), "roti de porc"));
-        Assert.assertEquals(1, mathieu.getComptoirPlats().getPlats().size());
+        commis.amenerPlatComptoir(new Plat(new Recette("roti de porc", new ArrayList<>(), false, TypeRecette.PLAT, 4), "roti de porc"));
+        Assert.assertEquals(1, commis.getComptoirPlats().getPlats().size());
+    }
+
+    @Test
+    public void testChercherIngredient(){
+        this.commis = new Commis(new ArrayList<>());
+        this.stockage = new Stockage();
+
+        stockage.addIngredientRecordToStockage(new IngredientRecord(new ArrayList<>(), 1, 50));
+        commis.chercherIngredient(new Ingredient("carotte", TypeIngredient.LEGUME));
+        Assert.assertEquals(0, stockage.getIngredients());
+
+    }
+
+
+    @Test
+    public void testEpluchage(){
+        this.carotte = new Ingredient("carotte", TypeIngredient.LEGUME);
+        this.commis = new Commis(new ArrayList<>());
+        this.recette = new Recette("carrotes rapées", new ArrayList<>(), false, TypeRecette.PLAT, 1);
+        commis.eplucherLegume(carotte);
+
+        //A compléter
+    }
+
+    @Test
+    public void testJeterIngredient(){
+        this.carotte = new Ingredient("carotte", TypeIngredient.LEGUME);
+        this.commis = new Commis(new ArrayList<>());
+        commis.jeterIngredient(carotte);
+        Assert.assertEquals(null, carotte);
     }
 }
+
+
