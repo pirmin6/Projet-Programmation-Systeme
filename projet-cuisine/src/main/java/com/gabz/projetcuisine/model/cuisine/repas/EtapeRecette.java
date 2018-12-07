@@ -2,10 +2,7 @@ package com.gabz.projetcuisine.model.cuisine.repas;
 
 import com.gabz.projetcuisine.model.cuisine.materiel.Materiel;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
@@ -18,7 +15,9 @@ public class EtapeRecette {
     private boolean faisableParPersonnelBasique;
     private int tempsRealisation;
     private int nbrEtape;
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Materiel> materiels;
+    @OneToMany(cascade = CascadeType.ALL)
     private List<IngredientRecord> ingredientRecords;
 
     public int getId() {

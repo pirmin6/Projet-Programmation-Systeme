@@ -2,10 +2,7 @@ package com.gabz.projetcuisine.model.common.repas;
 
 import com.gabz.projetcuisine.model.cuisine.repas.Recette;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Plat {
@@ -13,6 +10,8 @@ public class Plat {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+    @OneToOne
+    @JoinColumn(name = "recette_id")
     private Recette recette;
     private String nom;
 

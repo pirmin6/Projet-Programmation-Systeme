@@ -1,9 +1,6 @@
 package com.gabz.projetcuisine.model.cuisine.repas;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
@@ -12,6 +9,7 @@ public class IngredientRecord {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+    @ManyToOne
     private Ingredient ingredient;
     private int quantité;
     private int joursAvantPeremption;
@@ -20,8 +18,8 @@ public class IngredientRecord {
         return id;
     }
 
-    public IngredientRecord(Ingredient ingredient, int quantité, int joursAvantPeremption) {
-        this.ingredient = ingredient;
+    public IngredientRecord(Ingredient ingredient1, int quantité, int joursAvantPeremption) {
+        this.ingredient = ingredient1;
         this.quantité = quantité;
         this.joursAvantPeremption = joursAvantPeremption;
     }
