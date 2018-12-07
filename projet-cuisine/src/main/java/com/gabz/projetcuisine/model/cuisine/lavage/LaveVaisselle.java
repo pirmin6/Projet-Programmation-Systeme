@@ -10,7 +10,9 @@ import com.gabz.projetcuisine.model.common.vaisselle.verre.Verre;
 import com.gabz.projetcuisine.util.ListUtil;
 
 import java.lang.reflect.Field;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
 public class LaveVaisselle {
@@ -56,38 +58,41 @@ public class LaveVaisselle {
 
     public void remplirLaveVaisselle(List<Vaisselle> vaisselle) throws NoSuchFieldException, IllegalAccessException {
 
-        for (int i = 0; i < vaisselle.size(); i++) {
+        List<Vaisselle> vaisselleRestante = new ArrayList<>();
 
-            Vaisselle currentVaisselle = vaisselle.get(i);
+        Iterator it = vaisselle.iterator();
+        while (it.hasNext()) {
+
+            Vaisselle currentVaisselle = (Vaisselle) it.next();
 
             if (currentVaisselle.getClass().equals(Couteau.class))
-                if (ajouterVaisselle("couteaux", currentVaisselle)) {
-                    vaisselle.remove(currentVaisselle);
+                if (!ajouterVaisselle("couteaux", currentVaisselle)) {
+                    vaisselleRestante.add(currentVaisselle);
                 }
 
             if (currentVaisselle.getClass().equals(Fourchette.class))
-                if (ajouterVaisselle("fourchettes", currentVaisselle)) {
-                    vaisselle.remove(currentVaisselle);
+                if (!ajouterVaisselle("fourchettes", currentVaisselle)) {
+                    vaisselleRestante.add(currentVaisselle);
                 }
 
             if (currentVaisselle.getClass().equals(CuillereCafe.class))
-                if (ajouterVaisselle("cuillereCafes", currentVaisselle)) {
-                    vaisselle.remove(currentVaisselle);
+                if (!ajouterVaisselle("cuillereCafes", currentVaisselle)) {
+                    vaisselleRestante.add(currentVaisselle);
                 }
 
             if (currentVaisselle.getClass().equals(CuillereSoupe.class))
-                if(ajouterVaisselle("cuillereSoupes", currentVaisselle)) {
-                    vaisselle.remove(currentVaisselle);
+                if(!ajouterVaisselle("cuillereSoupes", currentVaisselle)) {
+                    vaisselleRestante.add(currentVaisselle);
                 }
 
             if (Verre.class.isAssignableFrom(currentVaisselle.getClass()))
-                if (ajouterVaisselle("verres", currentVaisselle)) {
-                    vaisselle.remove(currentVaisselle);
+                if (!ajouterVaisselle("verres", currentVaisselle)) {
+                    vaisselleRestante.add(currentVaisselle);
                 }
 
             if (Assiette.class.isAssignableFrom(currentVaisselle.getClass()))
-                if (ajouterVaisselle("assiettes", currentVaisselle)) {
-                    vaisselle.remove(currentVaisselle);
+                if (!ajouterVaisselle("assiettes", currentVaisselle)) {
+                    vaisselleRestante.add(currentVaisselle);
                 }
 
         }
