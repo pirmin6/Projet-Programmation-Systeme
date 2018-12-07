@@ -1,4 +1,4 @@
-package com.gabz.projetcuisine.model.cuisine.lavage;
+package com.gabz.projetcuisine.model.cuisine;
 
 import com.gabz.projetcuisine.model.common.StockageVaisselleTextile;
 import com.gabz.projetcuisine.model.common.textile.Nappe;

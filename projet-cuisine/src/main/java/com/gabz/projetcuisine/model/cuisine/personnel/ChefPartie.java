@@ -7,6 +7,7 @@ public class ChefPartie {
     private static int nbrInstances = 2;
     private List<Commis> commis;
     private Plongeur plongeurs;
+    private boolean available;
 
     public ChefPartie() {
     }
@@ -17,6 +18,14 @@ public class ChefPartie {
 
     public void setCommis(List<Commis> commis) {
         this.commis = commis;
+    }
+
+    public boolean isAvailable() {
+        return available;
+    }
+
+    public void setAvailable(boolean available) {
+        this.available = available;
     }
 
     public Plongeur getPlongeurs() {
@@ -30,4 +39,6 @@ public class ChefPartie {
     public void faireRecette() {
 
     }
+
+
 }

@@ -2,6 +2,7 @@ package com.gabz.projetcuisine.model.cuisine.personnel;
 
 import com.gabz.projetcuisine.model.common.repas.Carte;
 import com.gabz.projetcuisine.model.common.repas.Commande;
+import com.gabz.projetcuisine.model.common.repas.Plat;
 
 import java.util.List;
 
@@ -17,11 +18,9 @@ public class ChefCuisine {
 
     }
 
-    public static ChefCuisine getChefCuisineInstace() {
-        return instance;
-    }
-
-    public static ChefCuisine getInstance() {
+    public static ChefCuisine getInstance(Carte carte, IOrganisation organisation) {
+        instance.setCarte(carte);
+        instance.setOrganisation(organisation);
         return instance;
     }
 
@@ -61,15 +60,19 @@ public class ChefCuisine {
         this.organisation = organisation;
     }
 
-    private void organiserCommande(Commande commande) {
+    public void organiserCommande(Commande commande) {
         this.organisation.organiserCommande(commande);
     }
 
-    private void changerCarte() {
+    public void ajouterPlatCarte(Plat plat) {
 
     }
 
-    private void choisirChefPartie() {
+    public void retirerPlatCarte(int idPlat) {
+
+    }
+
+    public void choisirChefPartie() {
 
     }
 }

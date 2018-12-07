@@ -1,4 +1,4 @@
-package com.gabz.projetcuisine.common;
+package com.gabz.projetcuisine.model.common;
 import com.gabz.projetcuisine.model.common.repas.Carte;
 import com.gabz.projetcuisine.model.common.repas.Commande;
 import com.gabz.projetcuisine.model.common.repas.Plat;
