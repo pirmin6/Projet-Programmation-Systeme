@@ -51,7 +51,7 @@ public class Plongeur implements IPersonnelBasique {
         evier.demarrerLavage();
     }
 
-    public void laverTextile() {
+    public void laverTextile() throws InterruptedException {
 
         laveLinge.demarrerLavage();
     }

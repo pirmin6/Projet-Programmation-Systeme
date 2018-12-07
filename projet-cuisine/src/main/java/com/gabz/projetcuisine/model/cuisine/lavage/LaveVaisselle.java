@@ -7,11 +7,9 @@ import com.gabz.projetcuisine.model.common.vaisselle.couvert.CuillereCafe;
 import com.gabz.projetcuisine.model.common.vaisselle.couvert.CuillereSoupe;
 import com.gabz.projetcuisine.model.common.vaisselle.couvert.Fourchette;
 import com.gabz.projetcuisine.model.common.vaisselle.verre.Verre;
-import com.gabz.projetcuisine.util.ListUtil;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 

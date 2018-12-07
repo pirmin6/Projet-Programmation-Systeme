@@ -11,4 +11,8 @@ public abstract class Textile {
     public boolean isPropre() {
         return propre;
     }
+
+    public void setPropre(boolean propre) {
+        this.propre = propre;
+    }
 }
