@@ -1,6 +1,8 @@
 package com.gabz.projetcuisine.model.cuisine;
 
+import com.gabz.projetcuisine.model.cuisine.repas.Ingredient;
 import com.gabz.projetcuisine.model.cuisine.repas.IngredientRecord;
+import com.gabz.projetcuisine.model.cuisine.repas.TypeIngredient;
 import com.gabz.projetcuisine.model.cuisine.stockage.Stockage;
 import org.junit.Assert;
 import org.junit.Test;
@@ -15,7 +17,7 @@ public class TestStockage {
     public void testAddIngredientRecordToStockage(){
 
         stockage = new Stockage();
-        stockage.addIngredientRecordToStockage(new IngredientRecord(new ArrayList<>(), 4, 20));
+        stockage.addIngredientRecordToStockage(new IngredientRecord(new Ingredient("string ", TypeIngredient.LEGUME), 4, 20));
         Assert.assertEquals(4, stockage.getIngredients().size());
 
     }
