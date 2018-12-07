@@ -1,7 +1,5 @@
 package com.gabz.projetcuisine.model.common.repas;
 
-import com.gabz.projetcuisine.model.common.repas.Plat;
-
 import java.util.ArrayList;
 import java.util.List;
 

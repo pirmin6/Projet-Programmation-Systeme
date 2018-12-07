@@ -19,6 +19,10 @@ public class Plongeur implements IPersonnelBasique {
     private LaveVaisselle laveVaisselle;
 
     private Plongeur() {
+
+        evier = Evier.getInstance();
+        laveLinge = LaveLinge.getInstance();
+        laveVaisselle = LaveVaisselle.getInstance();
     }
 
     public Evier getEvier() {
@@ -44,23 +48,33 @@ public class Plongeur implements IPersonnelBasique {
 
     public void laverMateriel() {
 
+        evier.demarrerLavage();
     }
 
-    public List<Textile> laverTextile() {
+    public void laverTextile() {
 
-        return new ArrayList<>();
+        laveLinge.demarrerLavage();
     }
 
-    public List<Vaisselle> laverVaisselle() {
+    public void laverVaisselle() {
 
-        return new ArrayList<>();
+        laveVaisselle.demarrerLavage();
     }
 
     public void chargerLaveVaisselle(StockageVaisselleTextile stock) {
 
+        stock.prendreVaisselle();
+    }
+
+    public void viderLaveVaisselle() {
+
     }
 
     public void chargerLaveLinge(StockageVaisselleTextile stock) {
+
+    }
+
+    public void viderLaveLinge() {
 
     }
 }
