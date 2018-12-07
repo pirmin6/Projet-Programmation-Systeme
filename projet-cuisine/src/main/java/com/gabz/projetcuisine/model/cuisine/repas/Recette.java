@@ -1,9 +1,6 @@
 package com.gabz.projetcuisine.model.cuisine.repas;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
@@ -13,6 +10,7 @@ public class Recette {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String nom;
+    @OneToMany(cascade = CascadeType.ALL)
     private List<EtapeRecette> etapes;
     private boolean prepEnAmont;
     private TypeRecette typeRecette;

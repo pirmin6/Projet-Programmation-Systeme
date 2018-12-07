@@ -10,6 +10,7 @@ public class Commande {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private int numeroTable;
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Plat> plats;
 
     public Commande(int numeroTable, List<Plat> plats) {

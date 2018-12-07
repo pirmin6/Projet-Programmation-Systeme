@@ -8,6 +8,7 @@ import com.gabz.projetcuisine.model.common.vaisselle.couvert.Fourchette;
 import com.gabz.projetcuisine.model.common.vaisselle.verre.VerreEau;
 import com.gabz.projetcuisine.model.cuisine.lavage.LaveVaisselle;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -26,10 +27,10 @@ public class TestLaveVaisselle {
 
         laveVaisselle.remplirLaveVaisselle(vaisselles);
 
-        Assert.assertNotNull(laveVaisselle.getFourchettes()[0]);
-        Assert.assertNull(laveVaisselle.getFourchettes()[1]);
-        Assert.assertNotNull(laveVaisselle.getVerres()[0]);
-        Assert.assertNull(laveVaisselle.getVerres()[1]);
+        Assert.assertNotNull(laveVaisselle.getFourchettes().get(0));
+        Assert.assertEquals(1, laveVaisselle.getFourchettes().size());
+        Assert.assertNotNull(laveVaisselle.getVerres().get(0));
+        Assert.assertEquals(1, laveVaisselle.getVerres().size());
     }
 
     @Test
@@ -63,6 +64,8 @@ public class TestLaveVaisselle {
 
     @Test
     public void viderLaveVaisselle() throws InterruptedException, NoSuchFieldException, IllegalAccessException {
+
+        laveVaisselle.viderLaveVaisselle();
 
         vaisselles.add(new Fourchette());
         vaisselles.add(new Couteau());

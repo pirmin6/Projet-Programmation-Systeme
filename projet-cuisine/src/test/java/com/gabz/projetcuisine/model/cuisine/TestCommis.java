@@ -29,7 +29,7 @@ public class TestCommis {
         this.commis = new Commis(new ArrayList<>());
         this.stockage = new Stockage();
 
-        stockage.addIngredientRecordToStockage(new IngredientRecord(new ArrayList<>(), 1, 50));
+        stockage.addIngredientRecordToStockage(new IngredientRecord(new Ingredient("oui", TypeIngredient.LEGUME), 1, 50));
         commis.chercherIngredient(new Ingredient("carotte", TypeIngredient.LEGUME));
         Assert.assertEquals(0, stockage.getIngredients());
 

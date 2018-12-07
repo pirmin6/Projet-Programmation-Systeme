@@ -1,9 +1,6 @@
 package com.gabz.projetcuisine.model.common.repas;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
 
@@ -14,7 +11,9 @@ public class Carte {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private Date jour;
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Vin> vins;
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Plat> plats;
 
     public Carte(Date jour, List<Vin> vins, List<Plat> plats) {
