@@ -38,7 +38,7 @@ public class Commis implements IPersonnelBasique{
 
     }
 
-    public void jeterIngredient() {
+    public void jeterIngredient(Ingredient ingredient) {
 
     }
 

@@ -4,10 +4,10 @@ import com.gabz.projetcuisine.model.cuisine.repas.IngredientRecord;
 
 import java.util.List;
 
-public abstract class Stockage {
+public class Stockage {
 
-    protected int tempsStockage;
-    protected List<IngredientRecord> ingredients;
+    private int tempsStockage;
+    private List<IngredientRecord> ingredients;
 
     public int getTempsStockage() {
         return tempsStockage;
