@@ -51,12 +51,26 @@
   <ItemGroup>
     <Compile Include="Model\Salle\CarreTests.cs" />
     <Compile Include="Model\Salle\ChefRangTests.cs" />
+<<<<<<< HEAD
     <Compile Include="Model\Salle\MaitreHotelTests.cs" />
     <Compile Include="Model\Salle\RangTests.cs" />
     <Compile Include="Model\Salle\TableTests.cs" />
+=======
+    <Compile Include="Model\Salle\ClientFactoryTest.cs" />
+    <Compile Include="Model\Salle\RangTests.cs" />
+    <Compile Include="Model\Salle\ServeurTests.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+>>>>>>> 265995271ee3fd4a46732a8476029cfddb939e2e
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\Debug\Salle.exe.config" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\TestSalle.csproj.CopyComplete" />
+    <None Include="obj\Debug\TestSalle.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\TestSalle.csprojAssemblyReference.cache" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -64,6 +78,22 @@
       <Project>{f012f126-0b3c-4c9b-b851-24547871ed0e}</Project>
       <Name>Salle</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml" />
+    <Content Include="bin\Debug\Salle.exe" />
+    <Content Include="bin\Debug\Salle.pdb" />
+    <Content Include="bin\Debug\TestSalle.dll" />
+    <Content Include="bin\Debug\TestSalle.pdb" />
+    <Content Include="obj\Debug\TestSalle.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\TestSalle.dll" />
+    <Content Include="obj\Debug\TestSalle.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

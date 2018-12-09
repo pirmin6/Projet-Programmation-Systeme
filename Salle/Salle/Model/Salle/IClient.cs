@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Salle.Model.Salle
 {
-    interface IClient
+    public interface IClient
     {
+
+
         void prendreRepas();
         void choisirRepas();
         void mangerPlat();

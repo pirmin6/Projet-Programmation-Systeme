@@ -11,6 +11,9 @@ namespace Salle.Model.Salle
         public int stockPain;
         public int stockEau;
 
+        
+
+
         public Serveur()
         {
         }
@@ -31,8 +34,8 @@ namespace Salle.Model.Salle
         }
 
         public void servirPain()
-        {
-
+        { 
+           // stockPain - (client.Count);
         }
 
         public void servirEau()

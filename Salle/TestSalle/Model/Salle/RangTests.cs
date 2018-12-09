@@ -26,7 +26,8 @@ namespace TestSalle
 
             foreach (Table table in listeTable)
             {
-                Assert.IsNotNull(table);
+                 Assert.IsNotNull(table);
+
             }
         }
 
