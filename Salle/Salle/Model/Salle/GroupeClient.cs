@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Salle.Model.Salle
 {
-    class GroupeClient : Observable, Observer
+    public class GroupeClient : Observable, Observer
     {
         //List<Clients> clients;
         Boolean reservation;
-        private Observer obs;
+        //private Observer obs;
 
         public GroupeClient()
         {

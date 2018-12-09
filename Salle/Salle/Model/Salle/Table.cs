@@ -8,8 +8,12 @@ namespace Salle.Model.Salle
 {
     public class Table
     {
+        private int nbrPlaces;
+        public GroupeClient clients;
+
         public Table()
         {
+
         }
     }
 }
