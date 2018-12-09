@@ -6,11 +6,15 @@ using System.Threading.Tasks;
 
 namespace Salle.Model.Salle
 {
-    class ClientImpl1 : IClient
+    public class ClientImpl1 : IClient
     {
+        private string humeur = "préssé";
+
+
         public void prendreRepas()
         {
-
+            Console.WriteLine("Client1");
+            Console.ReadKey();
         }
 
         public void choisirRepas()
@@ -34,6 +38,11 @@ namespace Salle.Model.Salle
         }
 
         public void commanderPain()
+        {
+
+        }
+
+        public void Create()
         {
 
         }

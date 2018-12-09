@@ -8,12 +8,13 @@ namespace Salle.Model.Salle
 {
     class GroupeClient : Observable, Observer
     {
-        //List<Clients> clients;
+     //   List<clients> clients = new List<clients>();
         Boolean reservation;
         private Observer obs;
 
         public GroupeClient()
         {
+         
         }
 
         public void suivreChefRang()
