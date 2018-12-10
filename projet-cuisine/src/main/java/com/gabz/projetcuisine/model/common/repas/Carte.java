@@ -13,10 +13,10 @@ public class Carte {
     private Date jour;
     @OneToMany(cascade = CascadeType.ALL)
     private List<Vin> vins;
-    @OneToMany(cascade = CascadeType.ALL)
-    private List<Plat> plats;
+    @OneToOne
+    private Plat plats;
 
-    public Carte(Date jour, List<Vin> vins, List<Plat> plats) {
+    public Carte(Date jour, List<Vin> vins, Plat plats) {
         this.jour = jour;
         this.vins = vins;
         this.plats = plats;
@@ -34,7 +34,11 @@ public class Carte {
         return vins;
     }
 
-    public List<Plat> getPlats() {
+    public Plat getPlats() {
         return plats;
+    }
+
+    public void setPlats(Plat plats) {
+        this.plats = plats;
     }
 }

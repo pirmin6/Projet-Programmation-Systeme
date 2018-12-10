@@ -19,6 +19,7 @@ public class EtapeRecette {
     private List<Materiel> materiels;
     @OneToMany(cascade = CascadeType.ALL)
     private List<IngredientRecord> ingredientRecords;
+    private boolean faisableEnSimultanée;
 
     public int getId() {
         return id;
@@ -48,13 +49,19 @@ public class EtapeRecette {
         return ingredientRecords;
     }
 
+    public boolean isFaisableEnSimultanée() {
+        return faisableEnSimultanée;
+    }
+
     public EtapeRecette(String description, boolean faisableParPersonnelBasique, int tempsRealisation,
-                        int nbrEtape, List<Materiel> materiels, List<IngredientRecord> ingredientRecords) {
+                        int nbrEtape, List<Materiel> materiels, List<IngredientRecord> ingredientRecords,
+                        boolean faisableEnSimultanée) {
         this.description = description;
         this.faisableParPersonnelBasique = faisableParPersonnelBasique;
         this.tempsRealisation = tempsRealisation;
         this.nbrEtape = nbrEtape;
         this.materiels = materiels;
         this.ingredientRecords = ingredientRecords;
+        this.faisableEnSimultanée = faisableEnSimultanée;
     }
 }

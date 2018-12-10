@@ -37,12 +37,12 @@ public class TestChefCuisine {
     @Test
     public void testChangerCarte() {
 
-
         chefCuisine.ajouterPlatCarte(plat);
-        Assert.assertTrue(carte.getPlats().size() > 0);
+        Assert.assertNotNull(carte.getPlats());
 
-        chefCuisine.retirerPlatCarte(plat.getId());
-
+        chefCuisine.retirerPlatCarte();
+        Assert.assertNull(carte.getPlats());
     }
+
 
 }

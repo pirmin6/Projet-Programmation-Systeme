@@ -1,15 +1,10 @@
 package com.gabz.projetcuisine.model.cuisine.personnel;
 
 import com.gabz.projetcuisine.model.common.StockageVaisselleTextile;
-import com.gabz.projetcuisine.model.common.textile.Textile;
-import com.gabz.projetcuisine.model.common.vaisselle.Vaisselle;
 import com.gabz.projetcuisine.model.cuisine.lavage.Evier;
 import com.gabz.projetcuisine.model.cuisine.lavage.LaveLinge;
 import com.gabz.projetcuisine.model.cuisine.lavage.LaveVaisselle;
 import com.gabz.projetcuisine.model.cuisine.repas.Ingredient;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class Plongeur implements IPersonnelBasique {
 

@@ -65,14 +65,20 @@ public class ChefCuisine {
     }
 
     public void ajouterPlatCarte(Plat plat) {
-
+        carte.setPlats(plat);
     }
 
-    public void retirerPlatCarte(int idPlat) {
-
+    public void retirerPlatCarte() {
+        carte.setPlats(null);
     }
 
-    public void choisirChefPartie() {
+    public ChefPartie choisirChefPartie() {
 
+        while (true) {
+            for (ChefPartie chefParty : chefParties) {
+
+                if (chefParty.isAvailable()) return chefParty;
+            }
+        }
     }
 }

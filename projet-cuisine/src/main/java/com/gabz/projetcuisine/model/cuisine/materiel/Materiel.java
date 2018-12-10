@@ -1,5 +1,7 @@
 package com.gabz.projetcuisine.model.cuisine.materiel;
 
+import com.gabz.projetcuisine.model.cuisine.lavage.Evier;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,7 +17,6 @@ public abstract class Materiel {
     protected boolean propre = true;
 
     public Materiel() {
-        this.propre = false;
     }
 
     public int getId() {
@@ -35,4 +36,8 @@ public abstract class Materiel {
     }
 
     public abstract void remettreEnService();
+
+    public abstract void monopoliserMateriel();
+
+    public abstract void poserSurEvier();
 }
