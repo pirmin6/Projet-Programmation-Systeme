@@ -8,7 +8,7 @@ public class Tamis extends Materiel {
 
     private static Semaphore nbrInstance = new Semaphore(2);
 
-    Tamis() throws InterruptedException {
+    public Tamis() throws InterruptedException {
         super();
         this.nbrInstance.acquire();
         this.tempsLavage = 60;

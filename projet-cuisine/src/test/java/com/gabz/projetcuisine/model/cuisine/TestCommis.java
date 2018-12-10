@@ -20,7 +20,6 @@ public class TestCommis {
     public void testAjouterPlat(){
         this.commis = new Commis(new ArrayList<>());
 
-        commis.amenerPlatComptoir(new Plat(new Recette("roti de porc", new ArrayList<>(), false, TypeRecette.PLAT, 4), "roti de porc"));
         Assert.assertEquals(1, commis.getComptoirPlats().getPlats().size());
     }
 
@@ -28,9 +27,7 @@ public class TestCommis {
     public void testChercherIngredient(){
         this.commis = new Commis(new ArrayList<>());
         this.stockage = new Stockage();
-
-        stockage.addIngredientRecordToStockage(new IngredientRecord(new Ingredient("carotte", TypeIngredient.LEGUME), 1, 50));
-
+        
         commis.chercherIngredients(new ArrayList<>());
         Assert.assertEquals(0, stockage.getIngredients());
 
@@ -41,7 +38,6 @@ public class TestCommis {
     public void testEpluchage() throws InterruptedException {
         this.carotte = new Ingredient("carotte", TypeIngredient.LEGUME);
         this.commis = new Commis(new ArrayList<>());
-        this.recette = new Recette("carrotes rapées", new ArrayList<>(), false, TypeRecette.PLAT, 1);
         commis.faireEtapeRecette(recette.getEtapes().get(0));
 
         //A compléter
