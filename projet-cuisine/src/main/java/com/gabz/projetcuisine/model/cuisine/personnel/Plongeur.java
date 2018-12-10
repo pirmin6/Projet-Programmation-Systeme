@@ -5,7 +5,6 @@ import com.gabz.projetcuisine.model.cuisine.lavage.Evier;
 import com.gabz.projetcuisine.model.cuisine.lavage.LaveLinge;
 import com.gabz.projetcuisine.model.cuisine.lavage.LaveVaisselle;
 import com.gabz.projetcuisine.model.cuisine.repas.EtapeRecette;
-import com.gabz.projetcuisine.model.cuisine.repas.Ingredient;
 
 public class Plongeur implements ICuisinier {
 
