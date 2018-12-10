@@ -4,13 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Salle
+namespace Salle.Model.Salle
 {
-    class Program
+    public interface IServeur
     {
-        static void Main(string[] args)
-        {
-            
-        }
+        void update();
     }
 }

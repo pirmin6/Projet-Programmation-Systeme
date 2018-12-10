@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace Salle.Model.Salle
 {
-    public class Serveur : Observer
+    public class Serveur : IServeur
     {
         public int stockPain;
         public int stockEau;
+
+        
+
 
         public Serveur()
         {
@@ -31,8 +34,8 @@ namespace Salle.Model.Salle
         }
 
         public void servirPain()
-        {
-
+        { 
+           // stockPain - (client.Count);
         }
 
         public void servirEau()

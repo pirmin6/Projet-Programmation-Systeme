@@ -8,15 +8,14 @@ namespace Salle.Model.Salle
 {
     public class Carre
     {
-        List<Rang> Rangs;
-        
+        private List<Rang> listeRang = new List<Rang>();
+        int nmbreRang = 6;
+
         public Carre(int nbreCarres, int nbreTables)
         {
-            Rangs = new List<Rang>();
-
-            for (int i = 1; i <= nbreCarres; i++)
+            for (int i = 0; i < nmbreRang; i++)
             {
-                Rangs.Add(new Rang(nbreTables));
+                listeRang.Add(new Rang(0));
             }
 
         }
