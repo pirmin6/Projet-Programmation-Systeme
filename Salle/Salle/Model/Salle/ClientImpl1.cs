@@ -13,13 +13,18 @@ namespace Salle.Model.Salle
 
         public void prendreRepas()
         {
-            Console.WriteLine("Client1");
-            Console.ReadKey();
+            
         }
 
         public void choisirRepas()
         {
-
+            // Random nombre impair = repas choisi
+            //  Random random = new Random();
+            // random.Next(1, 10);
+            //if (random == 1) 
+            // {
+            // on choisit le plat 1
+            //  } 
         }
 
         public void mangerPlat()
@@ -27,24 +32,22 @@ namespace Salle.Model.Salle
 
         }
 
-        public void commanderVin()
+        public void commanderVin(Serveur serveur)
         {
-
+            // chosir le vin sur la carte
+            serveur.servirVin();
         }
 
-        public void commanderEau()
+        public void commanderEau(Serveur serveur)
         {
-
+            serveur.servirEau();
         }
 
-        public void commanderPain()
+        public void commanderPain(Serveur serveur)
         {
-
+            serveur.servirPain();
         }
 
-        public void Create()
-        {
 
-        }
     }
 }

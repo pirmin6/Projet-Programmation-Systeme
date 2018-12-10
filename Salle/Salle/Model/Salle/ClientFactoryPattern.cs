@@ -12,7 +12,8 @@ namespace Salle.Model.Salle
         {
             ClientFactory ClientFactory = new ClientFactory();
             IClient client = ClientFactory.getClient("Client1");
-            client.prendreRepas();
+            IClient client2 = ClientFactory.getClient("Client2");
+
         }
 
     }

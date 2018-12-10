@@ -51,7 +51,11 @@
   <ItemGroup>
     <Compile Include="Model\Salle\CarreTests.cs" />
     <Compile Include="Model\Salle\ChefRangTests.cs" />
+    <Compile Include="Model\Salle\ClientFactoryPatternTest.cs" />
     <Compile Include="Model\Salle\ClientFactoryTest.cs" />
+    <Compile Include="Model\Salle\ClientImpl1Tests.cs" />
+    <Compile Include="Model\Salle\ClientImpl2Tests.cs" />
+    <Compile Include="Model\Salle\GroupeClientTest.cs" />
     <Compile Include="Model\Salle\RangTests.cs" />
     <Compile Include="Model\Salle\ServeurTests.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />

@@ -8,11 +8,13 @@ namespace Salle.Model.Salle
 {
     public class Serveur : Observer
     {
-        public int stockPain;
-        public int stockEau;
+        private int _StockEau = 1000;
+        private int _StockPain = 1000;
 
-        
+        public int StockEau { get => _StockEau; set => _StockEau = value; }
+        public int StockPain { get => _StockPain; set => _StockPain = value; }
 
+        Serveur serveur = new Serveur();
 
         public Serveur()
         {
@@ -35,11 +37,12 @@ namespace Salle.Model.Salle
 
         public void servirPain()
         { 
-           // stockPain - (client.Count);
+            StockPain = StockPain -1;
         }
 
         public void servirEau()
         {
+            StockEau = StockEau - 1;
 
         }
 
