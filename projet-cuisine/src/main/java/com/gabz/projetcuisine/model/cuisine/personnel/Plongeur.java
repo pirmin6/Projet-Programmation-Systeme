@@ -6,7 +6,10 @@ import com.gabz.projetcuisine.model.cuisine.lavage.LaveLinge;
 import com.gabz.projetcuisine.model.cuisine.lavage.LaveVaisselle;
 import com.gabz.projetcuisine.model.cuisine.repas.EtapeRecette;
 
-public class Plongeur implements ICuisinier {
+import java.util.Observable;
+import java.util.Observer;
+
+public class Plongeur implements ICuisinier, Observer {
 
     private static Plongeur instance = new Plongeur();
     private Evier evier;
@@ -71,5 +74,28 @@ public class Plongeur implements ICuisinier {
     @Override
     public void faireEtapeRecette(EtapeRecette etapeRecette) {
 
+    }
+
+    @Override
+    public void update(Observable o, Object arg) {
+
+        synchronized (this) {
+
+            if (o instanceof Evier) {
+                try {
+                    laverMateriel();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            } else if (o instanceof LaveLinge) {
+                try {
+                    laverTextile();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            } else if (o instanceof LaveVaisselle) {
+                laverVaisselle();
+            }
+        }
     }
 }

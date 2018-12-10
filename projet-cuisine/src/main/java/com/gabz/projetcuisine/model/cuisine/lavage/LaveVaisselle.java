@@ -12,8 +12,9 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Observable;
 
-public class LaveVaisselle {
+public class LaveVaisselle extends Observable {
 
     private static LaveVaisselle instance = new LaveVaisselle();
     private List<? extends Vaisselle> assiettes = new ArrayList<Assiette>();

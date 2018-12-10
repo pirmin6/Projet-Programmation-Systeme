@@ -4,8 +4,9 @@ import com.gabz.projetcuisine.model.cuisine.materiel.Materiel;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Observable;
 
-public class Evier {
+public class Evier extends Observable {
 
     private static Evier instance = new Evier();
     private List<Materiel> materiels;
@@ -36,6 +37,10 @@ public class Evier {
 
     public void ajouterMateriel(Materiel materiel) {
         this.materiels.add(materiel);
+
+        new Thread(() -> {
+            notifyObservers();
+        }).start();
     }
 
 }
