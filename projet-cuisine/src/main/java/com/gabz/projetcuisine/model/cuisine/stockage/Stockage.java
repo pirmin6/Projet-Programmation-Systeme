@@ -6,6 +6,7 @@ import com.gabz.projetcuisine.repository.StockRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -18,6 +19,10 @@ public class Stockage {
     @OneToMany
     private List<IngredientRecord> ingredients;
 
+    public Stockage() {
+        this.ingredients = new ArrayList<>();
+    }
+
     public int getTempsStockage() {
         return tempsStockage;
     }
@@ -26,8 +31,9 @@ public class Stockage {
         return ingredients;
     }
 
-    public void addIngredientRecordToStockage(IngredientRecord ingredientRecord) {
+    public void addIngredientRecordToStockage(IngredientRecord ingredientRecord, StockRepository stockRepository) {
         this.ingredients.add(ingredientRecord);
+        stockRepository.save(this);
     }
 
 }
