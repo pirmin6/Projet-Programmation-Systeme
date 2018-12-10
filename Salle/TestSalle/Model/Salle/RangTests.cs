@@ -14,6 +14,8 @@ namespace TestSalle
         private List<Table> listeTable = new List<Table>();
         int nmbreTable = 4;
 
+        public GroupeClient Null { get; private set; }
+
         [TestMethod()]
         public void RangTest()
         {
@@ -26,6 +28,31 @@ namespace TestSalle
             {
                  Assert.IsNotNull(table);
 
+            }
+        }
+
+        [TestMethod()]
+        public void TableDisponible()
+        {
+            Rang rang = new Rang(5);
+            List<Table> tableDispo = new List<Table>();
+
+            foreach (Table table in listeTable)
+            {
+                if (table.clients != Null)
+                {
+                    tableDispo.Add(table);
+                }
+            }
+
+            foreach (Table table in listeTable)
+            {
+                Assert.IsNotNull(table);
+            }
+
+            foreach (Table tableRef in tableDispo)
+            {
+                Assert.IsNotNull(tableRef);
             }
         }
     }

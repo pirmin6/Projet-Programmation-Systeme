@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Salle.Model.Salle
 {
-    public class Serveur : Observer
+    public class Serveur : IServeur
     {
         private int _StockEau = 1000;
         private int _StockPain = 1000;

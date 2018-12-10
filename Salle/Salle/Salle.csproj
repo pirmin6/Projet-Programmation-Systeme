@@ -82,6 +82,7 @@
     <Compile Include="Model\Salle\ClientImpl2.cs" />
     <Compile Include="Model\Salle\GroupeClient.cs" />
     <Compile Include="Model\Salle\IClient.cs" />
+    <Compile Include="Model\Salle\IServeur.cs" />
     <Compile Include="Model\Salle\MaitreHotel.cs" />
     <Compile Include="Model\Salle\Observable.cs" />
     <Compile Include="Model\Salle\Observer.cs" />
@@ -101,7 +102,9 @@
     <Compile Include="View\PlatView.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="obj\Debug\Salle.csproj.CoreCompileInputs.cache" />
     <None Include="obj\Debug\Salle.csprojAssemblyReference.cache" />

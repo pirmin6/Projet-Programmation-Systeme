@@ -6,14 +6,8 @@ using System.Threading.Tasks;
 
 namespace Salle.Model.Salle
 {
-    public class Table
+    public interface IServeur
     {
-        private int nbrPlaces;
-        public GroupeClient clients;
-
-        public Table()
-        {
-
-        }
+        void update();
     }
 }

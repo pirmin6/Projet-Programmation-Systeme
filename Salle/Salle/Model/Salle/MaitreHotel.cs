@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace Salle.Model.Salle
 {
-    class MaitreHotel : Observable
+    public class MaitreHotel : Observable
     {
         private Observer chefRang;
         private int Attente;
+
+        List<Table> tablesLibres;
 
         public MaitreHotel()
         {
