@@ -2,14 +2,10 @@ package com.gabz.projetcuisine.model.cuisine;
 
 import com.gabz.projetcuisine.exception.InstanciationNotAllowedException;
 import com.gabz.projetcuisine.model.common.repas.ComptoirPlatAttente;
-import com.gabz.projetcuisine.model.common.repas.Plat;
 import com.gabz.projetcuisine.model.cuisine.personnel.ChefPartie;
-import com.gabz.projetcuisine.model.cuisine.repas.Recette;
-import com.gabz.projetcuisine.model.cuisine.repas.TypeRecette;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.ArrayList;
 
 public class TestSousChef {
 
@@ -25,7 +21,7 @@ public class TestSousChef {
     @Test
     public void testCuisinerPlat() {
 
-        chefPartie1.faireRecette();
+        //chefPartie1.faireRecette();
         Assert.assertEquals(1, ComptoirPlatAttente.getComptoir().getPlats().size());
     }
 }

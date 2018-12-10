@@ -3,8 +3,6 @@ package com.gabz.projetcuisine;
 import com.gabz.projetcuisine.controller.common.CarteController;
 import com.gabz.projetcuisine.model.common.repas.Carte;
 import com.gabz.projetcuisine.model.cuisine.personnel.ChefCuisine;
-import com.gabz.projetcuisine.model.cuisine.personnel.IOrganisationImpl1;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -28,7 +26,7 @@ public class ProjetCuisineApplication extends JFrame implements CommandLineRunne
     public void simulerRestauratn() throws Exception {
 
         Carte carte = carteController.createCarte();
-        ChefCuisine chefCuisine = ChefCuisine.getInstance(carte, new IOrganisationImpl1());
+        ChefCuisine chefCuisine = ChefCuisine.getInstance(carte);
     }
 
 }

@@ -4,9 +4,10 @@ import com.gabz.projetcuisine.model.common.StockageVaisselleTextile;
 import com.gabz.projetcuisine.model.cuisine.lavage.Evier;
 import com.gabz.projetcuisine.model.cuisine.lavage.LaveLinge;
 import com.gabz.projetcuisine.model.cuisine.lavage.LaveVaisselle;
+import com.gabz.projetcuisine.model.cuisine.repas.EtapeRecette;
 import com.gabz.projetcuisine.model.cuisine.repas.Ingredient;
 
-public class Plongeur implements IPersonnelBasique {
+public class Plongeur implements ICuisinier {
 
     private static Plongeur instance = new Plongeur();
     private Evier evier;
@@ -34,11 +35,6 @@ public class Plongeur implements IPersonnelBasique {
 
     public static Plongeur getInstance() {
         return instance;
-    }
-
-    @Override
-    public void eplucherLegume(Ingredient ingredient) {
-
     }
 
     public void laverMateriel() throws InterruptedException {
@@ -70,6 +66,11 @@ public class Plongeur implements IPersonnelBasique {
     }
 
     public void viderLaveLinge() {
+
+    }
+
+    @Override
+    public void faireEtapeRecette(EtapeRecette etapeRecette) {
 
     }
 }

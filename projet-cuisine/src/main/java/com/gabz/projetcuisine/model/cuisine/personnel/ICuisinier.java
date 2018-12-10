@@ -4,5 +4,5 @@ import com.gabz.projetcuisine.model.cuisine.repas.EtapeRecette;
 
 public interface ICuisinier {
 
-    void faireEtapeRecette(EtapeRecette etapeRecette);
+    void faireEtapeRecette(EtapeRecette etapeRecette) throws InterruptedException;
 }

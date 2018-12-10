@@ -1,5 +1,7 @@
 package com.gabz.projetcuisine.model.cuisine.materiel;
 
+import com.gabz.projetcuisine.model.cuisine.lavage.Evier;
+
 import java.util.concurrent.Semaphore;
 
 public class Entonoir extends Materiel {
@@ -17,5 +19,15 @@ public class Entonoir extends Materiel {
         if (this.propre == true) {
             this.nbrInstance.release();
         }
+    }
+
+    @Override
+    public void monopoliserMateriel() throws InterruptedException {
+        nbrInstance.acquire();
+    }
+
+    @Override
+    public void poserSurEvier() {
+        Evier.getInstance().ajouterMateriel(this);
     }
 }

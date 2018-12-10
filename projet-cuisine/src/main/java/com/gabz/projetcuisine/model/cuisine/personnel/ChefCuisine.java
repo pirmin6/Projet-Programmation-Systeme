@@ -12,15 +12,13 @@ public class ChefCuisine {
     private List<ChefPartie> chefParties;
     private List<Commande> commandes;
     private Carte carte;
-    private IOrganisation organisation;
 
     private ChefCuisine() {
 
     }
 
-    public static ChefCuisine getInstance(Carte carte, IOrganisation organisation) {
+    public static ChefCuisine getInstance(Carte carte) {
         instance.setCarte(carte);
-        instance.setOrganisation(organisation);
         return instance;
     }
 
@@ -52,16 +50,11 @@ public class ChefCuisine {
         this.carte = carte;
     }
 
-    public IOrganisation getOrganisation() {
-        return organisation;
-    }
+    public void organiserCommande(Commande commande) throws InterruptedException {
 
-    public void setOrganisation(IOrganisation organisation) {
-        this.organisation = organisation;
-    }
-
-    public void organiserCommande(Commande commande) {
-        this.organisation.organiserCommande(commande);
+        for (Plat plat : commande.getPlats()) {
+            choisirChefPartie().faireRecette(plat);
+        }
     }
 
     public void ajouterPlatCarte(Plat plat) {
@@ -77,7 +70,10 @@ public class ChefCuisine {
         while (true) {
             for (ChefPartie chefParty : chefParties) {
 
-                if (chefParty.isAvailable()) return chefParty;
+                if (chefParty.isAvailable()) {
+                    chefParty.setAvailable(false);
+                    return chefParty;
+                }
             }
         }
     }

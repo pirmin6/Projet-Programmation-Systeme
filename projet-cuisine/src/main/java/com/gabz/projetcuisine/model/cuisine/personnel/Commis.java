@@ -1,6 +1,7 @@
 package com.gabz.projetcuisine.model.cuisine.personnel;
 
 import com.gabz.projetcuisine.model.common.repas.Plat;
+import com.gabz.projetcuisine.model.cuisine.repas.EtapeRecette;
 import com.gabz.projetcuisine.model.cuisine.repas.Ingredient;
 import com.gabz.projetcuisine.model.common.repas.ComptoirPlatAttente;
 import com.gabz.projetcuisine.model.cuisine.repas.IngredientRecord;
@@ -8,7 +9,7 @@ import com.gabz.projetcuisine.model.cuisine.stockage.Stockage;
 
 import java.util.List;
 
-public class Commis implements IPersonnelBasique{
+public class Commis implements ICuisinier {
 
     private static int nbrInstance = 2;
     private static List<Stockage> stockages;
@@ -39,10 +40,6 @@ public class Commis implements IPersonnelBasique{
         isAvailable = available;
     }
 
-    @Override
-    public void eplucherLegume(IngredientRecord ingredients) {
-
-    }
 
     public void chercherIngredients(List<IngredientRecord> ingredients) {
 
@@ -54,5 +51,10 @@ public class Commis implements IPersonnelBasique{
 
     public void amenerPlatComptoir(Plat plat) {
         ComptoirPlatAttente.getComptoir().addPlat(plat);
+    }
+
+    @Override
+    public void faireEtapeRecette(EtapeRecette etapeRecette) throws InterruptedException {
+
     }
 }

@@ -37,7 +37,7 @@ public abstract class Materiel {
 
     public abstract void remettreEnService();
 
-    public abstract void monopoliserMateriel();
+    public abstract void monopoliserMateriel() throws InterruptedException;
 
     public abstract void poserSurEvier();
 }

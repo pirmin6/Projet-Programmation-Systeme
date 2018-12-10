@@ -26,7 +26,9 @@ public class TestRepas {
     @Test
     public void testCarte(){
 
-        this.carte = new Carte(new Date(), new ArrayList<>(), new ArrayList<>());
+        this.plat = new Plat(new Recette("roti de porc", new ArrayList<>(), false, TypeRecette.PLAT, 4), "roti de porc" );
+
+        this.carte = new Carte(new Date(), new ArrayList<>(), plat);
         Assert.assertNotNull(carte.getJour());
         Assert.assertNotNull(carte.getPlats());
         Assert.assertNotNull(carte.getVins());

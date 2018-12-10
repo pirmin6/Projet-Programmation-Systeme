@@ -1,4 +1,4 @@
-package com.gabz.projetcuisine.controller.cuisine;
+package com.gabz.projetcuisine.controller.common;
 
 import org.springframework.stereotype.Controller;
 

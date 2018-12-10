@@ -5,7 +5,7 @@ import com.gabz.projetcuisine.model.common.textile.Textile;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LaveLinge {
+public class LaveLinge extends java.util.Observable {
 
     private static LaveLinge instance = new LaveLinge();
     private List<Textile> textileList = new ArrayList<>();

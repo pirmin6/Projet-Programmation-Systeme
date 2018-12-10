@@ -31,18 +31,18 @@ public class TestCommis {
 
         stockage.addIngredientRecordToStockage(new IngredientRecord(new Ingredient("carotte", TypeIngredient.LEGUME), 1, 50));
 
-        commis.chercherIngredient(new Ingredient("carotte", TypeIngredient.LEGUME));
+        commis.chercherIngredients(new ArrayList<>());
         Assert.assertEquals(0, stockage.getIngredients());
 
     }
 
 
     @Test
-    public void testEpluchage(){
+    public void testEpluchage() throws InterruptedException {
         this.carotte = new Ingredient("carotte", TypeIngredient.LEGUME);
         this.commis = new Commis(new ArrayList<>());
         this.recette = new Recette("carrotes rapées", new ArrayList<>(), false, TypeRecette.PLAT, 1);
-        commis.eplucherLegume(carotte);
+        commis.faireEtapeRecette(recette.getEtapes().get(0));
 
         //A compléter
     }
@@ -51,7 +51,7 @@ public class TestCommis {
     public void testJeterIngredient(){
         this.carotte = new Ingredient("carotte", TypeIngredient.LEGUME);
         this.commis = new Commis(new ArrayList<>());
-        commis.jeterIngredient(carotte);
+        commis.jeterIngredient(new IngredientRecord(carotte, 1, 1));
         Assert.assertEquals(null, carotte);
     }
 }

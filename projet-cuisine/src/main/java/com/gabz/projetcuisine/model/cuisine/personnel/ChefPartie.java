@@ -10,7 +10,7 @@ import com.gabz.projetcuisine.model.cuisine.repas.Recette;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ChefPartie {
+public class ChefPartie implements ICuisinier {
 
     private static int nbrInstances = 2;
     private List<Commis> commis;
@@ -66,9 +66,7 @@ public class ChefPartie {
         for (EtapeRecette etapeRecette: etapes) {
 
             if (etapeRecette.isFaisableParPersonnelBasique()) {
-                for (IngredientRecord ingredientRecord : etapeRecette.getIngredientRecords()) {
-                    choosenCommis.eplucherLegume(ingredientRecord);
-                }
+                    choosenCommis.faireEtapeRecette(etapeRecette);
 
             } else {
                 if (etapeRecette.isFaisableEnSimultanée()) {
@@ -87,6 +85,7 @@ public class ChefPartie {
 
         }
         choosenCommis.amenerPlatComptoir(plat);
+        this.available = true;
     }
 
     public Commis chooseAvailableCommis() {
@@ -101,7 +100,8 @@ public class ChefPartie {
         }
     }
 
-    private void faireEtapeRecette(EtapeRecette etapeRecette) throws InterruptedException {
+    @Override
+    public void faireEtapeRecette(EtapeRecette etapeRecette) throws InterruptedException {
 
         List<Materiel> materielEtape = new ArrayList<>();
         for (Materiel materiel : etapeRecette.getMateriels()) {
