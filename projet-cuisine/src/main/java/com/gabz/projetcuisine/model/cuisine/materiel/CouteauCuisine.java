@@ -8,7 +8,7 @@ public class CouteauCuisine extends Materiel {
 
     private static Semaphore nbrInstance = new Semaphore(5);
 
-    CouteauCuisine() throws InterruptedException {
+    public CouteauCuisine() throws InterruptedException {
         super();
         this.nbrInstance.acquire();
         this.tempsLavage = 30;

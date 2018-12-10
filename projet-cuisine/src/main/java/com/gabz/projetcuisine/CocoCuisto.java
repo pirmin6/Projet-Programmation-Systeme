@@ -1,10 +1,9 @@
 package com.gabz.projetcuisine;
 
-<<<<<<< HEAD
-=======
+import com.gabz.projetcuisine.model.cuisine.materiel.CouteauCuisine;
 import com.gabz.projetcuisine.model.cuisine.materiel.Materiel;
+import com.gabz.projetcuisine.model.cuisine.materiel.Poele;
 import com.gabz.projetcuisine.model.cuisine.repas.*;
->>>>>>> 93e84913b3eae39cf49279ce5176790c5f80c58f
 import com.gabz.projetcuisine.repository.RecetteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -18,29 +17,40 @@ public class CocoCuisto {
     @Autowired
     private RecetteRepository recetteRepository;
 
-<<<<<<< HEAD
-=======
-    List<EtapeRecette> listeEtapesRecette = new ArrayList<>();
+    public void poulet() throws InterruptedException {
 
-    public void feuilleteaucrabe() {
-        List<Materiel> four = new ArrayList<>();
-        List<Materiel> mixeur = new ArrayList<>();
+        List<EtapeRecette> listeEtapesRecette = new ArrayList<>();
 
+        //ON CREEE LA LISTE DES INGREDIENTS POUR LA RECETTE ESPECE DE GROS DEBILE
+        List<IngredientRecord> ingredientRecords = new ArrayList<>();
 
-        List<IngredientRecord> feuillete_etape1_ingredients = new ArrayList<>();
+        ingredientRecords.add(new IngredientRecord(new Ingredient("Poulet", TypeIngredient.VIANDE),1,1));
+        ingredientRecords.add(new IngredientRecord(new Ingredient("huile OLIVE", TypeIngredient.AUTRE), 1, 1));
 
-        IngredientRecord crabe = new IngredientRecord(new Ingredient("crabe", TypeIngredient.AUTRE), 1, 1);
-        Ingredient piment = new Ingredient("piment", TypeIngredient.LEGUME);
-        Ingredient citron = new Ingredient("citron", TypeIngredient.FRUIT);
-        Ingredient chapelure = new Ingredient("chapelure", TypeIngredient.AUTRE);
-        Ingredient herbes = new Ingredient("herbes", TypeIngredient.AUTRE);
+        //Etape 1
+        //DABORD LE MATERIEL
+        List<Materiel> materielEtape1 = new ArrayList<>();
 
-        feuillete_etape1_ingredients
+        // ENSUITE ON CREE LETAPE
+        materielEtape1.add(new CouteauCuisine());
+        EtapeRecette etape1 = new EtapeRecette("Couper le poulet en lamelles", true, 60, 1,
+                materielEtape1, false);
 
-        EtapeRecette feuillete_etape1 = new EtapeRecette("Préchauffer le four à 230° (th 7-8)", false, 30, 1, four, null, true);
-        EtapeRecette feuillete_etape2 = new EtapeRecette("Mélanger la chair de crabe, le jus de citron, la chapelure, les herbes et le piment", false, 120, 2, mixeur, herbes, false);
+        // Etape 2 ON FAIT PAREIL
+        List<Materiel> materielEtape2 = new ArrayList<>();
+        materielEtape1.add(new Poele());
+        EtapeRecette etape2 = new EtapeRecette("Cuire le poulet à la poele", false, 240, 2
+                , materielEtape2, true);
+
+        // JAJOUTE LES ETAPES CREEE A LA LISTE GROS LOURDEAU
+        listeEtapesRecette.add(etape1);
+        listeEtapesRecette.add(etape2);
+
+        // GNEUFDSFDSFS ET ENSUITE ON CREEE LA RECETTE
+        Recette recette = new Recette("Poulet à la poele", listeEtapesRecette, ingredientRecords, false, TypeRecette.PLAT, 1);
+
+        // HOHOHO ON SAUVEGARDE LA RECETTE
+        recetteRepository.save(recette);
     }
 
-
->>>>>>> 93e84913b3eae39cf49279ce5176790c5f80c58f
 }

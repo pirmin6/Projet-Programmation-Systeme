@@ -12,6 +12,8 @@ public class Recette {
     private String nom;
     @OneToMany(cascade = CascadeType.ALL)
     private List<EtapeRecette> etapes;
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<IngredientRecord> ingredients;
     private boolean prepEnAmont;
     private TypeRecette typeRecette;
     private int nbrPersonne;
@@ -40,9 +42,15 @@ public class Recette {
         return nbrPersonne;
     }
 
-    public Recette(String nom, List<EtapeRecette> etapes, boolean prepEnAmont, TypeRecette typeRecette, int nbrPersonne) {
+    public List<IngredientRecord> getIngredients() {
+        return ingredients;
+    }
+
+    public Recette(String nom, List<EtapeRecette> etapes, List<IngredientRecord> ingredients, boolean prepEnAmont,
+                   TypeRecette typeRecette, int nbrPersonne) {
         this.nom = nom;
         this.etapes = etapes;
+        this.ingredients = ingredients;
         this.prepEnAmont = prepEnAmont;
         this.typeRecette = typeRecette;
         this.nbrPersonne = nbrPersonne;
