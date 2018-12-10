@@ -6,5 +6,6 @@ public enum TypeIngredient {
     VIANDE,
     FRUIT,
     FECULENT,
+    POISSON,
     AUTRE
 }
