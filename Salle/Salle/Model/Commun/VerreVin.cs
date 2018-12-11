@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Salle.Model.Commun
 {
-    class VerreVin : Verre
+    internal class VerreVin : Verre
     {
     }
 }

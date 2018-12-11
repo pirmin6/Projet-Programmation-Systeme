@@ -11,8 +11,8 @@ namespace Salle.Model.Salle.Tests
     [TestClass()]
     public class ServeurTests
     {
-        int stockPain;
-        int stockEau;
+        private int stockPain;
+        private int stockEau;
      
 
         [TestMethod()]

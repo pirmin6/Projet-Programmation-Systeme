@@ -8,8 +8,7 @@ namespace Salle.Model.Salle
 {
     public abstract class Observable 
     {
-        List<IServeur> observers = new List<IServeur>();
-
+        private List<IServeur> observers = new List<IServeur>();
 
         public void Attach(IServeur serveur)
         {
@@ -21,9 +20,9 @@ namespace Salle.Model.Salle
             if(this.observers.Contains(serveur)) this.observers.Add(serveur);
         }
 
-        protected void NotifyObservers(Delegate action)
+        protected void NotifyObservers(string action)
         {
-            foreach (IServeur obs in this.observers) obs.update(this, Delegate action);
+            foreach (IServeur obs in this.observers) obs.update(this, string action);
         }
     }
 

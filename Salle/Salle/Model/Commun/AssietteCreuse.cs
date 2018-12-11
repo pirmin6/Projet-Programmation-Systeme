@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Salle.Model.Commun
 {
-    class AssietteCreuse : Assiette
+    internal class AssietteCreuse : Assiette
     {
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Salle.Model.Commun
 {
-    class Couteau : Couvert
+    internal class Couteau : Couvert
     {
     }
 }

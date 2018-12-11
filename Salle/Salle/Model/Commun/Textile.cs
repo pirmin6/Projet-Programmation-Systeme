@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Salle.Model.Commun
 {
-    abstract class Textile
+    internal abstract class Textile
     {
-        bool propre;
+        private bool propre;
     }
 }

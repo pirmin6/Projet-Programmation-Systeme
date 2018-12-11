@@ -8,8 +8,8 @@ namespace Salle.Model.Salle
 {
     public class Rang
     {
-        List<Table> Tables;
-        int nmbres;
+        private List<Table> Tables;
+        private int nmbres;
 
         public Rang(int nbreTables)
         {

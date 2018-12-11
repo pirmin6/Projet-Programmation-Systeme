@@ -10,8 +10,7 @@ namespace Salle.Model.Salle
     {
         private Observer chefRang;
         private int Attente;
-
-        List<Table> tablesLibres;
+        private List<Table> tablesLibres;
 
         public MaitreHotel()
         {

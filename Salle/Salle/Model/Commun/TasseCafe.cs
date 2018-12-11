@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Salle.Model.Commun
 {
-    class TasseCafe : Vaiselle
+    internal class TasseCafe : Vaiselle
     {
     }
 }

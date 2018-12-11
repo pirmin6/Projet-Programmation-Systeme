@@ -8,9 +8,9 @@ namespace Salle.Model.Commun
 {
     public class Carte
     {
-        List<Plat> plats = new List<Plat>();
-        List<Vin> vins = new List<Vin>();
-        int Date; // (string timedate.tostring)((((((
+        private List<Plat> plats = new List<Plat>();
+        private List<Vin> vins = new List<Vin>();
+        private int Date; // (string timedate.tostring)((((((
 
         public Carte()
         {

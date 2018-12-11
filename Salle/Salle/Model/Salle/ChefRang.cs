@@ -11,7 +11,7 @@ namespace Salle.Model.Salle
     {
         private Carre carre;
         private Carte carte;
-        List<Observer> groupesClients;
+        private List<Observer> groupesClients;
 
         public ChefRang()
         {

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Salle.Model.Commun
 {
-    class StockagePropre
+    internal class StockagePropre
     {
-        List<Vaiselle> vaiselleDispo = new List<Vaiselle>();
-        List<Textile> textileDispo = new List<Textile>();
+        private List<Vaiselle> vaiselleDispo = new List<Vaiselle>();
+        private List<Textile> textileDispo = new List<Textile>();
 
         public StockagePropre(List<Vaiselle> vaiselleDispo, List<Textile> textileDispo)
         {

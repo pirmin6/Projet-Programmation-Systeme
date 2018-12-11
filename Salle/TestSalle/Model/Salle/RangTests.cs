@@ -12,7 +12,7 @@ namespace TestSalle
     public class RangTests
     {
         private List<Table> listeTable = new List<Table>();
-        int nmbreTable = 4;
+        private int nmbreTable = 4;
 
         public GroupeClient Null { get; private set; }
 

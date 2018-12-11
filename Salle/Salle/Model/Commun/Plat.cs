@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Salle.Model.Commun
 {
-    class Plat
+    internal class Plat
     {
-        string recette;
-        string nom;
+        private string recette;
+        private string nom;
 
         public Plat(string recette, string nom)
         {

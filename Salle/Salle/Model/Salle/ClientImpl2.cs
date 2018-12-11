@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Salle.Model.Salle
 {
-    class ClientImpl2 : IClient
+    internal class ClientImpl2 : IClient
     {
-        string humeur = "mange lentement";
+        private string humeur = "mange lentement";
 
         public void choisirRepas()
         {

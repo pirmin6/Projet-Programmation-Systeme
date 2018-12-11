@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Salle.Model.Commun
 {
-    class StockageSale
+    internal class StockageSale
     {
-        List<Vaiselle> vaiselleSale = new List<Vaiselle>();
-        List<Textile> textileSale = new List<Textile>();
+        private List<Vaiselle> vaiselleSale = new List<Vaiselle>();
+        private List<Textile> textileSale = new List<Textile>();
     }
 }

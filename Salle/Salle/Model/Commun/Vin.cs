@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Salle.Model.Commun
 {
-    class Vin
+    internal class Vin
     {
-        string nom;
-        int annee; // dateTime.ToString https://docs.microsoft.com/fr-fr/dotnet/api/system.datetime.tostring?view=netframework-4.7.2
+        private string nom;
+        private int annee; // dateTime.ToString https://docs.microsoft.com/fr-fr/dotnet/api/system.datetime.tostring?view=netframework-4.7.2
 
         public Vin(string nom, int annee)
         {

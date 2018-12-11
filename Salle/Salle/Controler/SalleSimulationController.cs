@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Salle.Controler
 {
-    class SalleSimulationController : Observable, Observer
+    internal class SalleSimulationController : Observable, Observer
     {
         public SalleSimulationController()
         {

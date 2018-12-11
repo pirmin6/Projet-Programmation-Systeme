@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Salle.View
 {
-    class MaterielView : AbstractView
+    internal class MaterielView : AbstractView
     {
         public MaterielView()
         {

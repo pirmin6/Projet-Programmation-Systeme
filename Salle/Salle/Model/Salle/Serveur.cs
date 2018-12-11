@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace Salle.Model.Salle
 {
+    delegate void DelegateAction();
+
     public class Serveur : IServeur
     {
         public int stockPain;
         public int stockEau;
-
+        //public delegate void DelegateAction();
         
-
 
         public Serveur()
         {
@@ -48,9 +49,16 @@ namespace Salle.Model.Salle
 
         }
 
-        public void update()
+        public void update(GroupeClient groupe, DelegateAction actionNecessaire)
         {
+            Console.WriteLine("Le groupe client {0} doit être servis en {1}" );
+            //DelegateAction action = actionNecessaire;
+            actionNecessaire();
+
+            throw new NotImplementedException();
 
         }
+
+        
     }
 }

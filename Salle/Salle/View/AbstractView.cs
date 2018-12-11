@@ -8,12 +8,12 @@ namespace Salle.View
 {
     public abstract class AbstractView
     {
-        void initialiserComposant()
+        private void initialiserComposant()
         {
 
         }
 
-        void update()
+        private void update()
         {
 
         }

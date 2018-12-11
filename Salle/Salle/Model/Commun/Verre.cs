@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Salle.Model.Commun
 {
-    abstract class Verre : Vaiselle
+    internal abstract class Verre : Vaiselle
     {
     }
 }

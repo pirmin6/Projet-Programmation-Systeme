@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Salle.View
 {
-    interface IView
+    internal interface IView
     {
         void initialiserComposant();
         void update();

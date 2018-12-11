@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace Salle.Model.Salle
 {
-    public class GroupeClient : Observable, Observer
+    public class GroupeClient : Observable
     {
-     //   List<clients> clients = new List<clients>();
-        Boolean reservation;
-        //private Observer obs;
+        private Boolean reservation;
         private int _painCorbeille = 3;
         private bool _vin = true;
         private bool _eau = true;
@@ -21,7 +19,7 @@ namespace Salle.Model.Salle
             set
             {
                 this._painCorbeille = value;
-                if(this._painCorbeille == 0) this.NotifyObservers();
+                if(this._painCorbeille == 0) NotifyObservers("ManquePain");
             }
         }
 
@@ -31,7 +29,7 @@ namespace Salle.Model.Salle
             set
             {
                 this._vin = value;
-                this.NotifyObservers();
+                NotifyObservers("ManqueVin");
             }
         }
 
@@ -41,7 +39,7 @@ namespace Salle.Model.Salle
             set
             {
                 this._eau = value;
-                this.NotifyObservers();
+                NotifyObservers("ManqueEau");
             }
         }
 

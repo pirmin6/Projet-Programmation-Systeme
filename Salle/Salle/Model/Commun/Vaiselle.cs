@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Salle.Model.Commun
 {
-    abstract class Vaiselle
+    internal abstract class Vaiselle
     {
-        bool propre;
+        private bool propre;
     }
 }

@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Salle.Model.Salle
 {
-    interface Observer
+    internal interface Observer
     {
-        void update();
+        void update(Object o);
     }
 }

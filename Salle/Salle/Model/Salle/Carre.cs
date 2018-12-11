@@ -9,7 +9,7 @@ namespace Salle.Model.Salle
     public class Carre
     {
         private List<Rang> listeRang = new List<Rang>();
-        int nmbreRang = 6;
+        private int nmbreRang = 6;
 
         public Carre(int nbreCarres, int nbreTables)
         {

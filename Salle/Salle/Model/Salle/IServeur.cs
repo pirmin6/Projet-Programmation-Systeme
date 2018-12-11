@@ -8,6 +8,6 @@ namespace Salle.Model.Salle
 {
     public interface IServeur
     {
-        void update();
+        void update(GroupeClient groupe, DelegateAction actionNecessaire);
     }
 }

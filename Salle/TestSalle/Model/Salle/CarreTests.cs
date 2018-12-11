@@ -12,7 +12,7 @@ namespace TestSalle
     public class CarreTests
     {
         private List<Rang> listeRang = new List<Rang>();
-        int nmbreRang = 6;
+        private int nmbreRang = 6;
 
         [TestMethod()]
         public void CarreTest()

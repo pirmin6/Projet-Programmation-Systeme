@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Salle.Controler
 {
-    class Iencodagelmpl1
+    internal class Iencodagelmpl1
     {
     }
 }

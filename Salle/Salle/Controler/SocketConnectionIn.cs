@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Salle.Controler
 {
-    class SocketConnectionIn
+    internal class SocketConnectionIn
     {
     }
 }
