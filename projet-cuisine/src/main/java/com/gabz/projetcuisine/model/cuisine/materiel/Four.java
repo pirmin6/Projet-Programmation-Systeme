@@ -8,7 +8,7 @@ public class Four extends Materiel {
 
     private static Semaphore nbrInstance = new Semaphore(1);
 
-    Four() throws InterruptedException {
+    public Four() throws InterruptedException {
         super();
         this.nbrInstance.acquire();
         this.tempsLavage = 0;

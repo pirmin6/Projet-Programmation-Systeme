@@ -8,7 +8,7 @@ public class BolSalade extends Materiel {
 
     private static Semaphore nbrInstance = new Semaphore(5);
 
-    BolSalade() throws InterruptedException {
+    public BolSalade() throws InterruptedException {
         super();
         this.nbrInstance.acquire();
         this.tempsLavage = 30;
