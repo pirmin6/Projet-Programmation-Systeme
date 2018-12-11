@@ -230,8 +230,23 @@ public class CocoCuisto {
                 "Sortez la pâte et laissez la reposer pendant que vous préparez l’appareil.", true, 1800000, 1, null, true);
         EtapeRecette etape2 = new EtapeRecette("Durant la pré-cuisson de la pâte, prenez les lardons et faites les cuire à la poêle à feu vif, durant la cuisson égouttez les avec une passoire afin de faire partir leur graisse ayant fondu, le but étant de les griller légèrement pour leur donner davantage de saveur.", false, 600000, 2, null, false);
 
-        EtapeRecette etape3 = new EtapeRecette("")
+        List<String> materielEtape3 = new ArrayList<>();
+        materielEtape3.add(BolSalade.class.getName());
+        EtapeRecette etape3 = new EtapeRecette("Prenez le saladier et cassez-y les 3 œufs puis versez la crème fraîche.\n" +
+                "Mélangez les œufs et la crème fraiche avec le fouet.\n" +
+                "Rajoutez progressivement le lait tout en continuant à mélanger avec le fouet\n" +
+                "Ajoutez le Sel et le poivre\n" +
+                "Puis la Muscade\n" +
+                "Etalez les morceaux de poulet sur la pâte précuite de manière harmonieuse et régulière.\n" +
+                "Versez dessus l’appareil à Quiche Lorraine\n" +
+                "Saupoudrez de manière régulière la Quiche Lorraine avec l’emmental.\n", false, 60000, 2, materielEtape3, false);
+        List<String> materielEtape4 = new ArrayList<>();
+        materielEtape4.add(Four.class.getName());
+        EtapeRecette etape4 = new EtapeRecette("Enfournez la Quiche Lorraine durant 30 minutes à 250°C", false, 2400000, 4, materielEtape4, true);
 
+        Recette recette = new Recette("quichelorrainepoulet", listeEtapesRecette, IngredientRecords, false, TypeRecette.ENTREE);
+        recetteRepository.save(recette);
+        return recette;
     }
 
 
