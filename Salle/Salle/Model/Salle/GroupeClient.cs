@@ -10,7 +10,7 @@ namespace Salle.Model.Salle
     {
         List<IClient> Clients;
         Boolean reservation;
-        /*
+        
         private int _painCorbeille = 3;
         private bool _vin = true;
         private bool _eau = true;
@@ -20,7 +20,7 @@ namespace Salle.Model.Salle
         public int PainCorbeille
         {
             get { return this._painCorbeille; }
-            internal set
+            set
             {
                 this._painCorbeille = value;
                 if(this._painCorbeille == 0) NotifyObservers("ManquePain");
@@ -30,7 +30,7 @@ namespace Salle.Model.Salle
         public bool Vin
         {
             get { return this._vin; }
-            internal set
+            set
             {
                 this._vin = value;
                 NotifyObservers("ManqueVin");
@@ -40,13 +40,13 @@ namespace Salle.Model.Salle
         public bool Eau
         {
             get { return this._eau; }
-            internal set
+            set
             {
                 this._eau = value;
                 NotifyObservers("ManqueEau");
             }
         }
-        */
+        
 
         public GroupeClient()
         {

@@ -10,7 +10,14 @@ namespace Salle.Model.Salle
     public class ClientImpl2 : IClient
 
     {
+
+
+        bool _Plat = false;
+
+        public bool Plat { get => Plat; set => Plat = value; }
+
         private string humeur = "mange lentement";
+
 
         public void choisirRepas()
         {
@@ -37,12 +44,17 @@ namespace Salle.Model.Salle
 
         public void commanderPain(Serveur serveur)
         {
+<<<<<<< HEAD
             //serveur.servirPain(this);
+=======
+            serveur.servirPain(GroupeClient groupe);
+>>>>>>> da84cefb9689233a6569ec9f080083b07d53ed9e
         }
 
         public void mangerPlat()
         {
-
+            // sleep
+            // Plat = false;
         }
 
         public void prendreRepas()

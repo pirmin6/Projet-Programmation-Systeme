@@ -8,12 +8,14 @@ namespace Salle.Model.Salle
 {
     public class ClientImpl1 : IClient
     {
-        private string humeur = "préssé";
 
+        bool _Plat = false;
+
+        public bool Plat { get => Plat; set => Plat = value; }
 
         public void prendreRepas()
         {
-            
+            // Repas = true;
         }
 
         public void choisirRepas()
@@ -29,7 +31,8 @@ namespace Salle.Model.Salle
 
         public void mangerPlat()
         {
-
+            // sleep
+            //Plat = false;
         }
 
         public void commanderVin(Serveur serveur)

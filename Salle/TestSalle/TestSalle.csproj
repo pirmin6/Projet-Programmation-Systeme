@@ -51,7 +51,11 @@
   <ItemGroup>
     <Compile Include="Model\Salle\CarreTests.cs" />
     <Compile Include="Model\Salle\ChefRangTests.cs" />
-    <Compile Include="Model\Salle\UnitTest1.cs" />
+
+    <Compile Include="Model\Salle\ClientImpl1Tests.cs" />
+    <Compile Include="Model\Salle\GroupeClientTest.cs" />
+    <Compile Include="Model\Salle\ServeurTests.cs" />
+
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

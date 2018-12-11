@@ -30,9 +30,12 @@ namespace Salle.Model.Salle
 
         }
 
-        public void servirClients()
+        public void servirClients(ClientImpl1 client, ClientImpl2 client2)
         {
-
+            // sleep();
+            client.Plat = false;
+            client2.Plat = false;
+                
         }
 
         public void debarrasserTable()
@@ -40,11 +43,13 @@ namespace Salle.Model.Salle
 
         }
 
-        public void servirPain(GroupeClient groupe)
-        {
+
+        public void servirPain()
+        { 
+
             StockPain = StockPain -1;
-            Console.WriteLine("le serveur sert du pain chez le client {0}", groupe);
-            groupe.PainCorbeille = 1;
+            
+
         }
 
         public void servirEau(GroupeClient groupe)

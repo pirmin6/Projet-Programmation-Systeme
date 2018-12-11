@@ -8,16 +8,20 @@ namespace Salle.Model.Salle
 {
     public class Rang
     {
-        private List<Table> Tables;
-        private int nmbres;
+        List<Table> Tables;
+
+        int nmbreTables;
+
 
         public Rang(int nbreTables)
         {
             Tables = new List<Table>();
-            for (int i = 1; i <= nbreTables; i++)
+            for (int i = 0; i < nbreTables; i++)
             {
-                Tables.Add(new Table());
+                Tables.Add(new Table(i));
             }
+
+
         }
 /*
         public void TableDisponible()
