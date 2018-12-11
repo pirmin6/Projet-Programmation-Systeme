@@ -1,5 +1,6 @@
 package com.gabz.projetcuisine.model.cuisine;
 
+import com.gabz.projetcuisine.exception.InstanciationNotAllowedException;
 import com.gabz.projetcuisine.model.common.repas.Carte;
 import com.gabz.projetcuisine.model.common.repas.Plat;
 import com.gabz.projetcuisine.model.cuisine.personnel.ChefCuisine;
@@ -13,8 +14,12 @@ import java.util.List;
 
 public class TestChefCuisine {
 
-    private Carte carte = new Carte(new Date(), new ArrayList<>(), new Plat(null, "test"));
+    private Plat plat = new Plat(null, "test");
+    private Carte carte = new Carte(new Date(), new ArrayList<>(), plat);
     private ChefCuisine chefCuisine = ChefCuisine.getInstance(carte);
+
+    public TestChefCuisine() throws InstanciationNotAllowedException {
+    }
 
     @Test
     public void testConstructeur() {
@@ -26,24 +31,23 @@ public class TestChefCuisine {
     public void testChoixSousChef() throws InterruptedException {
 
         List<ChefPartie> chefsPartie = new ArrayList<>();
-        chefsPartie.add(new ChefPartie());
-        chefsPartie.add(new ChefPartie());
-        chefCuisine.setChefParties(chefsPartie);
 
         chefCuisine.getChefParties().get(0).setAvailable(false);
         chefCuisine.getChefParties().get(1).setAvailable(true);
-        chefCuisine.choisirChefPartie();
+        Assert.assertEquals(chefCuisine.getChefParties().get(1), chefCuisine.choisirChefPartie());
         Assert.assertFalse(chefCuisine.getChefParties().get(1).isAvailable());
     }
-/*
+
     @Test
     public void testChangerCarte() {
+
+        chefCuisine.retirerPlatCarte();
+        Assert.assertNull(carte.getPlats());
 
         chefCuisine.ajouterPlatCarte(plat);
         Assert.assertNotNull(carte.getPlats());
 
-        chefCuisine.retirerPlatCarte();
-        Assert.assertNull(carte.getPlats());
     }
-*/
+
+
 }

@@ -1,37 +1,50 @@
 package com.gabz.projetcuisine.model.cuisine.personnel;
 
+import com.gabz.projetcuisine.exception.InstanciationNotAllowedException;
 import com.gabz.projetcuisine.model.common.repas.Carte;
 import com.gabz.projetcuisine.model.common.repas.Commande;
 import com.gabz.projetcuisine.model.common.repas.Plat;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ChefCuisine {
 
-    private static ChefCuisine instance = new ChefCuisine();
+    private static int nbrInstance = 0;
+    private static ChefCuisine instance;
     private List<ChefPartie> chefParties;
     private List<Commande> commandes;
     private Carte carte;
 
-    private ChefCuisine() {
+    private ChefCuisine() throws InstanciationNotAllowedException {
 
+        chefParties = new ArrayList<>();
+        chefParties.add(new ChefPartie());
+        chefParties.add(new ChefPartie());
     }
 
-    public static ChefCuisine getInstance(Carte carte) {
+    public static ChefCuisine getInstance(Carte carte) throws InstanciationNotAllowedException {
+
+        if (nbrInstance > 0)  {
+            return instance;
+        }
+        instance = new ChefCuisine();
         instance.setCarte(carte);
         return instance;
     }
 
-    public static void setInstance(ChefCuisine instance) {
-        ChefCuisine.instance = instance;
+    public static ChefCuisine getInstance() throws InstanciationNotAllowedException {
+
+        if (nbrInstance > 0)  {
+            return instance;
+        }
+        nbrInstance++;
+        instance = new ChefCuisine();
+        return instance;
     }
 
     public List<ChefPartie> getChefParties() {
         return chefParties;
-    }
-
-    public void setChefParties(List<ChefPartie> chefParties) {
-        this.chefParties = chefParties;
     }
 
     public List<Commande> getCommandes() {

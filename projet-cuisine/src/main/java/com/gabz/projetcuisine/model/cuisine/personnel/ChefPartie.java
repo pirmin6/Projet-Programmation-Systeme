@@ -1,5 +1,6 @@
 package com.gabz.projetcuisine.model.cuisine.personnel;
 
+import com.gabz.projetcuisine.exception.InstanciationNotAllowedException;
 import com.gabz.projetcuisine.model.common.repas.ComptoirPlatAttente;
 import com.gabz.projetcuisine.model.common.repas.Plat;
 import com.gabz.projetcuisine.model.cuisine.materiel.Materiel;
@@ -13,13 +14,16 @@ import java.util.List;
 
 public class ChefPartie implements ICuisinier {
 
-    private static int nbrInstances = 2;
+    private static int nbrInstances = 0;
     private List<Commis> commis;
     private Plongeur plongeur;
     private boolean available;
     private MaterielFactory materielFactory;
 
-    public ChefPartie() {
+    public ChefPartie() throws InstanciationNotAllowedException {
+
+        nbrInstances++;
+        if (nbrInstances > 2 ) throw new InstanciationNotAllowedException();
 
         materielFactory = MaterielFactory.getMaterielFactory();
 
@@ -126,4 +130,9 @@ public class ChefPartie implements ICuisinier {
         }
     }
 
+    @Override
+    protected void finalize() throws Throwable {
+        super.finalize();
+        nbrInstances --;
+    }
 }
