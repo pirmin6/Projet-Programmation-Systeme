@@ -40,7 +40,7 @@ namespace Salle.Model.Salle.Tests
         {
             Serveur serveur = new Serveur();
             int StockBase = serveur.StockEau;
-            serveur.servirEau();
+            //serveur.servirEau();
             int stockFinal = serveur.StockEau;
             Assert.AreNotEqual(StockBase, stockFinal);
         }
@@ -50,7 +50,7 @@ namespace Salle.Model.Salle.Tests
         {
             Serveur serveur = new Serveur();
             int StockBase = serveur.StockPain;
-            serveur.servirPain();
+            //serveur.servirPain();
             int stockFinal = serveur.StockPain;
             Assert.AreNotEqual(StockBase, stockFinal);
         }

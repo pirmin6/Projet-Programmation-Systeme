@@ -21,7 +21,7 @@ namespace TestSalle
         {
             for (int i = 0; i < nmbreTable; i++)
             {
-                listeTable.Add(new Table());
+                //listeTable.Add(new Table());
             }
 
             foreach (Table table in listeTable)
@@ -39,7 +39,7 @@ namespace TestSalle
 
             foreach (Table table in listeTable)
             {
-                if (table.clients != Null)
+                //if (table.clients != Null)
                 {
                     tableDispo.Add(table);
                 }

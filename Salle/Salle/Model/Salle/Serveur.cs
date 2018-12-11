@@ -44,11 +44,11 @@ namespace Salle.Model.Salle
         }
 
 
-        public void servirPain()
+        public void servirPain(GroupeClient groupe)
         { 
-
             StockPain = StockPain -1;
-            
+            Console.WriteLine("le serveur sert du pain chez le client {0}", groupe);
+            groupe.PainCorbeille = 1;
 
         }
 

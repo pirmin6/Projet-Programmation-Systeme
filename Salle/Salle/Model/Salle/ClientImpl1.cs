@@ -50,7 +50,5 @@ namespace Salle.Model.Salle
         {
             //serveur.servirPain();
         }
-
-
     }
 }

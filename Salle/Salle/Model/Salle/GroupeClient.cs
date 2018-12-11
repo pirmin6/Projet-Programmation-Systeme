@@ -10,7 +10,7 @@ namespace Salle.Model.Salle
     {
         List<IClient> Clients;
         Boolean reservation;
-        
+
         private int _painCorbeille = 3;
         private bool _vin = true;
         private bool _eau = true;
@@ -23,7 +23,7 @@ namespace Salle.Model.Salle
             set
             {
                 this._painCorbeille = value;
-                if(this._painCorbeille == 0) NotifyObservers("ManquePain");
+                if (this._painCorbeille == 0) NotifyObservers("ManquePain");
             }
         }
 
@@ -33,7 +33,7 @@ namespace Salle.Model.Salle
             set
             {
                 this._vin = value;
-                NotifyObservers("ManqueVin");
+                if (this._vin == false) NotifyObservers("ManqueVin");
             }
         }
 
@@ -43,14 +43,14 @@ namespace Salle.Model.Salle
             set
             {
                 this._eau = value;
-                NotifyObservers("ManqueEau");
+                if (this._eau == false) NotifyObservers("ManqueEau");
             }
         }
-        
+
 
         public GroupeClient()
         {
-            GroupeClient groupeClient = new GroupeClient();
+            //GroupeClient groupeClient = new GroupeClient();
 
             List<string> ClientType = new List<string>();
             ClientType.Add("Client1");

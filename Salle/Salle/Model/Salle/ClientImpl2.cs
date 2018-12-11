@@ -44,11 +44,6 @@ namespace Salle.Model.Salle
 
         public void commanderPain(Serveur serveur)
         {
-<<<<<<< HEAD
-            //serveur.servirPain(this);
-=======
-            serveur.servirPain(GroupeClient groupe);
->>>>>>> da84cefb9689233a6569ec9f080083b07d53ed9e
         }
 
         public void mangerPlat()
