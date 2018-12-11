@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Salle.Model.Salle
+/*namespace Salle.Model.Salle
 {
     public abstract class Observable 
     {
@@ -27,3 +27,4 @@ namespace Salle.Model.Salle
     }
 
 }
+*/

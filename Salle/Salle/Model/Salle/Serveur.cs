@@ -26,9 +26,12 @@ namespace Salle.Model.Salle
 
         }
 
-        public void servirClients()
+        public void servirClients(ClientImpl1 client, ClientImpl2 client2)
         {
-
+            // sleep();
+            client.Plat = false;
+            client2.Plat = false;
+                
         }
 
         public void debarrasserTable()
@@ -38,7 +41,9 @@ namespace Salle.Model.Salle
 
         public void servirPain()
         { 
+
             StockPain = StockPain -1;
+            
         }
 
         public void servirEau()

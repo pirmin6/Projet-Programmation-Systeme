@@ -6,6 +6,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+namespace Salle.Model.Salle.Tests
+{
+    [TestClass()]
+    public class CarreTests
+    {
+        private List<Rang> listeRang = new List<Rang>();
+        int nmbreRang = 6;
+        [TestMethod()]
+        public void CarreTest()
+        {
+            
+            for (int i = 0; i <= nmbreRang; i++)
+            {
+                listeRang.Add(new Rang(i));
+            }
+            int test = listeRang.Count();
+            Assert.AreEqual(nmbreRang, test);
+        }
+
+
+    }
+}
+
 namespace TestSalle
 {
     [TestClass()]

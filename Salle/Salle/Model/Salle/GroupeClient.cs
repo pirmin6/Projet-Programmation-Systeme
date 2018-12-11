@@ -8,7 +8,12 @@ namespace Salle.Model.Salle
 {
     public class GroupeClient : Observable
     {
+
+
+        public List<IClient> Clients;
+
         List<IClient> Clients;
+
         Boolean reservation;
 
         private int _painCorbeille = 3;
@@ -56,7 +61,7 @@ namespace Salle.Model.Salle
             ClientType.Add("Client1");
             ClientType.Add("Client2");
 
-            List<IClient> Clients = new List<IClient>();
+            new List<IClient>();
             Random random = new Random();
             int rdmNb = random.Next(1, 10);
 
