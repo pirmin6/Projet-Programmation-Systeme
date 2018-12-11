@@ -18,7 +18,7 @@ public class CocoCuisto {
     @Autowired
     private RecetteRepository recetteRepository;
 
-    public void poulet() throws InterruptedException {
+    public Recette poulet() throws InterruptedException {
 
         List<EtapeRecette> listeEtapesRecette = new ArrayList<>();
 
@@ -34,13 +34,13 @@ public class CocoCuisto {
 
         // ENSUITE ON CREE LETAPE
         materielEtape1.add(CouteauCuisine.class.toString());
-        EtapeRecette etape1 = new EtapeRecette("Couper le poulet en lamelles", true, 60, 1,
+        EtapeRecette etape1 = new EtapeRecette("Couper le poulet en lamelles", true, 60000, 1,
                 materielEtape1, false);
 
         // Etape 2 ON FAIT PAREIL
         List<String> materielEtape2 = new ArrayList<>();
         materielEtape2.add(Poele.class.toString());
-        EtapeRecette etape2 = new EtapeRecette("Cuire le poulet à la poele", false, 240, 2, materielEtape2, true);
+        EtapeRecette etape2 = new EtapeRecette("Cuire le poulet à la poele", false, 240000, 2, materielEtape2, true);
 
         // JAJOUTE LES ETAPES CREEE A LA LISTE GROS LOURDEAU
         listeEtapesRecette.add(etape1);
@@ -51,9 +51,10 @@ public class CocoCuisto {
 
         // HOHOHO ON SAUVEGARDE LA RECETTE
         recetteRepository.save(recette);
+        return recette;
     }
 
-    public void feuilletecrabe() throws InterruptedException {
+    public Recette feuilletecrabe() throws InterruptedException {
 
         List<EtapeRecette> listeEtapesRecette = new ArrayList<>();
 
@@ -77,16 +78,16 @@ public class CocoCuisto {
 
         List<String> materielEtape2 = new ArrayList<>();
         materielEtape2.add(CouteauCuisine.class.toString());
-        EtapeRecette etape2 = new EtapeRecette("Découper 4 disques dans la pâte feuilletée et répartir la farce sur la moitié de chaque disque, en laissant 1 cm de rebord", false, 60, 2, materielEtape2, false);
+        EtapeRecette etape2 = new EtapeRecette("Découper 4 disques dans la pâte feuilletée et répartir la farce sur la moitié de chaque disque, en laissant 1 cm de rebord", false, 60000, 2, materielEtape2, false);
 
-        EtapeRecette etape3 = new EtapeRecette("Rabattre l'autre moitié et souder", false, 60, 3, null, false);
+        EtapeRecette etape3 = new EtapeRecette("Rabattre l'autre moitié et souder", false, 60000, 3, null, false);
 
-        EtapeRecette etape4 = new EtapeRecette("Badigeonner les feuilletés avec un oeuf battu et salé, puis strier avec une fourchette", true, 60, 4, null, false);
+        EtapeRecette etape4 = new EtapeRecette("Badigeonner les feuilletés avec un oeuf battu et salé, puis strier avec une fourchette", true, 60000, 4, null, false);
 
 
         List<String> materielEtape5 = new ArrayList<>();
         materielEtape5.add(Four.class.toString());
-        EtapeRecette etape5 = new EtapeRecette("Mettre au four à 180° (th 6) pendant 20mn minimum", true, 1200, 5, materielEtape5, true);
+        EtapeRecette etape5 = new EtapeRecette("Mettre au four à 180° (th 6) pendant 20mn minimum", true, 1200000, 5, materielEtape5, true);
 
         listeEtapesRecette.add(etape1);
         listeEtapesRecette.add(etape2);
@@ -96,9 +97,10 @@ public class CocoCuisto {
 
         Recette recette = new Recette("Feuilleté de crabe", listeEtapesRecette, IngredientRecords, false, TypeRecette.ENTREE);
         recetteRepository.save(recette);
+        return recette;
     }
 
-    public void oeufscocotte() throws InterruptedException{
+    public Recette oeufscocotte() throws InterruptedException{
         List<EtapeRecette> listeEtapesRecette = new ArrayList<>();
         List<IngredientRecord> IngredientRecords = new ArrayList<>();
 
@@ -106,10 +108,10 @@ public class CocoCuisto {
         IngredientRecords.add(new IngredientRecord(new Ingredient("gruyère", TypeIngredient.AUTRE), 1, 15));
         IngredientRecords.add(new IngredientRecord(new Ingredient("crème fraiche", TypeIngredient.AUTRE), 1, 15));
 
-        EtapeRecette etape1 = new EtapeRecette("Séparer les blancs des jaunes et laisser ces derniers dans une demi-coquille", true, 30, 1, null, false);
-        EtapeRecette etape2 = new EtapeRecette("Monter les blancs en neige et incorporer un sachet de râpé", false, 60, 2, null, false);
-        EtapeRecette etape3 = new EtapeRecette("Mettre cette préparation dans un ramequin et faîtes un trou pour y loger un jaune d'oeuf", false, 60, 3, null, false );
-        EtapeRecette etape4 = new EtapeRecette("Rajouter un peu de crème fraîche sur le jaune, poivrer et saler", true, 20, 4, null, false);
+        EtapeRecette etape1 = new EtapeRecette("Séparer les blancs des jaunes et laisser ces derniers dans une demi-coquille", true, 30000, 1, null, false);
+        EtapeRecette etape2 = new EtapeRecette("Monter les blancs en neige et incorporer un sachet de râpé", false, 60000, 2, null, false);
+        EtapeRecette etape3 = new EtapeRecette("Mettre cette préparation dans un ramequin et faîtes un trou pour y loger un jaune d'oeuf", false, 60000, 3, null, false );
+        EtapeRecette etape4 = new EtapeRecette("Rajouter un peu de crème fraîche sur le jaune, poivrer et saler", true, 20000, 4, null, false);
 
         List<String> materielEtape5 = new ArrayList<>();
         materielEtape5.add(Four.class.toString());
@@ -123,9 +125,10 @@ public class CocoCuisto {
 
         Recette recette = new Recette("oeufs cocotte", listeEtapesRecette, IngredientRecords, false, TypeRecette.ENTREE);
         recetteRepository.save(recette);
+        return recette;
     }
 
-    public void gaspacho() throws InterruptedException{
+    public Recette gaspacho() throws InterruptedException{
         List<EtapeRecette> listeEtapesRecette = new ArrayList<>();
         List<IngredientRecord> IngredientRecords = new ArrayList<>();
 
@@ -139,11 +142,11 @@ public class CocoCuisto {
 
         List<String> materielEtape1 = new ArrayList<>();
         materielEtape1.add(CouteauCuisine.class.toString());
-        EtapeRecette etape1 = new EtapeRecette("Au fond d'un saladier, mettre un crouton de pain rassi, rajouter l'huile d'olive, le vinaigre puis les lègumes coupés. Saler et poivrer.", true, 60, 1, materielEtape1, false);
-        EtapeRecette etape2 = new EtapeRecette("Placer le récipient au frigo pour la nuit", true, 28800, 2, null, true);
+        EtapeRecette etape1 = new EtapeRecette("Au fond d'un saladier, mettre un crouton de pain rassi, rajouter l'huile d'olive, le vinaigre puis les lègumes coupés. Saler et poivrer.", true, 60000, 1, materielEtape1, false);
+        EtapeRecette etape2 = new EtapeRecette("Placer le récipient au frigo pour la nuit", true, 28800000, 2, null, true);
         List<String> materielEtape3 = new ArrayList<>();
         materielEtape3.add(Tamis.class.toString());
-        EtapeRecette etape3 = new EtapeRecette("mixer et passer au tamis, Servir avec les mêmes lègumes coupés en petits morceaux sur du pain grillés à l'huile d'olive", true, 120, 3, materielEtape3, false);
+        EtapeRecette etape3 = new EtapeRecette("mixer et passer au tamis, Servir avec les mêmes lègumes coupés en petits morceaux sur du pain grillés à l'huile d'olive", true, 120000, 3, materielEtape3, false);
 
         listeEtapesRecette.add(etape1);
         listeEtapesRecette.add(etape2);
@@ -152,9 +155,10 @@ public class CocoCuisto {
         Recette recette = new Recette("gaspacho", listeEtapesRecette, IngredientRecords, true, TypeRecette.ENTREE);
 
         recetteRepository.save(recette);
+        return recette;
     }
 
-    public void patedesanglier() throws InterruptedException {
+    public Recette patedesanglier() throws InterruptedException {
 
         List<EtapeRecette> listeEtapesRecette = new ArrayList<>();
         List<IngredientRecord> IngredientRecords = new ArrayList<>();
@@ -167,9 +171,9 @@ public class CocoCuisto {
 
         List<String> materielEtape1 = new ArrayList<>();
         materielEtape1.add(CouteauCuisine.class.toString());
-        EtapeRecette etape1 = new EtapeRecette("Hacher les viandes puis bien mélanger le tout. Parfumer (truffes, herbes etc….) puis remplir les bocaux en tassant un peu", false, 300, 1, materielEtape1, false);
-        EtapeRecette etape2 = new EtapeRecette("Faire cuire les bocaux au four au bain marie pendant 2 heures puis les retirer immédiatement, les fermer", true, 7200, 2, null, true);
-        EtapeRecette etape3 = new EtapeRecette("les placer dans un couscoussier rempli d’eau chaude avec un torchon au fond puis des pierres dessus et faire cuire encore 1 heure ½. Les laisser dans le couscoussier jusqu’à refroidissement total", true, 7200, 3, null, true);
+        EtapeRecette etape1 = new EtapeRecette("Hacher les viandes puis bien mélanger le tout. Parfumer (truffes, herbes etc….) puis remplir les bocaux en tassant un peu", false, 300000, 1, materielEtape1, false);
+        EtapeRecette etape2 = new EtapeRecette("Faire cuire les bocaux au four au bain marie pendant 2 heures puis les retirer immédiatement, les fermer", true, 7200000, 2, null, true);
+        EtapeRecette etape3 = new EtapeRecette("les placer dans un couscoussier rempli d’eau chaude avec un torchon au fond puis des pierres dessus et faire cuire encore 1 heure ½. Les laisser dans le couscoussier jusqu’à refroidissement total", true, 7200000, 3, null, true);
 
         listeEtapesRecette.add(etape1);
         listeEtapesRecette.add(etape2);
@@ -178,17 +182,35 @@ public class CocoCuisto {
         Recette recette = new Recette("pâté de sanglier", listeEtapesRecette, IngredientRecords, true, TypeRecette.ENTREE);
 
         recetteRepository.save(recette);
+        return recette;
 
     }
 
-    public void tartethon() throws InterruptedException {
+    public Recette tartethon() throws InterruptedException {
 
         List<EtapeRecette> listeEtapesRecette = new ArrayList<>();
         List<IngredientRecord> IngredientRecords = new ArrayList<>();
 
         IngredientRecords.add(new IngredientRecord(new Ingredient("farine", TypeIngredient.AUTRE), 1, 365));
         IngredientRecords.add(new IngredientRecord(new Ingredient("lait", TypeIngredient.AUTRE), 1, 20));
+        IngredientRecords.add(new IngredientRecord(new Ingredient("champignon", TypeIngredient.LEGUME), 1, 20));
+        IngredientRecords.add(new IngredientRecord(new Ingredient("thon", TypeIngredient.POISSON), 1, 20));
+        IngredientRecords.add(new IngredientRecord(new Ingredient("gruyère", TypeIngredient.AUTRE), 1, 25));
+        IngredientRecords.add(new IngredientRecord(new Ingredient("pate feuilleté", TypeIngredient.AUTRE), 1, 10));
+        IngredientRecords.add(new IngredientRecord(new Ingredient("beurre", TypeIngredient.AUTRE), 1, 20));
+
+        EtapeRecette etape1 = new EtapeRecette("Etaler la pate dans un moule, Faire fondre le beurre, y ajouter la farine et le lait petit à petit, Bien mélanger à l'aide d'un fouet jusqu’à épaississement, saler et poivrer. Egoutter le thon et les champignons puis les ajouter à la béchamelle, Mettre l'appareil sur la pate et parsemer de gruyère", false, 600, 1, null, false);
+        List<String> materielEtape2 = new ArrayList<>();
+        materielEtape2.add(Four.class.toString());
+        EtapeRecette etape2 = new EtapeRecette("mettre au four 20min", true, 1200000, 2, materielEtape2, true);
+
+
+        listeEtapesRecette.add(etape1);
+        listeEtapesRecette.add(etape1);
+
+        Recette recette = new Recette("tarte au thon", listeEtapesRecette, IngredientRecords, false, TypeRecette.ENTREE);
+        recetteRepository.save(recette);
+        return recette;
+
     }
-
-
-}
+    }
