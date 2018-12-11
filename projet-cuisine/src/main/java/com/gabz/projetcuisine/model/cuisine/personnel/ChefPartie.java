@@ -21,6 +21,9 @@ public class ChefPartie implements ICuisinier {
 
         available = true;
         plongeur = Plongeur.getInstance();
+        commis = new ArrayList<>();
+        commis.add(new Commis(new ArrayList<>()));
+        commis.add(new Commis(new ArrayList<>()));
     }
 
     public List<Commis> getCommis() {
@@ -52,12 +55,9 @@ public class ChefPartie implements ICuisinier {
         Recette recette = plat.getRecette();
         this.available = false;
         List<EtapeRecette> etapes = recette.getEtapes();
-        List<IngredientRecord> recipeIngredients = new ArrayList<>();
+        List<IngredientRecord> recipeIngredients = recette.getIngredients();
 
         // recup tout les ingredients pour la recette
-        for (EtapeRecette etape : etapes) {
-            recipeIngredients.addAll(etape.getIngredientRecords());
-        }
 
         Commis choosenCommis = chooseAvailableCommis();
 

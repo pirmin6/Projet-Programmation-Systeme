@@ -1,6 +1,7 @@
 package com.gabz.projetcuisine.model.cuisine.lavage;
 
 import com.gabz.projetcuisine.model.cuisine.materiel.Materiel;
+import com.gabz.projetcuisine.model.cuisine.personnel.Plongeur;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +14,7 @@ public class Evier extends Observable {
 
     private Evier() {
         this.materiels = new ArrayList<>();
+        addObserver(Plongeur.getInstance());
     }
 
     public static Evier getInstance() {
@@ -27,7 +29,7 @@ public class Evier extends Observable {
 
         for (Materiel materiel: materiels) {
             Thread.sleep((long) materiel.getTempsLavage());
-            materiel.setPropre(true);
+            materiel.remettreEnService();
         }
 
         List<Materiel> materielOut = materiels;

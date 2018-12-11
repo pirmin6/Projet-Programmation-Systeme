@@ -23,7 +23,7 @@ public class TestRepas {
     private Plat plat;
     private Vin vin;
 
-    @Test
+   /* @Test
     public void testCarte(){
 
         this.plat = new Plat(new Recette("roti de porc", new ArrayList<>(), false, TypeRecette.PLAT, 4), "roti de porc" );
@@ -55,7 +55,7 @@ public class TestRepas {
         Assert.assertNotNull(vin.getName());
         Assert.assertNotNull(vin.getYear());
 
-    }
+    }*/
 
 
 }

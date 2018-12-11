@@ -14,7 +14,7 @@ public class TestCommis {
     private Stockage stockage;
     private Recette recette;
     private Ingredient carotte;
-
+/*
 
     @Test
     public void testAjouterPlat(){
@@ -53,7 +53,7 @@ public class TestCommis {
         this.commis = new Commis(new ArrayList<>());
         commis.jeterIngredient(new IngredientRecord(carotte, 1, 1));
         Assert.assertEquals(null, carotte);
-    }
+    } */
 }
 
 

@@ -15,7 +15,7 @@ package com.gabz.projetcuisine.model.cuisine;
 
 public class TestChefCuisine {
 
-    private Plat plat = new Plat(new Recette("oui", new ArrayList<>(), false, TypeRecette.PLAT, 1), "plat");
+    /*private Plat plat = new Plat(new Recette("oui", new ArrayList<>(), false, TypeRecette.PLAT, 1), "plat");
 
     private Carte carte = new Carte(new Date(), new ArrayList<>(), plat);
     private ChefCuisine chefCuisine = ChefCuisine.getInstance(carte);
@@ -50,5 +50,5 @@ public class TestChefCuisine {
         Assert.assertNull(carte.getPlats());
     }
 
-
+*/
 }

@@ -1,4 +1,12 @@
 package com.gabz.projetcuisine.view;
 
-public class ChefPartieView {
+import javax.swing.*;
+import java.awt.*;
+
+public class ChefPartieView extends JFrame {
+
+    public ChefPartieView() throws HeadlessException {
+
+
+    }
 }

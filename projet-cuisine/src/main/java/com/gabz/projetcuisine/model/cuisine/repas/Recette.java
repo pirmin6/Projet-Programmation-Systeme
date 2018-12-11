@@ -16,7 +16,6 @@ public class Recette {
     private List<IngredientRecord> ingredients;
     private boolean prepEnAmont;
     private TypeRecette typeRecette;
-    private int nbrPersonne;
 
     public int getId() {
         return id;
@@ -38,21 +37,16 @@ public class Recette {
         return typeRecette;
     }
 
-    public int getNbrPersonne() {
-        return nbrPersonne;
-    }
-
     public List<IngredientRecord> getIngredients() {
         return ingredients;
     }
 
     public Recette(String nom, List<EtapeRecette> etapes, List<IngredientRecord> ingredients, boolean prepEnAmont,
-                   TypeRecette typeRecette, int nbrPersonne) {
+                   TypeRecette typeRecette) {
         this.nom = nom;
         this.etapes = etapes;
         this.ingredients = ingredients;
         this.prepEnAmont = prepEnAmont;
         this.typeRecette = typeRecette;
-        this.nbrPersonne = nbrPersonne;
     }
 }

@@ -49,7 +49,7 @@ public class CocoCuisto {
         listeEtapesRecette.add(etape2);
 
         // GNEUFDSFDSFS ET ENSUITE ON CREEE LA RECETTE
-        Recette recette = new Recette("Poulet à la poele", listeEtapesRecette, ingredientRecords, false, TypeRecette.PLAT, 1);
+        Recette recette = new Recette("Poulet à la poele", listeEtapesRecette, ingredientRecords, false, TypeRecette.PLAT);
 
         // HOHOHO ON SAUVEGARDE LA RECETTE
         recetteRepository.save(recette);
