@@ -15,22 +15,6 @@ public class ProjetCuisineApplication extends JFrame implements CommandLineRunne
     @Autowired
     private CocoCuisto cocoCuisto;
 
-    public ProjetCuisineApplication() {
-        initUI();
-    }
-
-    private void initUI() {
-
-        add(new CuisineView());
-
-        setSize(1000, 800);
-
-        setTitle("Cuisine Simulator");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null);
-        setResizable(false);
-    }
-
     public static void main(String[] args) {
         SpringApplication.run(ProjetCuisineApplication.class, args);
     }
@@ -45,7 +29,7 @@ public class ProjetCuisineApplication extends JFrame implements CommandLineRunne
         cocoCuisto.poulet();
 */
         EventQueue.invokeLater(() -> {
-            ProjetCuisineApplication ex = new ProjetCuisineApplication();
+            CuisineView ex = new CuisineView();
             ex.setVisible(true);
         });
     }

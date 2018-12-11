@@ -3,33 +3,23 @@ package com.gabz.projetcuisine.view;
 import javax.swing.*;
 import java.awt.*;
 
-public class CuisineView extends JPanel {
-
-    private Image bardejov;
+public class CuisineView extends JFrame {
 
     public CuisineView() {
-
-        initBoard();
+        initUI();
     }
 
-    private void initBoard() {
+    private void initUI() {
 
-        loadImage();
+        add(new ChefPartieView(100,100));
+        add(new ChefPartieView(300,300));
+        add(new ChefPartieView(100,100));
 
-        int w = bardejov.getWidth(this);
-        int h =  bardejov.getHeight(this);
-        setPreferredSize(new Dimension(w, h));
-    }
+        setSize(1000, 800);
 
-    private void loadImage() {
-
-        ImageIcon ii = new ImageIcon("src/main/resources/chefpartie.png");
-        bardejov = ii.getImage();
-    }
-
-    @Override
-    public void paintComponent(Graphics g) {
-
-        g.drawImage(bardejov, 0, 0, null);
+        setTitle("Cuisine Simulator");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+        setResizable(false);
     }
 }

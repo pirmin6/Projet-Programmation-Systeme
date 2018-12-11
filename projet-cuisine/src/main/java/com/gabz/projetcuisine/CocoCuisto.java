@@ -213,7 +213,7 @@ public class CocoCuisto {
         return recette;
 
     }
-
+/*
     public Recette quichelorraineaupoulet() throws InterruptedException {
 
         List<EtapeRecette> listeEtapesRecette = new ArrayList<>();
@@ -230,9 +230,9 @@ public class CocoCuisto {
                 "Sortez la pâte et laissez la reposer pendant que vous préparez l’appareil.", true, 1800000, 1, null, true);
         EtapeRecette etape2 = new EtapeRecette("Durant la pré-cuisson de la pâte, prenez les lardons et faites les cuire à la poêle à feu vif, durant la cuisson égouttez les avec une passoire afin de faire partir leur graisse ayant fondu, le but étant de les griller légèrement pour leur donner davantage de saveur.", false, 600000, 2, null, false);
 
-        EtapeRecette etape3 = new EtapeRecette("")
+        EtapeRecette etape3 = new EtapeRecette("");
 
     }
 
-
+*/
     }

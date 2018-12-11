@@ -65,13 +65,13 @@ public class TestCommis {
 
     @Test
     public void testChercherIngredient(){
+
         this.stockage = new Stockage();
         
         commis.chercherIngredients(new ArrayList<>());
         Assert.assertEquals(0, stockage.getIngredients());
 
     }
-
 
     @Test
     public void testEpluchage() throws InterruptedException {
@@ -83,7 +83,7 @@ public class TestCommis {
     }
 
     @Test
-    public void testJeterIngredient(){
+    public void testJeterIngredient() {
         this.carotte = new Ingredient("carotte", TypeIngredient.LEGUME);
         this.commis = new Commis(new ArrayList<>());
         commis.jeterIngredient(new IngredientRecord(carotte, 1, 1));

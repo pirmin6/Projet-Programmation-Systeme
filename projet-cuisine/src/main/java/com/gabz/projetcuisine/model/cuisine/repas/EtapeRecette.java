@@ -15,7 +15,7 @@ public class EtapeRecette {
     private boolean faisableParPersonnelBasique;
     private int tempsRealisation;
     private int nbrEtape;
-    @OneToMany(cascade = CascadeType.ALL)
+    @ElementCollection
     private List<String> materiels;
     private boolean faisableEnSimultanée;
 
