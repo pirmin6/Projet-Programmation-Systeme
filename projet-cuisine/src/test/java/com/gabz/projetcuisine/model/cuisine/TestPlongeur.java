@@ -5,7 +5,9 @@ import com.gabz.projetcuisine.model.common.textile.Nappe;
 import com.gabz.projetcuisine.model.common.textile.Textile;
 import com.gabz.projetcuisine.model.common.vaisselle.Vaisselle;
 import com.gabz.projetcuisine.model.common.vaisselle.assiette.AssietteEntree;
+import com.gabz.projetcuisine.model.cuisine.lavage.Evier;
 import com.gabz.projetcuisine.model.cuisine.materiel.Materiel;
+import com.gabz.projetcuisine.model.cuisine.materiel.Poele;
 import com.gabz.projetcuisine.model.cuisine.personnel.Plongeur;
 import org.junit.Assert;
 import org.junit.Before;
@@ -26,10 +28,12 @@ public class TestPlongeur {
     public void setEnvironnement() throws InterruptedException {
 
         stockSale = new StockageVaisselleTextile();
+
         stockSale.addTextile(new Nappe());
         stockSale.addVaisselle(new AssietteEntree());
 
         stockPropre = new StockageVaisselleTextile();
+
     }
 
     @Test
@@ -85,6 +89,19 @@ public class TestPlongeur {
         Assert.assertTrue(stockPropre.getVaisselles().get(0).isPropre());
         Assert.assertTrue(stockPropre.getTextiles().get(0).isPropre());
 
+    }
+
+    @Test
+    public void testLaverMateriel() throws InterruptedException {
+
+        plongeur = Plongeur.getInstance();
+        plongeur.getEvier().ajouterMateriel(new Poele());
+        plongeur.getEvier().ajouterMateriel(new Poele());
+
+        Assert.assertEquals(8, Poele.getNbrInstance().availablePermits());
+
+        plongeur.laverMateriel();
+        Assert.assertEquals(10, Poele.getNbrInstance().availablePermits());
     }
 
 }

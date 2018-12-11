@@ -30,4 +30,8 @@ public class Poele extends Materiel {
     public void monopoliserMateriel() throws InterruptedException {
         nbrInstance.acquire();
     }
+
+    public static Semaphore getNbrInstance() {
+        return nbrInstance;
+    }
 }

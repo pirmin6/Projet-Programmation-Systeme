@@ -24,16 +24,14 @@ public class Evier extends Observable {
         return materiels;
     }
 
-    public List<Materiel> demarrerLavage() throws InterruptedException {
+    public void demarrerLavage() throws InterruptedException {
 
         for (Materiel materiel: materiels) {
             Thread.sleep((long) materiel.getTempsLavage());
             materiel.remettreEnService();
         }
 
-        List<Materiel> materielOut = materiels;
         materiels.clear();
-        return materielOut;
     }
 
     public void ajouterMateriel(Materiel materiel) {
