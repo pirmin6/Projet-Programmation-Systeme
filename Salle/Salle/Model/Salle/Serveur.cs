@@ -16,6 +16,10 @@ namespace Salle.Model.Salle
         public int StockEau { get => _StockEau; set => _StockEau = value; }
         public int StockPain { get => _StockPain; set => _StockPain = value; }
 
+        string RemarquePain;
+        string RemarqueEau;
+        string RemarqueVin;
+
         
         public Serveur()
         {
@@ -36,38 +40,44 @@ namespace Salle.Model.Salle
 
         }
 
-        public void servirPain()
-        { 
+        public void servirPain(GroupeClient groupe)
+        {
             StockPain = StockPain -1;
+            Console.WriteLine("le serveur sert du pain chez le client {0}", groupe);
+            groupe.PainCorbeille = 1;
         }
 
-        public void servirEau()
+        public void servirEau(GroupeClient groupe)
         {
             StockEau = StockEau - 1;
-
+            Console.WriteLine("le serveur sert de l'eau chez le client {0}", groupe);
+            groupe.Eau = true;
         }
 
-        public void servirVin()
+        public void servirVin(GroupeClient groupe)
         {
-
+            Console.WriteLine("le serveur sert du vin chez le client {0}", groupe);
+            groupe.Vin = true;
         }
 
         public void update(Observable observable, string actionUpdate)
         {
             Console.WriteLine("Le groupe client {0} doit être servis en {1}", observable, actionUpdate);
+
+            GroupeClient groupe = (GroupeClient) observable;
             
             switch(actionUpdate)
             {
                 case "ManquePain":
-                    this.servirPain(observable);
+                    this.servirPain(groupe);
                     break;
 
                 case "ManqueEau":
-                    this.servirEau(observable);
+                    this.servirEau(groupe);
                     break;
 
                 case "ManqueVin":
-                    this.servirVin(observable);
+                    this.servirVin(groupe);
                     break;
             }
         }

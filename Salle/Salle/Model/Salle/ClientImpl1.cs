@@ -35,17 +35,17 @@ namespace Salle.Model.Salle
         public void commanderVin(Serveur serveur)
         {
             // chosir le vin sur la carte
-            serveur.servirVin();
+            //serveur.servirVin();
         }
 
         public void commanderEau(Serveur serveur)
         {
-            serveur.servirEau();
+            //serveur.servirEau();
         }
 
         public void commanderPain(Serveur serveur)
         {
-            serveur.servirPain();
+            //serveur.servirPain();
         }
 
 
