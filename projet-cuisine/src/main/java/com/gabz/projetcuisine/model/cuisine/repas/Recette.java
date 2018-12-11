@@ -1,5 +1,7 @@
 package com.gabz.projetcuisine.model.cuisine.repas;
 
+import com.gabz.projetcuisine.model.common.repas.Plat;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -29,6 +31,10 @@ public class Recette {
         return etapes;
     }
 
+    public List<IngredientRecord> getIngredients() {
+        return ingredients;
+    }
+
     public boolean isPrepEnAmont() {
         return prepEnAmont;
     }
@@ -37,12 +43,9 @@ public class Recette {
         return typeRecette;
     }
 
-    public List<IngredientRecord> getIngredients() {
-        return ingredients;
-    }
 
-    public Recette(String nom, List<EtapeRecette> etapes, List<IngredientRecord> ingredients, boolean prepEnAmont,
-                   TypeRecette typeRecette) {
+    public Recette(String nom, List<EtapeRecette> etapes, List<IngredientRecord> ingredients,
+                   boolean prepEnAmont, TypeRecette typeRecette) {
         this.nom = nom;
         this.etapes = etapes;
         this.ingredients = ingredients;

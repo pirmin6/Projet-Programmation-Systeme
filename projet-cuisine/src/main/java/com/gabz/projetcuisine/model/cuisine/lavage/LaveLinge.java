@@ -1,6 +1,7 @@
 package com.gabz.projetcuisine.model.cuisine.lavage;
 
 import com.gabz.projetcuisine.model.common.textile.Textile;
+import com.gabz.projetcuisine.model.cuisine.personnel.Plongeur;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +12,8 @@ public class LaveLinge extends Observable {
     private static LaveLinge instance = new LaveLinge();
     private List<Textile> textileList = new ArrayList<>();
 
-    private LaveLinge() {}
+    private LaveLinge() {
+    }
 
     public static LaveLinge getInstance() {
         return instance;

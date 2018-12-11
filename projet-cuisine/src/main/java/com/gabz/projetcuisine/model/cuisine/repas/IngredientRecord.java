@@ -9,7 +9,7 @@ public class IngredientRecord {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private Ingredient ingredient;
     private int quantité;
     private int joursAvantPeremption;

@@ -20,45 +20,65 @@ public class TestPlongeur {
     private List<Vaisselle> vaisselles;
     private List<Materiel> materiels;
     private StockageVaisselleTextile stockSale;
+    private StockageVaisselleTextile stockPropre;
 
     @Before
     public void setEnvironnement() throws InterruptedException {
 
-        stockSale = StockageVaisselleTextile.getInstance();
+        stockSale = new StockageVaisselleTextile();
         stockSale.addTextile(new Nappe());
         stockSale.addVaisselle(new AssietteEntree());
+
+        stockPropre = new StockageVaisselleTextile();
     }
 
     @Test
     public void testPlongeurConstructor() {
 
-        this.plongeur = Plongeur.getInstance();
+        plongeur = Plongeur.getInstance();
         Assert.assertNotNull(plongeur.getEvier());
         Assert.assertNotNull(plongeur.getLaveLinge());
         Assert.assertNotNull(plongeur.getLaveVaisselle());
     }
 
     @Test
-    public void testPlongeurChargerMachine() {
+    public void testPlongeurChargerMachine() throws InterruptedException, NoSuchFieldException, IllegalAccessException {
 
-        this.plongeur = Plongeur.getInstance();
+        plongeur = Plongeur.getInstance();
 
         plongeur.chargerLaveLinge(stockSale);
         plongeur.chargerLaveVaisselle(stockSale);
 
-        Assert.assertEquals(1, plongeur.getLaveLinge().getTextileList());
-        Assert.assertEquals(1, plongeur.getLaveVaisselle().getAssiettes());
+        Assert.assertEquals(1, plongeur.getLaveLinge().getTextileList().size());
+        Assert.assertEquals(1, plongeur.getLaveVaisselle().getAssiettes().size());
     }
 
     @Test
-    public void testPlongeurLaver() {
+    public void testPlongeurLaver() throws InterruptedException, NoSuchFieldException, IllegalAccessException {
 
-        this.plongeur = Plongeur.getInstance();
+        plongeur = Plongeur.getInstance();
         plongeur.chargerLaveLinge(stockSale);
         plongeur.chargerLaveVaisselle(stockSale);
 
-        //Assert.assertTrue(plongeur.laverTextile().get(0).isPropre());
-        //Assert.assertTrue(plongeur.laverVaisselle().get(0).isPropre());
+        plongeur.laverTextile();
+        plongeur.laverVaisselle();
+
+        Assert.assertTrue(plongeur.getLaveLinge().getTextileList().get(0).isPropre());
+        Assert.assertTrue(plongeur.getLaveVaisselle().getAssiettes().get(0).isPropre());
+    }
+
+    @Test
+    public void testPlongeurVider() throws InterruptedException, NoSuchFieldException, IllegalAccessException {
+
+        plongeur = Plongeur.getInstance();
+        plongeur.chargerLaveLinge(stockSale);
+        plongeur.chargerLaveVaisselle(stockSale);
+
+        plongeur.laverTextile();
+        plongeur.laverVaisselle();
+
+        plongeur.viderLaveLinge(stockPropre);
+        plongeur.viderLaveVaisselle(stockPropre);
     }
 
 }

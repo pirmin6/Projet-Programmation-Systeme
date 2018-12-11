@@ -3,8 +3,8 @@ package com.gabz.projetcuisine.controller.common;
 import com.gabz.projetcuisine.model.common.repas.Carte;
 import com.gabz.projetcuisine.model.common.repas.Plat;
 import com.gabz.projetcuisine.model.common.repas.Vin;
-import com.gabz.projetcuisine.repository.CarteRepository;
-import com.gabz.projetcuisine.repository.PlatRepository;
+import com.gabz.projetcuisine.model.cuisine.repas.Recette;
+import com.gabz.projetcuisine.repository.RecetteRepository;
 import com.gabz.projetcuisine.repository.VinRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,20 +21,20 @@ public class CarteController {
     private VinRepository vinRepository;
 
     @Autowired
-    private PlatRepository platRepository;
+    private RecetteRepository recetteRepository;
 
-    public Carte createCarte() throws Exception {
+    /*public Carte createCarte() throws Exception {
 
         //generate random menu
         Random generator = new Random();
         int choixMenu = generator.nextInt(11);
 
-        Optional<Plat> platduJour = platRepository.findById(choixMenu);
+        Optional<Recette> platduJour = recetteRepository.findById(choixMenu);
         if (!platduJour.isPresent()) {
             throw new Exception();
         }
 
         List<Vin> vins = vinRepository.findAll();
-        return new Carte(new Date(), vins, platduJour.get());
-    }
+        return new Carte(new Date(), vins, platduJour.get().getPlat());
+    }*/
 }

@@ -14,7 +14,6 @@ public class Evier extends Observable {
 
     private Evier() {
         this.materiels = new ArrayList<>();
-        addObserver(Plongeur.getInstance());
     }
 
     public static Evier getInstance() {

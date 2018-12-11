@@ -94,7 +94,8 @@ public class CocoCuisto {
         listeEtapesRecette.add(etape4);
         listeEtapesRecette.add(etape5);
 
-        Recette recette = new Recette("Feuilleté de crabe", listeEtapesRecette, IngredientRecords, false, TypeRecette.ENTREE, 4);
+        Recette recette = new Recette("Feuilleté de crabe", listeEtapesRecette, IngredientRecords, false, TypeRecette.ENTREE);
+        recetteRepository.save(recette);
     }
 
     public void oeufscocotte() throws InterruptedException{
@@ -120,7 +121,8 @@ public class CocoCuisto {
         listeEtapesRecette.add(etape4);
         listeEtapesRecette.add(etape5);
 
-        Recette recette = new Recette("oeufs cocotte", listeEtapesRecette, IngredientRecords, false, TypeRecette.ENTREE, 4);
+        Recette recette = new Recette("oeufs cocotte", listeEtapesRecette, IngredientRecords, false, TypeRecette.ENTREE);
+        recetteRepository.save(recette);
     }
 
     public void gaspacho() throws InterruptedException{
@@ -147,9 +149,9 @@ public class CocoCuisto {
         listeEtapesRecette.add(etape2);
         listeEtapesRecette.add(etape3);
 
-        Recette recette = new Recette("gaspacho", listeEtapesRecette, IngredientRecords, true, TypeRecette.ENTREE, 1);
+        Recette recette = new Recette("gaspacho", listeEtapesRecette, IngredientRecords, true, TypeRecette.ENTREE);
 
-
+        recetteRepository.save(recette);
     }
 
 

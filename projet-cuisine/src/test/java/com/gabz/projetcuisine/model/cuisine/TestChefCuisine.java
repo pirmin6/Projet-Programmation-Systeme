@@ -5,7 +5,6 @@ package com.gabz.projetcuisine.model.cuisine;
         import com.gabz.projetcuisine.model.cuisine.personnel.ChefCuisine;
         import com.gabz.projetcuisine.model.cuisine.personnel.ChefPartie;
         import com.gabz.projetcuisine.model.cuisine.repas.Recette;
-        import com.gabz.projetcuisine.model.cuisine.repas.TypeRecette;
         import org.junit.Assert;
         import org.junit.Test;
 
@@ -15,9 +14,7 @@ package com.gabz.projetcuisine.model.cuisine;
 
 public class TestChefCuisine {
 
-    /*private Plat plat = new Plat(new Recette("oui", new ArrayList<>(), false, TypeRecette.PLAT, 1), "plat");
-
-    private Carte carte = new Carte(new Date(), new ArrayList<>(), plat);
+    /*private Carte carte = new Carte(new Date(), new ArrayList<>(), new Plat(new Recette(), "test"));
     private ChefCuisine chefCuisine = ChefCuisine.getInstance(carte);
 
     @Test
@@ -49,6 +46,6 @@ public class TestChefCuisine {
         chefCuisine.retirerPlatCarte();
         Assert.assertNull(carte.getPlats());
     }
+    */
 
-*/
 }

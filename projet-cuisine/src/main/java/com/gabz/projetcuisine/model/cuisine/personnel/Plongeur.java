@@ -54,21 +54,24 @@ public class Plongeur implements ICuisinier, Observer {
         laveVaisselle.demarrerLavage();
     }
 
-    public void chargerLaveVaisselle(StockageVaisselleTextile stock) {
+    public void chargerLaveVaisselle(StockageVaisselleTextile stock) throws NoSuchFieldException, IllegalAccessException {
 
-        stock.prendreVaisselle();
+        laveVaisselle.remplirLaveVaisselle(stock.prendreVaisselle());
     }
 
-    public void viderLaveVaisselle() {
+    public void viderLaveVaisselle(StockageVaisselleTextile stockPropre) {
 
+        stockPropre.addVaisselle(laveVaisselle.viderLaveVaisselle());
     }
 
-    public void chargerLaveLinge(StockageVaisselleTextile stock) {
+    public void chargerLaveLinge(StockageVaisselleTextile stock) throws InterruptedException {
 
+        laveLinge.remplirEtViderLaveLinge(stock.prendreTextile());
     }
 
-    public void viderLaveLinge() {
+    public void viderLaveLinge(StockageVaisselleTextile stockPropre) {
 
+        stockPropre.addTextile(laveLinge.viderLageLinge());
     }
 
     @Override
