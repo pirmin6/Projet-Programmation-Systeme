@@ -18,6 +18,14 @@ public class StockageVaisselleTextile {
         vaisselles = new ArrayList<>();
     }
 
+    public List<Textile> getTextiles() {
+        return textiles;
+    }
+
+    public List<Vaisselle> getVaisselles() {
+        return vaisselles;
+    }
+
     public void addTextile(Textile textile) {
         this.textiles.add(textile);
     }

@@ -79,6 +79,12 @@ public class TestPlongeur {
 
         plongeur.viderLaveLinge(stockPropre);
         plongeur.viderLaveVaisselle(stockPropre);
+
+        Assert.assertTrue(plongeur.getLaveVaisselle().viderLaveVaisselle().isEmpty());
+        Assert.assertTrue(plongeur.getLaveLinge().viderLageLinge().isEmpty());
+        Assert.assertTrue(stockPropre.getVaisselles().get(0).isPropre());
+        Assert.assertTrue(stockPropre.getTextiles().get(0).isPropre());
+
     }
 
 }
