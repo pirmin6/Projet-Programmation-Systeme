@@ -13,9 +13,9 @@ namespace Salle.Model.Salle
         void prendreRepas();
         void choisirRepas();
         void mangerPlat();
-        void commanderVin();
-        void commanderEau();
-        void commanderPain();
+        void commanderVin(Serveur serveur);
+        void commanderEau(Serveur serveur);
+        void commanderPain(Serveur serveur);
 
     }
 }

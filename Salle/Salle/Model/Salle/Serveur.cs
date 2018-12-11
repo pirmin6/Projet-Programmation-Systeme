@@ -10,11 +10,13 @@ namespace Salle.Model.Salle
 
     public class Serveur : IServeur
     {
-        public int stockPain;
-        public int stockEau;
-        //public delegate void DelegateAction();
-        
+        private int _StockEau = 1000;
+        private int _StockPain = 1000;
 
+        public int StockEau { get => _StockEau; set => _StockEau = value; }
+        public int StockPain { get => _StockPain; set => _StockPain = value; }
+
+        
         public Serveur()
         {
         }
@@ -36,11 +38,12 @@ namespace Salle.Model.Salle
 
         public void servirPain()
         { 
-           // stockPain - (client.Count);
+            StockPain = StockPain -1;
         }
 
         public void servirEau()
         {
+            StockEau = StockEau - 1;
 
         }
 
@@ -49,14 +52,24 @@ namespace Salle.Model.Salle
 
         }
 
-        public void update(GroupeClient groupe, DelegateAction actionNecessaire)
+        public void update(Observable observable, string actionUpdate)
         {
-            Console.WriteLine("Le groupe client {0} doit être servis en {1}" );
-            //DelegateAction action = actionNecessaire;
-            actionNecessaire();
+            Console.WriteLine("Le groupe client {0} doit être servis en {1}", observable, actionUpdate);
+            
+            switch(actionUpdate)
+            {
+                case "ManquePain":
+                    this.servirPain(observable);
+                    break;
 
-            throw new NotImplementedException();
+                case "ManqueEau":
+                    this.servirEau(observable);
+                    break;
 
+                case "ManqueVin":
+                    this.servirVin(observable);
+                    break;
+            }
         }
 
         

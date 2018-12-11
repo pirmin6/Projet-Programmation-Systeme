@@ -22,7 +22,7 @@ namespace Salle.Model.Salle
 
         protected void NotifyObservers(string action)
         {
-            foreach (IServeur obs in this.observers) obs.update(this, string action);
+            foreach (IServeur obs in this.observers) obs.update(this, action);
         }
     }
 

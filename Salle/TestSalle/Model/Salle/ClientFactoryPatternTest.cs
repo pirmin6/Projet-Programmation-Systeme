@@ -9,15 +9,15 @@ using System.Threading.Tasks;
 namespace Salle.Model.Salle.Tests
 {
     [TestClass()]
-    public class ClientFactoryTest
+    public class ClientFactoryPatternTest
     {
-
         [TestMethod()]
-        public void getClientTest()
+        public void ClientFactoryPatternneTest()
         {
-
-
-
+            IClient client1 = ClientFactory.getClient("Client1");
+            Assert.IsNotNull(client1);
         }
+
+
     }
 }

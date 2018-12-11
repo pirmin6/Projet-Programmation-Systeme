@@ -6,28 +6,38 @@ using System.Threading.Tasks;
 
 namespace Salle.Model.Salle
 {
-    internal class ClientImpl2 : IClient
+
+    public class ClientImpl2 : IClient
+
     {
         private string humeur = "mange lentement";
 
         public void choisirRepas()
         {
-
+            // Random nombre paire = plat choise
+          //  Random random = new Random();
+           // random.Next(1, 10);
+            //!if (random == 1) 
+           // {
+                // on choisit le plat 1
+          //  } 
+            
         }
 
-        public void commanderEau()
+        public void commanderVin(Serveur serveur)
         {
-
+            // chosir le vin sur la carte
+            serveur.servirVin();
         }
 
-        public void commanderPain()
+        public void commanderEau(Serveur serveur)
         {
-
+            serveur.servirEau();
         }
 
-        public void commanderVin()
+        public void commanderPain(Serveur serveur)
         {
-
+            serveur.servirPain();
         }
 
         public void mangerPlat()
