@@ -50,7 +50,7 @@ public class CocoCuisto {
         Recette recette = new Recette("Poulet à la poele", listeEtapesRecette, ingredientRecords, false, TypeRecette.PLAT);
 
         // HOHOHO ON SAUVEGARDE LA RECETTE
-        recetteRepository.save(recette);
+//        recetteRepository.save(recette);
         return recette;
     }
 
@@ -96,7 +96,7 @@ public class CocoCuisto {
         listeEtapesRecette.add(etape5);
 
         Recette recette = new Recette("Feuilleté de crabe", listeEtapesRecette, IngredientRecords, false, TypeRecette.ENTREE);
-        recetteRepository.save(recette);
+        //recetteRepository.save(recette);
         return recette;
     }
 
@@ -124,7 +124,7 @@ public class CocoCuisto {
         listeEtapesRecette.add(etape5);
 
         Recette recette = new Recette("oeufs cocotte", listeEtapesRecette, IngredientRecords, false, TypeRecette.ENTREE);
-        recetteRepository.save(recette);
+        //recetteRepository.save(recette);
         return recette;
     }
 
@@ -154,7 +154,7 @@ public class CocoCuisto {
 
         Recette recette = new Recette("gaspacho", listeEtapesRecette, IngredientRecords, true, TypeRecette.ENTREE);
 
-        recetteRepository.save(recette);
+        //recetteRepository.save(recette);
         return recette;
     }
 
@@ -181,7 +181,7 @@ public class CocoCuisto {
 
         Recette recette = new Recette("pâté de sanglier", listeEtapesRecette, IngredientRecords, true, TypeRecette.ENTREE);
 
-        recetteRepository.save(recette);
+        //recetteRepository.save(recette);
         return recette;
 
     }
@@ -209,7 +209,7 @@ public class CocoCuisto {
         listeEtapesRecette.add(etape1);
 
         Recette recette = new Recette("tarte au thon", listeEtapesRecette, IngredientRecords, false, TypeRecette.ENTREE);
-        recetteRepository.save(recette);
+        //recetteRepository.save(recette);
         return recette;
 
     }

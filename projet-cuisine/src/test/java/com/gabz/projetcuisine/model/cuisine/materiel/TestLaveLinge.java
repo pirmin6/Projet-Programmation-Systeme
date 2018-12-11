@@ -1,4 +1,4 @@
-package com.gabz.projetcuisine.model.cuisine;
+package com.gabz.projetcuisine.model.cuisine.materiel;
 
 import com.gabz.projetcuisine.model.common.textile.Nappe;
 import com.gabz.projetcuisine.model.common.textile.Serviette;

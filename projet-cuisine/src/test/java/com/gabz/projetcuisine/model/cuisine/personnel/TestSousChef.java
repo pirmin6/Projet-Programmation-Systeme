@@ -1,9 +1,9 @@
-package com.gabz.projetcuisine.model.cuisine;
+package com.gabz.projetcuisine.model.cuisine.personnel;
 
+import com.gabz.projetcuisine.CocoCuisto;
 import com.gabz.projetcuisine.exception.InstanciationNotAllowedException;
 import com.gabz.projetcuisine.model.common.repas.ComptoirPlatAttente;
-import com.gabz.projetcuisine.model.cuisine.personnel.ChefCuisine;
-import com.gabz.projetcuisine.model.cuisine.personnel.ChefPartie;
+import com.gabz.projetcuisine.model.common.repas.Plat;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -23,9 +23,9 @@ public class TestSousChef {
     }
 
     @Test
-    public void testCuisinerPlat() {
+    public void testCuisinerPlat() throws InterruptedException, IllegalAccessException, InstantiationException, ClassNotFoundException {
 
-        chefPartie1.faireRecette();
+        chefPartie1.faireRecette(new Plat(new CocoCuisto().poulet(), "Pate de sanglier"));
         Assert.assertEquals(1, ComptoirPlatAttente.getComptoir().getPlats().size());
     }
 }

@@ -1,4 +1,4 @@
-package com.gabz.projetcuisine.model.cuisine;
+package com.gabz.projetcuisine.model.cuisine.personnel;
 
 import com.gabz.projetcuisine.model.common.repas.Plat;
 import com.gabz.projetcuisine.model.common.vaisselle.couvert.Couteau;

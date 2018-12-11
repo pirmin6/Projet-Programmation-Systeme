@@ -1,10 +1,8 @@
-package com.gabz.projetcuisine.model.cuisine;
+package com.gabz.projetcuisine.model.cuisine.personnel;
 
 import com.gabz.projetcuisine.exception.InstanciationNotAllowedException;
 import com.gabz.projetcuisine.model.common.repas.Carte;
 import com.gabz.projetcuisine.model.common.repas.Plat;
-import com.gabz.projetcuisine.model.cuisine.personnel.ChefCuisine;
-import com.gabz.projetcuisine.model.cuisine.personnel.ChefPartie;
 import org.junit.Assert;
 import org.junit.Test;
 
