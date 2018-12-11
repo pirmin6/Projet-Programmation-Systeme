@@ -7,12 +7,13 @@ import com.gabz.projetcuisine.model.common.repas.ComptoirPlatAttente;
 import com.gabz.projetcuisine.model.cuisine.repas.IngredientRecord;
 import com.gabz.projetcuisine.model.cuisine.stockage.Stockage;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Commis implements ICuisinier {
 
     private static int nbrInstance = 2;
-    private static List<Stockage> stockages;
+    private static List<Stockage> stockages = new ArrayList<>();
     private static ComptoirPlatAttente comptoirPlats;
     private boolean isAvailable = true;
 

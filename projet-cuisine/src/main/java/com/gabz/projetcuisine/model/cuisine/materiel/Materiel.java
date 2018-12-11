@@ -16,7 +16,8 @@ public abstract class Materiel {
     protected double tempsLavage;
     protected boolean propre = true;
 
-    public Materiel() {
+    public Materiel() throws InterruptedException {
+        monopoliserMateriel();
     }
 
     public int getId() {

@@ -50,7 +50,8 @@ public class ChefCuisine {
         this.carte = carte;
     }
 
-    public void organiserCommande(Commande commande) throws InterruptedException {
+    public void organiserCommande(Commande commande) throws InterruptedException, IllegalAccessException,
+            InstantiationException, ClassNotFoundException {
 
         for (Plat plat : commande.getPlats()) {
             choisirChefPartie().faireRecette(plat);

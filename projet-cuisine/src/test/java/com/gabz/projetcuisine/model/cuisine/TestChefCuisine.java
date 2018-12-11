@@ -1,20 +1,19 @@
 package com.gabz.projetcuisine.model.cuisine;
 
-        import com.gabz.projetcuisine.model.common.repas.Carte;
-        import com.gabz.projetcuisine.model.common.repas.Plat;
-        import com.gabz.projetcuisine.model.cuisine.personnel.ChefCuisine;
-        import com.gabz.projetcuisine.model.cuisine.personnel.ChefPartie;
-        import com.gabz.projetcuisine.model.cuisine.repas.Recette;
-        import org.junit.Assert;
-        import org.junit.Test;
+import com.gabz.projetcuisine.model.common.repas.Carte;
+import com.gabz.projetcuisine.model.common.repas.Plat;
+import com.gabz.projetcuisine.model.cuisine.personnel.ChefCuisine;
+import com.gabz.projetcuisine.model.cuisine.personnel.ChefPartie;
+import org.junit.Assert;
+import org.junit.Test;
 
-        import java.util.ArrayList;
-        import java.util.Date;
-        import java.util.List;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 public class TestChefCuisine {
 
-    /*private Carte carte = new Carte(new Date(), new ArrayList<>(), new Plat(new Recette(), "test"));
+    private Carte carte = new Carte(new Date(), new ArrayList<>(), new Plat(null, "test"));
     private ChefCuisine chefCuisine = ChefCuisine.getInstance(carte);
 
     @Test
@@ -36,7 +35,7 @@ public class TestChefCuisine {
         chefCuisine.choisirChefPartie();
         Assert.assertFalse(chefCuisine.getChefParties().get(1).isAvailable());
     }
-
+/*
     @Test
     public void testChangerCarte() {
 
@@ -46,6 +45,5 @@ public class TestChefCuisine {
         chefCuisine.retirerPlatCarte();
         Assert.assertNull(carte.getPlats());
     }
-    */
-
+*/
 }

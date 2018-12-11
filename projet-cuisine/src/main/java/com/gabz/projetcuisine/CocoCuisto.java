@@ -14,7 +14,7 @@ public class CocoCuisto {
 
     // BUREAU DES SPORTS BUREAU DES SPORTS BUREAU DES SPORTS
 
-    @Autowired
+   /* @Autowired
     private RecetteRepository recetteRepository;
 
     public void poulet() throws InterruptedException {
@@ -155,5 +155,5 @@ public class CocoCuisto {
     }
 
 
-
+ */
 }

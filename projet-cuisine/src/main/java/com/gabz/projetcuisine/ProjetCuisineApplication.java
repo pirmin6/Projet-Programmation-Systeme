@@ -38,12 +38,12 @@ public class ProjetCuisineApplication extends JFrame implements CommandLineRunne
     @Override
     public void run(String... args) throws Exception {
         System.out.println("Hello World");
-
+/*
         cocoCuisto.feuilletecrabe();
         cocoCuisto.gaspacho();
         cocoCuisto.oeufscocotte();
         cocoCuisto.poulet();
-
+*/
         EventQueue.invokeLater(() -> {
             ProjetCuisineApplication ex = new ProjetCuisineApplication();
             ex.setVisible(true);

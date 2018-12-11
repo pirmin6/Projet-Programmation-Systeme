@@ -3,6 +3,7 @@ package com.gabz.projetcuisine.model.cuisine.personnel;
 import com.gabz.projetcuisine.model.common.repas.ComptoirPlatAttente;
 import com.gabz.projetcuisine.model.common.repas.Plat;
 import com.gabz.projetcuisine.model.cuisine.materiel.Materiel;
+import com.gabz.projetcuisine.model.cuisine.materiel.MaterielFactory;
 import com.gabz.projetcuisine.model.cuisine.repas.EtapeRecette;
 import com.gabz.projetcuisine.model.cuisine.repas.IngredientRecord;
 import com.gabz.projetcuisine.model.cuisine.repas.Recette;
@@ -16,8 +17,11 @@ public class ChefPartie implements ICuisinier {
     private List<Commis> commis;
     private Plongeur plongeur;
     private boolean available;
+    private MaterielFactory materielFactory;
 
     public ChefPartie() {
+
+        materielFactory = MaterielFactory.getMaterielFactory();
 
         available = true;
         plongeur = Plongeur.getInstance();
@@ -50,7 +54,7 @@ public class ChefPartie implements ICuisinier {
         this.plongeur = plongeur;
     }
 
-    public void faireRecette(Plat plat) throws InterruptedException {
+    public void faireRecette(Plat plat) throws InterruptedException, IllegalAccessException, ClassNotFoundException, InstantiationException {
 
         Recette recette = plat.getRecette();
         this.available = false;
@@ -75,6 +79,12 @@ public class ChefPartie implements ICuisinier {
                         try {
                             faireEtapeRecette(etapeRecette);
                         } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        } catch (IllegalAccessException e) {
+                            e.printStackTrace();
+                        } catch (InstantiationException e) {
+                            e.printStackTrace();
+                        } catch (ClassNotFoundException e) {
                             e.printStackTrace();
                         }
                     }).start();
@@ -101,13 +111,14 @@ public class ChefPartie implements ICuisinier {
     }
 
     @Override
-    public void faireEtapeRecette(EtapeRecette etapeRecette) throws InterruptedException {
+    public void faireEtapeRecette(EtapeRecette etapeRecette) throws InterruptedException, IllegalAccessException, InstantiationException, ClassNotFoundException {
 
         List<Materiel> materielEtape = new ArrayList<>();
-        for (Materiel materiel : etapeRecette.getMateriels()) {
-            materielEtape.add(materiel);
-            materiel.monopoliserMateriel();
+
+        for (String s : etapeRecette.getMateriels()) {
+            materielEtape.add(materielFactory.getMateriel(s));
         }
+
         Thread.sleep(etapeRecette.getTempsRealisation());
 
         for (Materiel materiel : materielEtape) {

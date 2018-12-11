@@ -14,7 +14,8 @@ public class ChefCuisineController {
         this.chefCuisineView = chefCuisineView;
     }
 
-    public void onCommandeRecue(Commande commande) throws InterruptedException {
+    public void onCommandeRecue(Commande commande) throws InterruptedException,
+            IllegalAccessException, ClassNotFoundException, InstantiationException {
         chefCuisine.organiserCommande(commande);
     }
 }

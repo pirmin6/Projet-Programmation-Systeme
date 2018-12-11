@@ -31,9 +31,8 @@ public class Stockage {
         return ingredients;
     }
 
-    public void addIngredientRecordToStockage(IngredientRecord ingredientRecord, StockRepository stockRepository) {
+    public void addIngredientRecordToStockage(IngredientRecord ingredientRecord) {
         this.ingredients.add(ingredientRecord);
-        stockRepository.save(this);
     }
 
 }
