@@ -18,6 +18,7 @@ public class Commis implements ICuisinier {
 
     public Commis(List<Stockage> stockage) {
         this.stockages = stockage;
+        comptoirPlats = ComptoirPlatAttente.getComptoir();
     }
 
     public static int getNbrInstance() {

@@ -18,9 +18,15 @@ public class Plongeur implements ICuisinier, Observer {
 
     private Plongeur() {
 
+        // Instancier les elements utilisés par le plongeur
         evier = Evier.getInstance();
         laveLinge = LaveLinge.getInstance();
         laveVaisselle = LaveVaisselle.getInstance();
+
+        // Ajouter le plongeur en tant qu'observer pour les elements necessaires
+        evier.addObserver(this);
+        laveLinge.addObserver(this);
+        laveVaisselle.addObserver(this);
     }
 
     public Evier getEvier() {
@@ -39,38 +45,40 @@ public class Plongeur implements ICuisinier, Observer {
         return instance;
     }
 
-    public void laverMateriel() throws InterruptedException {
+    public synchronized void laverMateriel() throws InterruptedException {
 
         evier.demarrerLavage();
     }
 
-    public void laverTextile() throws InterruptedException {
+    public synchronized void laverTextile() throws InterruptedException {
 
         laveLinge.demarrerLavage();
     }
 
-    public void laverVaisselle() {
+    public synchronized void laverVaisselle() {
 
         laveVaisselle.demarrerLavage();
     }
 
-    public void chargerLaveVaisselle(StockageVaisselleTextile stock) throws NoSuchFieldException, IllegalAccessException {
+    public synchronized void chargerLaveVaisselle(StockageVaisselleTextile stock) throws NoSuchFieldException, IllegalAccessException {
 
         laveVaisselle.remplirLaveVaisselle(stock.prendreVaisselle());
     }
 
-    public void viderLaveVaisselle(StockageVaisselleTextile stockPropre) {
+    public synchronized void viderLaveVaisselle(StockageVaisselleTextile stockPropre) throws InterruptedException {
 
+        Thread.sleep(60000);
         stockPropre.addVaisselle(laveVaisselle.viderLaveVaisselle());
     }
 
-    public void chargerLaveLinge(StockageVaisselleTextile stock) throws InterruptedException {
+    public synchronized void chargerLaveLinge(StockageVaisselleTextile stock) throws InterruptedException {
 
         laveLinge.remplirEtViderLaveLinge(stock.prendreTextile());
     }
 
-    public void viderLaveLinge(StockageVaisselleTextile stockPropre) {
+    public synchronized void viderLaveLinge(StockageVaisselleTextile stockPropre) throws InterruptedException {
 
+        Thread.sleep(60000);
         stockPropre.addTextile(laveLinge.viderLageLinge());
     }
 

@@ -1,7 +1,6 @@
 package com.gabz.projetcuisine.model.cuisine.lavage;
 
 import com.gabz.projetcuisine.model.common.textile.Textile;
-import com.gabz.projetcuisine.model.cuisine.personnel.Plongeur;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,11 +18,11 @@ public class LaveLinge extends Observable {
         return instance;
     }
 
-    public List<Textile> getTextileList() {
+    public synchronized List<Textile> getTextileList() {
         return textileList;
     }
 
-    public List<Textile> remplirEtViderLaveLinge(List<Textile> textiles) throws InterruptedException {
+    public synchronized List<Textile> remplirEtViderLaveLinge(List<Textile> textiles) throws InterruptedException {
 
         Thread.sleep(1);
         List<Textile> textilesSortant = textileList;
@@ -32,7 +31,7 @@ public class LaveLinge extends Observable {
         return textilesSortant;
     }
 
-    public List<Textile> viderLageLinge() {
+    public synchronized List<Textile> viderLageLinge() {
 
         List<Textile> textilesSortant = textileList;
         textileList = new ArrayList<>();
@@ -40,9 +39,9 @@ public class LaveLinge extends Observable {
         return textilesSortant;
     }
 
-    public void demarrerLavage() throws InterruptedException {
+    public synchronized void demarrerLavage() throws InterruptedException {
 
-        Thread.sleep(15);
+        Thread.sleep(15 * 60000);
         textileList.forEach(textile -> {
             textile.setPropre(true);
         });

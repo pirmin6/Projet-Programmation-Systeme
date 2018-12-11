@@ -21,6 +21,6 @@ public class ComptoirPlatAttente {
     }
 
     public void addPlat(Plat plat) {
-
+        plats.add(plat);
     }
 }

@@ -55,7 +55,7 @@ public class LaveVaisselle extends Observable {
         return cuillereCafes;
     }
 
-    public void remplirLaveVaisselle(List<Vaisselle> vaisselle) throws NoSuchFieldException, IllegalAccessException {
+    public synchronized void remplirLaveVaisselle(List<Vaisselle> vaisselle) throws NoSuchFieldException, IllegalAccessException {
 
         List<Vaisselle> vaisselleRestante = new ArrayList<>();
 
@@ -97,7 +97,7 @@ public class LaveVaisselle extends Observable {
         }
     }
 
-    public boolean ajouterVaisselle(String string, Vaisselle vaisselle) throws NoSuchFieldException, IllegalAccessException {
+    public synchronized boolean ajouterVaisselle(String string, Vaisselle vaisselle) throws NoSuchFieldException, IllegalAccessException {
 
         // Get the specific field to the vaisselle Item class
         Field field = this.getClass().getDeclaredField(string);
@@ -118,7 +118,7 @@ public class LaveVaisselle extends Observable {
         return vaisselleAdded;
     }
 
-    public void demarrerLavage() {
+    public synchronized void demarrerLavage() {
 
         List<Vaisselle> vaisselle = new ArrayList<>();
         vaisselle.addAll(assiettes);
@@ -135,7 +135,7 @@ public class LaveVaisselle extends Observable {
         }
     }
 
-    public List<Vaisselle> viderLaveVaisselle() {
+    public synchronized List<Vaisselle> viderLaveVaisselle() {
 
         List<Vaisselle> vaisselle = new ArrayList<>();
         vaisselle.addAll(assiettes);

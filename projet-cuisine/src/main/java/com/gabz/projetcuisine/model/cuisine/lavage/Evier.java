@@ -20,11 +20,11 @@ public class Evier extends Observable {
         return instance;
     }
 
-    public List<Materiel> getMateriels() {
+    public synchronized List<Materiel> getMateriels() {
         return materiels;
     }
 
-    public void demarrerLavage() throws InterruptedException {
+    public synchronized void demarrerLavage() throws InterruptedException {
 
         for (Materiel materiel: materiels) {
             Thread.sleep((long) materiel.getTempsLavage());
@@ -34,7 +34,7 @@ public class Evier extends Observable {
         materiels.clear();
     }
 
-    public void ajouterMateriel(Materiel materiel) {
+    public synchronized void ajouterMateriel(Materiel materiel) {
         this.materiels.add(materiel);
 
         new Thread(() -> {
