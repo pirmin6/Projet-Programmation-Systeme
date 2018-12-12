@@ -142,7 +142,7 @@ public class CocoCuisto {
         List<String> materielEtape1 = new ArrayList<>();
         materielEtape1.add(CouteauCuisine.class.getName());
         EtapeRecette etape1 = new EtapeRecette("Au fond d'un saladier, mettre un crouton de pain rassi, rajouter l'huile d'olive, le vinaigre puis les lègumes coupés. Saler et poivrer.", true, 60000, 1, materielEtape1, false);
-        EtapeRecette etape2 = new EtapeRecette("Placer le récipient au frigo pour la nuit", true, 288000, 2, new ArrayList<>(), true);
+        EtapeRecette etape2 = new EtapeRecette("Placer le récipient au frigo pour la nuit", true, 28800, 2, new ArrayList<>(), true);
         List<String> materielEtape3 = new ArrayList<>();
         materielEtape3.add(Tamis.class.getName());
         EtapeRecette etape3 = new EtapeRecette("mixer et passer au tamis, Servir avec les mêmes lègumes coupés en petits morceaux sur du pain grillés à l'huile d'olive", true, 120000, 3, materielEtape3, false);
@@ -170,9 +170,9 @@ public class CocoCuisto {
 
         List<String> materielEtape1 = new ArrayList<>();
         materielEtape1.add(CouteauCuisine.class.getName());
-        EtapeRecette etape1 = new EtapeRecette("Hacher les viandes puis bien mélanger le tout. Parfumer (truffes, herbes etc….) puis remplir les bocaux en tassant un peu", false, 300000, 1, materielEtape1, false);
-        EtapeRecette etape2 = new EtapeRecette("Faire cuire les bocaux au four au bain marie pendant 2 heures puis les retirer immédiatement, les fermer", true, 7200000, 2, new ArrayList<>(), true);
-        EtapeRecette etape3 = new EtapeRecette("les placer dans un couscoussier rempli d’eau chaude avec un torchon au fond puis des pierres dessus et faire cuire encore 1 heure ½. Les laisser dans le couscoussier jusqu’à refroidissement total", true, 7200000, 3, new ArrayList<>(), true);
+        EtapeRecette etape1 = new EtapeRecette("Hacher les viandes puis bien mélanger le tout. Parfumer (truffes, herbes etc….) puis remplir les bocaux en tassant un peu", false, 30000, 1, materielEtape1, false);
+        EtapeRecette etape2 = new EtapeRecette("Faire cuire les bocaux au four au bain marie pendant 2 heures puis les retirer immédiatement, les fermer", true, 720000, 2, new ArrayList<>(), true);
+        EtapeRecette etape3 = new EtapeRecette("les placer dans un couscoussier rempli d’eau chaude avec un torchon au fond puis des pierres dessus et faire cuire encore 1 heure ½. Les laisser dans le couscoussier jusqu’à refroidissement total", true, 720000, 3, new ArrayList<>(), true);
 
         listeEtapesRecette.add(etape1);
         listeEtapesRecette.add(etape2);
@@ -201,7 +201,7 @@ public class CocoCuisto {
         EtapeRecette etape1 = new EtapeRecette("Etaler la pate dans un moule, Faire fondre le beurre, y ajouter la farine et le lait petit à petit, Bien mélanger à l'aide d'un fouet jusqu’à épaississement, saler et poivrer. Egoutter le thon et les champignons puis les ajouter à la béchamelle, Mettre l'appareil sur la pate et parsemer de gruyère", false, 600, 1, new ArrayList<>(), false);
         List<String> materielEtape2 = new ArrayList<>();
         materielEtape2.add(Four.class.getName());
-        EtapeRecette etape2 = new EtapeRecette("mettre au four 20min", true, 1200000, 2, materielEtape2, true);
+        EtapeRecette etape2 = new EtapeRecette("mettre au four 20min", true, 120000, 2, materielEtape2, true);
 
 
         listeEtapesRecette.add(etape1);
@@ -226,8 +226,8 @@ public class CocoCuisto {
         IngredientRecords.add(new IngredientRecord(new Ingredient("gruyere", TypeIngredient.AUTRE), 1, 10));
 
         EtapeRecette etape1 = new EtapeRecette("Mettez la pâte dans le moule dans le four chaud pendant 10 min le temps que la pâte dore très légèrement.\n" +
-                "Sortez la pâte et laissez la reposer pendant que vous préparez l’appareil.", true, 1800000, 1, new ArrayList<>(), true);
-        EtapeRecette etape2 = new EtapeRecette("Durant la pré-cuisson de la pâte, prenez les lardons et faites les cuire à la poêle à feu vif, durant la cuisson égouttez les avec une passoire afin de faire partir leur graisse ayant fondu, le but étant de les griller légèrement pour leur donner davantage de saveur.", false, 600000, 2, new ArrayList<>(), false);
+                "Sortez la pâte et laissez la reposer pendant que vous préparez l’appareil.", true, 180000, 1, new ArrayList<>(), true);
+        EtapeRecette etape2 = new EtapeRecette("Durant la pré-cuisson de la pâte, prenez les lardons et faites les cuire à la poêle à feu vif, durant la cuisson égouttez les avec une passoire afin de faire partir leur graisse ayant fondu, le but étant de les griller légèrement pour leur donner davantage de saveur.", false, 60000, 2, new ArrayList<>(), false);
 
         List<String> materielEtape3 = new ArrayList<>();
         materielEtape3.add(BolSalade.class.getName());
@@ -238,10 +238,10 @@ public class CocoCuisto {
                 "Puis la Muscade\n" +
                 "Etalez les morceaux de poulet sur la pâte précuite de manière harmonieuse et régulière.\n" +
                 "Versez dessus l’appareil à Quiche Lorraine\n" +
-                "Saupoudrez de manière régulière la Quiche Lorraine avec l’emmental.\n", false, 60000, 2, materielEtape3, false);
+                "Saupoudrez de manière régulière la Quiche Lorraine avec l’emmental.\n", false, 6000, 2, materielEtape3, false);
         List<String> materielEtape4 = new ArrayList<>();
         materielEtape4.add(Four.class.getName());
-        EtapeRecette etape4 = new EtapeRecette("Enfournez la Quiche Lorraine durant 30 minutes à 250°C", false, 2400000, 4, materielEtape4, true);
+        EtapeRecette etape4 = new EtapeRecette("Enfournez la Quiche Lorraine durant 30 minutes à 250°C", false, 240000, 4, materielEtape4, true);
 
         Recette recette = new Recette("quichelorrainepoulet", listeEtapesRecette, IngredientRecords, false, TypeRecette.ENTREE);
         //recetteRepository.save(recette);

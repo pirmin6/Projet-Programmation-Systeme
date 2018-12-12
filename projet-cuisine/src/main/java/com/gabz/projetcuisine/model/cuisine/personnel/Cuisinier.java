@@ -13,14 +13,18 @@ public abstract class Cuisinier {
             throws InterruptedException, IllegalAccessException, InstantiationException, ClassNotFoundException {
         List<Materiel> materielEtape = new ArrayList<>();
 
-        for (String s : etapeRecette.getMateriels()) {
-            materielEtape.add(MaterielFactory.getMaterielFactory().getMateriel(s));
+        if (etapeRecette.getMateriels() != null) {
+
+            for (String s : etapeRecette.getMateriels()) {
+                materielEtape.add(MaterielFactory.getMaterielFactory().getMateriel(s));
+            }
+
+            Thread.sleep(etapeRecette.getTempsRealisation());
+
+            for (Materiel materiel : materielEtape) {
+                materiel.poserSurEvier();
+            }
         }
 
-        Thread.sleep(etapeRecette.getTempsRealisation());
-
-        for (Materiel materiel : materielEtape) {
-            materiel.poserSurEvier();
-        }
     }
 }

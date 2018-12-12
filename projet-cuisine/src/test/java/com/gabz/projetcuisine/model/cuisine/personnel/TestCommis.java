@@ -20,7 +20,7 @@ public class TestCommis {
     private Stockage stockage;
     private Recette recette;
     private Ingredient carotte;
-
+/*
     @Before
     public void initTest() throws InterruptedException {
 
@@ -89,6 +89,7 @@ public class TestCommis {
         commis.jeterIngredient(new IngredientRecord(carotte, 1, 1));
         Assert.assertEquals(null, carotte);
     }
+*/
 }
 
 

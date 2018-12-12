@@ -66,12 +66,15 @@ public class ChefCuisine {
     public void organiserCommande(Commande commande) throws InterruptedException, IllegalAccessException,
             InstantiationException, ClassNotFoundException {
 
+        List<Thread> threadsPreparationRecette = new ArrayList<>();
+        List<Plat> plats = new ArrayList<>();
         // preparation de plusieurs plats en simultané
         for (Plat plat : commande.getPlats()) {
-            /*new Thread(() -> {
-                try { */
-                    choisirChefPartie().faireRecette(plat);
-                /*} catch (InterruptedException e) {
+
+            threadsPreparationRecette.add(new Thread(() -> {
+                try {
+                    plats.add(choisirChefPartie().faireRecette(plat));
+                } catch (InterruptedException e) {
                     e.printStackTrace();
                 } catch (IllegalAccessException e) {
                     e.printStackTrace();
@@ -80,7 +83,20 @@ public class ChefCuisine {
                 } catch (InstantiationException e) {
                     e.printStackTrace();
                 }
-            }).start(); */
+            }));
+            // Lancer le dernier Thread ajouté
+            threadsPreparationRecette.get(threadsPreparationRecette.size() - 1).start();
+        }
+
+        // attendre la realisation de l'ensemble des plats de la commande
+        for (Thread thread : threadsPreparationRecette) {
+            thread.join();
+        }
+
+        // ajouter les plats au comptoir d'attente
+        for (Plat plat : plats) {
+            // on doit passer par la classe chef de partie pour recuperer un commis.
+            ChefPartie.chooseAvailableCommis().amenerPlatComptoir(plat);
         }
     }
 

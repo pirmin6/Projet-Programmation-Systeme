@@ -54,7 +54,6 @@ public class TestChefCuisine {
         List<Plat> listePlat = new ArrayList<>();
         listePlat.add(new Plat(CocoCuisto.poulet(), "test1"));
         listePlat.add(new Plat(CocoCuisto.feuilletecrabe(), "test2"));
-        listePlat.add(new Plat(CocoCuisto.oeufscocotte(), "test3"));
         Commande commande = new Commande(1, listePlat);
 
         chefCuisine.organiserCommande(commande);
