@@ -10,7 +10,6 @@ public class Entonoir extends Materiel {
 
     Entonoir() throws InterruptedException {
         super();
-        this.nbrInstance.acquire();
         this.tempsLavage = 30;
     }
 

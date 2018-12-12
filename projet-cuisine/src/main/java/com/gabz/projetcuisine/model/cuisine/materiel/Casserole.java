@@ -10,7 +10,6 @@ public class Casserole  extends Materiel {
 
     Casserole() throws InterruptedException {
         super();
-        this.nbrInstance.acquire();
         this.tempsLavage = 60;
     }
 

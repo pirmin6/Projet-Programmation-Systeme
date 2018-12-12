@@ -1,7 +1,10 @@
 package com.gabz.projetcuisine.model.cuisine.personnel;
 
+import com.gabz.projetcuisine.CocoCuisto;
 import com.gabz.projetcuisine.exception.InstanciationNotAllowedException;
 import com.gabz.projetcuisine.model.common.repas.Carte;
+import com.gabz.projetcuisine.model.common.repas.Commande;
+import com.gabz.projetcuisine.model.common.repas.ComptoirPlatAttente;
 import com.gabz.projetcuisine.model.common.repas.Plat;
 import org.junit.Assert;
 import org.junit.Test;
@@ -28,8 +31,6 @@ public class TestChefCuisine {
     @Test
     public void testChoixSousChef() throws InterruptedException {
 
-        List<ChefPartie> chefsPartie = new ArrayList<>();
-
         chefCuisine.getChefParties().get(0).setAvailable(false);
         chefCuisine.getChefParties().get(1).setAvailable(true);
         Assert.assertEquals(chefCuisine.getChefParties().get(1), chefCuisine.choisirChefPartie());
@@ -47,5 +48,17 @@ public class TestChefCuisine {
 
     }
 
+    @Test
+    public void commandeRecue() throws InterruptedException, IllegalAccessException, ClassNotFoundException, InstantiationException {
+
+        List<Plat> listePlat = new ArrayList<>();
+        listePlat.add(new Plat(CocoCuisto.poulet(), "test1"));
+        listePlat.add(new Plat(CocoCuisto.feuilletecrabe(), "test2"));
+        listePlat.add(new Plat(CocoCuisto.oeufscocotte(), "test3"));
+        Commande commande = new Commande(1, listePlat);
+
+        chefCuisine.organiserCommande(commande);
+        Assert.assertEquals(2, ComptoirPlatAttente.getComptoir().getPlats().size());
+    }
 
 }

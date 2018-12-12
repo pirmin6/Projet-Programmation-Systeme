@@ -74,7 +74,7 @@ public class TestCommis {
     }
 
     @Test
-    public void testEpluchage() throws InterruptedException {
+    public void testEpluchage() throws InterruptedException, IllegalAccessException, ClassNotFoundException, InstantiationException {
         this.carotte = new Ingredient("carotte", TypeIngredient.LEGUME);
         this.commis = new Commis(new ArrayList<>());
         commis.faireEtapeRecette(recette.getEtapes().get(0));

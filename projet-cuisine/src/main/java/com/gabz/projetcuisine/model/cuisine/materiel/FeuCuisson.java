@@ -10,7 +10,6 @@ public class FeuCuisson extends Materiel {
 
     FeuCuisson() throws InterruptedException {
         super();
-        this.nbrInstance.acquire();
         this.tempsLavage = 0;
     }
 

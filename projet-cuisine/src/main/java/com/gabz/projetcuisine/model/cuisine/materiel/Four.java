@@ -10,7 +10,6 @@ public class Four extends Materiel {
 
     public Four() throws InterruptedException {
         super();
-        this.nbrInstance.acquire();
         this.tempsLavage = 0;
     }
 

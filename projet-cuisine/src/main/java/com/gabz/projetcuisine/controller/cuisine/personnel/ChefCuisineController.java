@@ -1,4 +1,4 @@
-package com.gabz.projetcuisine.controller.cuisine;
+package com.gabz.projetcuisine.controller.cuisine.personnel;
 
 import com.gabz.projetcuisine.model.common.repas.Commande;
 import com.gabz.projetcuisine.model.cuisine.personnel.ChefCuisine;

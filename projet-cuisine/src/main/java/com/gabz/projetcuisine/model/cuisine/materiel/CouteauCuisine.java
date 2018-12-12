@@ -10,7 +10,6 @@ public class CouteauCuisine extends Materiel {
 
     public CouteauCuisine() throws InterruptedException {
         super();
-        this.nbrInstance.acquire();
         this.tempsLavage = 30;
     }
 

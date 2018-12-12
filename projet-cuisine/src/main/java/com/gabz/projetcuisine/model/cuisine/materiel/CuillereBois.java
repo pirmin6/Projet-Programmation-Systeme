@@ -10,7 +10,6 @@ public class CuillereBois extends Materiel{
 
     public CuillereBois() throws InterruptedException {
         super();
-        this.nbrInstance.acquire();
         this.tempsLavage = 30;
     }
 

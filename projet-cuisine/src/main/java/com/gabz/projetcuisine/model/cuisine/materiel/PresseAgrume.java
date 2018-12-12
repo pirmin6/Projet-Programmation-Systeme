@@ -10,7 +10,6 @@ public class PresseAgrume extends Materiel {
 
     PresseAgrume() throws InterruptedException {
         super();
-        this.nbrInstance.acquire();
         this.tempsLavage = 60;
     }
 

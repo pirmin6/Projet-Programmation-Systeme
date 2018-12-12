@@ -10,7 +10,6 @@ public class Mixeur extends Materiel {
 
     Mixeur() throws InterruptedException {
         super();
-        this.nbrInstance.acquire();
         this.tempsLavage = 60;
     }
 

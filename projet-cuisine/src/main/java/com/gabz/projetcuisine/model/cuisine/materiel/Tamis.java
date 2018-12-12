@@ -10,7 +10,6 @@ public class Tamis extends Materiel {
 
     public Tamis() throws InterruptedException {
         super();
-        this.nbrInstance.acquire();
         this.tempsLavage = 60;
     }
 

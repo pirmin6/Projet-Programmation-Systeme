@@ -49,6 +49,8 @@ public class TestPlongeur {
     public void testPlongeurChargerMachine() throws InterruptedException, NoSuchFieldException, IllegalAccessException {
 
         plongeur = Plongeur.getInstance();
+        plongeur.getLaveLinge().viderLageLinge();
+        plongeur.getLaveVaisselle().viderLaveVaisselle();
 
         plongeur.chargerLaveLinge(stockSale);
         plongeur.chargerLaveVaisselle(stockSale);
@@ -95,6 +97,7 @@ public class TestPlongeur {
     public void testLaverMateriel() throws InterruptedException {
 
         plongeur = Plongeur.getInstance();
+        plongeur.getEvier().demarrerLavage();
         plongeur.getEvier().ajouterMateriel(new Poele());
         plongeur.getEvier().ajouterMateriel(new Poele());
 

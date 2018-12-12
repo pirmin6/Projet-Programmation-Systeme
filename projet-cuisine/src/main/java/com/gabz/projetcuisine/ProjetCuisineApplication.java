@@ -8,6 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import javax.swing.*;
 import java.awt.*;
+import java.net.ServerSocket;
+import java.net.Socket;
 
 @SpringBootApplication
 public class ProjetCuisineApplication extends JFrame implements CommandLineRunner {
@@ -21,17 +23,17 @@ public class ProjetCuisineApplication extends JFrame implements CommandLineRunne
 
     @Override
     public void run(String... args) throws Exception {
-        System.out.println("Hello World");
-/*
-        cocoCuisto.feuilletecrabe();
-        cocoCuisto.gaspacho();
-        cocoCuisto.oeufscocotte();
-        cocoCuisto.poulet();
-*/
+
+        ServerSocket serverSocket = new ServerSocket(8080, 1);
+        Socket socket = serverSocket.accept();
+
         EventQueue.invokeLater(() -> {
             CuisineView ex = new CuisineView();
             ex.setVisible(true);
         });
+
+        serverSocket.close();
+        socket.close();
     }
 
 }

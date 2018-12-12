@@ -1,8 +1,6 @@
 package com.gabz.projetcuisine.model.cuisine.personnel;
 
 import com.gabz.projetcuisine.model.common.repas.Plat;
-import com.gabz.projetcuisine.model.cuisine.repas.EtapeRecette;
-import com.gabz.projetcuisine.model.cuisine.repas.Ingredient;
 import com.gabz.projetcuisine.model.common.repas.ComptoirPlatAttente;
 import com.gabz.projetcuisine.model.cuisine.repas.IngredientRecord;
 import com.gabz.projetcuisine.model.cuisine.stockage.Stockage;
@@ -10,7 +8,7 @@ import com.gabz.projetcuisine.model.cuisine.stockage.Stockage;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Commis implements ICuisinier {
+public class Commis extends Cuisinier {
 
     private static int nbrInstance = 2;
     private static List<Stockage> stockages = new ArrayList<>();
@@ -53,10 +51,5 @@ public class Commis implements ICuisinier {
 
     public void amenerPlatComptoir(Plat plat) {
         ComptoirPlatAttente.getComptoir().addPlat(plat);
-    }
-
-    @Override
-    public void faireEtapeRecette(EtapeRecette etapeRecette) throws InterruptedException {
-
     }
 }

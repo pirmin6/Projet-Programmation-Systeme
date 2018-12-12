@@ -10,7 +10,6 @@ public class BolSalade extends Materiel {
 
     public BolSalade() throws InterruptedException {
         super();
-        this.nbrInstance.acquire();
         this.tempsLavage = 30;
     }
 

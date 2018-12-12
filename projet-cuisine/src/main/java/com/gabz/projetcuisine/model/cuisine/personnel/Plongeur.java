@@ -9,7 +9,7 @@ import com.gabz.projetcuisine.model.cuisine.repas.EtapeRecette;
 import java.util.Observable;
 import java.util.Observer;
 
-public class Plongeur implements ICuisinier, Observer {
+public class Plongeur extends Cuisinier implements Observer {
 
     private static Plongeur instance = new Plongeur();
     private Evier evier;
@@ -80,11 +80,6 @@ public class Plongeur implements ICuisinier, Observer {
 
         Thread.sleep(60000);
         stockPropre.addTextile(laveLinge.viderLageLinge());
-    }
-
-    @Override
-    public void faireEtapeRecette(EtapeRecette etapeRecette) {
-
     }
 
     @Override
