@@ -13,28 +13,29 @@ namespace Salle.Model.Salle
         int nmbreTables;
 
 
-        public Rang(int nbreTables)
+        public Rang(int nbreTables, int[] nbrPlacesParTable)
         {
             Tables = new List<Table>();
             for (int i = 0; i < nbreTables; i++)
             {
-                Tables.Add(new Table(i));
+                Tables.Add(new Table(nbrPlacesParTables[i]));
             }
-
 
         }
 
-        public void GetTableDisponible()
+        public List<Table> GetTableDisponible()
         {
             List<Table> tableDispo = new List<Table>();
             
             foreach(Table table in Tables)
             {
-                if(table.clients != null)
+                if(table.groupeClient == null)
                 {
                     tableDispo.Add(table);
                 }
             }
+
+            return tableDispo;
         }
         
     }

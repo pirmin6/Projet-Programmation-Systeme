@@ -9,12 +9,15 @@ namespace Salle.Model.Salle
 {
     public class ChefRang : Observable
     {
-        private Carre carre;
-        private Carte carte;
+        private List<Carre> carres;
         private List<Observer> groupesClients;
 
         public ChefRang()
         {
+        }
+
+        public List<Carre> getCarres() {
+            return carres;
         }
 
         public void distribueCartes()

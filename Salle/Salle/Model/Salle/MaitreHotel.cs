@@ -8,7 +8,7 @@ namespace Salle.Model.Salle
 {
     public class MaitreHotel : Observable
     {
-        private Observer chefRang;
+        private ChefRang chefRang;
         private int Attente;
         private List<Table> tablesLibres;
 
@@ -18,6 +18,15 @@ namespace Salle.Model.Salle
 
         public void attribuerTable()
         {
+
+            List<Table> tables = new List();
+            
+            for (int i = 0; i < chefRang.getCarres.length; i++)
+            {
+                tables.AddRange(chefRang.getCarres.getTablesDispo());
+            }
+            // Reste plus qu'a faire le traitement sur la liste de tables dispo récupérées.
+
 
         }
 
