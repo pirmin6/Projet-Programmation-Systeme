@@ -21,8 +21,11 @@ namespace TestSalle
         {
             for (int i = 0; i < nmbreTable; i++)
             {
-                //listeTable.Add(new Table());
+                listeTable.Add(new Table(i));
             }
+            int count = listeTable.Count();
+            Assert.AreEqual(count, nmbreTable);
+
 
             foreach (Table table in listeTable)
             {

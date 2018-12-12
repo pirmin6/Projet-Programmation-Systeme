@@ -23,8 +23,8 @@ namespace Salle.Model.Salle
 
 
         }
-/*
-        public void TableDisponible()
+
+        public void GetTableDisponible()
         {
             List<Table> tableDispo = new List<Table>();
             
@@ -36,6 +36,6 @@ namespace Salle.Model.Salle
                 }
             }
         }
-        */
+        
     }
 }

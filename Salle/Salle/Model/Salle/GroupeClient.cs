@@ -50,7 +50,7 @@ namespace Salle.Model.Salle
 
         public GroupeClient()
         {
-            //GroupeClient groupeClient = new GroupeClient();
+
 
             List<string> ClientType = new List<string>();
             ClientType.Add("Client1");

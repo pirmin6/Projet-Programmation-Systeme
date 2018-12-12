@@ -24,7 +24,8 @@ namespace Salle.Model.Salle.Tests
             int test = listeRang.Count();
             Assert.AreEqual(nmbreRang, test);
         }
-
+                  
+        
 
     }
 }

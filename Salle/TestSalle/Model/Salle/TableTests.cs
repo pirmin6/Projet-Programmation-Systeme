@@ -11,10 +11,13 @@ namespace TestSalle
     [TestClass()]
     public class TableTests
     {
+        private int nbrPlaces = 4;
+
         [TestMethod()]
         public void TableTest()
         {
-            
+            this.nbrPlaces = nbrPlaces;
+            Assert.IsNotNull(nbrPlaces);
         }
     }
 }

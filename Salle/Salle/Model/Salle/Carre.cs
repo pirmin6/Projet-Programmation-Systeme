@@ -9,13 +9,13 @@ namespace Salle.Model.Salle
     public class Carre
     {
         private List<Rang> listeRang = new List<Rang>();
-        private int nmbreRang = 6;
+        private int nmbreRang;
 
-        public Carre(int nbreCarres, int nbreTables)
+        public Carre(int nmbreRang)
         {
             for (int i = 0; i < nmbreRang; i++)
             {
-                listeRang.Add(new Rang(0));
+                listeRang.Add(new Rang(i));
             }
 
         }
