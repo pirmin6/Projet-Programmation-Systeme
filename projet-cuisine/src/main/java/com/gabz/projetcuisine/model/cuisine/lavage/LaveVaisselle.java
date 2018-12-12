@@ -25,7 +25,8 @@ public class LaveVaisselle extends Observable {
     private List<? extends Vaisselle> cuillereCafes = new ArrayList<CuillereCafe>();
 
 
-    private LaveVaisselle() {}
+    private LaveVaisselle() {
+    }
 
     public static LaveVaisselle getInstance() {
         return instance;
@@ -64,6 +65,7 @@ public class LaveVaisselle extends Observable {
 
             Vaisselle currentVaisselle = (Vaisselle) it.next();
 
+            // On ajoute la vaisselle dans le bon attribut en fonction de son type
             if (currentVaisselle.getClass().equals(Couteau.class))
                 if (!ajouterVaisselle("couteaux", currentVaisselle)) {
                     vaisselleRestante.add(currentVaisselle);
@@ -80,7 +82,7 @@ public class LaveVaisselle extends Observable {
                 }
 
             if (currentVaisselle.getClass().equals(CuillereSoupe.class))
-                if(!ajouterVaisselle("cuillereSoupes", currentVaisselle)) {
+                if (!ajouterVaisselle("cuillereSoupes", currentVaisselle)) {
                     vaisselleRestante.add(currentVaisselle);
                 }
 
@@ -129,9 +131,9 @@ public class LaveVaisselle extends Observable {
         vaisselle.addAll(couteaux);
 
 
-        for (Vaisselle v: vaisselle) {
+        for (Vaisselle v : vaisselle) {
             if (v != null)
-            v.setPropre(true);
+                v.setPropre(true);
         }
     }
 

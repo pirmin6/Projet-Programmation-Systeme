@@ -78,7 +78,7 @@ public class Plongeur extends Cuisinier implements Observer {
 
     public synchronized void viderLaveLinge(StockageVaisselleTextile stockPropre) throws InterruptedException {
 
-        Thread.sleep(60000);
+        Thread.sleep(6000);
         stockPropre.addTextile(laveLinge.viderLageLinge());
     }
 

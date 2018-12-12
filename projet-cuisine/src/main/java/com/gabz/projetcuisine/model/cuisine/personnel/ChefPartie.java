@@ -7,8 +7,7 @@ import com.gabz.projetcuisine.model.cuisine.repas.EtapeRecette;
 import com.gabz.projetcuisine.model.cuisine.repas.IngredientRecord;
 import com.gabz.projetcuisine.model.cuisine.repas.Recette;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class ChefPartie extends Cuisinier {
 
@@ -73,6 +72,9 @@ public class ChefPartie extends Cuisinier {
         choosenCommis.chercherIngredients(recipeIngredients);
 
         List<Thread> threadsEtapeRecette = new ArrayList<>();
+
+        // trier les etape de la recette dans l'ordre
+        etapes.sort(Comparator.comparingInt(EtapeRecette::getNbrEtape));
 
         for (EtapeRecette etapeRecette : etapes) {
 

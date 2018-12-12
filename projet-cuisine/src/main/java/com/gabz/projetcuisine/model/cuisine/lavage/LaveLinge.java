@@ -26,7 +26,14 @@ public class LaveLinge extends Observable {
 
         Thread.sleep(1);
         List<Textile> textilesSortant = textileList;
+
         textileList = textiles;
+
+        if (textiles.size() > 9) {
+
+            // Si il y a 10 textiles dans la machine, alors le plongeur doit mettre la machine en route
+            new Thread(() -> notifyObservers()).start();
+        }
 
         return textilesSortant;
     }

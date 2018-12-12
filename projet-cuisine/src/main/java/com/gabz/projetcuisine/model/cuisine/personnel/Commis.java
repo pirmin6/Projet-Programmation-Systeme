@@ -64,6 +64,7 @@ public class Commis extends Cuisinier {
 
     public void chercherIngredients(List<IngredientRecord> ingredients) {
 
+
     }
 
     public void jeterIngredient(IngredientRecord ingredients) {
