@@ -1,33 +1,21 @@
 package com.gabz.projetcuisine.model.cuisine.personnel;
 
-import com.gabz.projetcuisine.model.common.repas.Plat;
-import com.gabz.projetcuisine.model.common.vaisselle.couvert.Couteau;
-import com.gabz.projetcuisine.model.cuisine.materiel.CouteauCuisine;
-import com.gabz.projetcuisine.model.cuisine.materiel.Materiel;
-import com.gabz.projetcuisine.model.cuisine.materiel.Poele;
-import com.gabz.projetcuisine.model.cuisine.personnel.Commis;
 import com.gabz.projetcuisine.model.cuisine.repas.*;
-import com.gabz.projetcuisine.model.cuisine.stockage.Stockage;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.gabz.projetcuisine.model.cuisine.stockage.IngredientRecordStockage;
 
 public class TestCommis {
     private Commis commis;
-    private Stockage stockage;
+    private IngredientRecordStockage ingredientRecordStockage;
     private Recette recette;
     private Ingredient carotte;
 /*
     @Before
     public void initTest() throws InterruptedException {
 
-        Stockage zoneDenree = new Stockage();
+        IngredientRecordStockage zoneDenree = new IngredientRecordStockage();
         zoneDenree.addIngredientRecordToStockage(new IngredientRecordEtapeRecette(
                 new Ingredient("poisson", TypeIngredient.VIANDE), 3, 3));
-        List<Stockage> stockages = new ArrayList<>();
+        List<IngredientRecordStockage> stockages = new ArrayList<>();
 
         commis = new Commis(stockages);
         List<EtapeRecette> listeEtapesRecette = new ArrayList<>();
@@ -66,10 +54,10 @@ public class TestCommis {
     @Test
     public void testChercherIngredient(){
 
-        this.stockage = new Stockage();
+        this.ingredientRecordStockage = new IngredientRecordStockage();
         
         commis.chercherIngredients(new ArrayList<>());
-        Assert.assertEquals(0, stockage.getIngredients());
+        Assert.assertEquals(0, ingredientRecordStockage.getIngredients());
 
     }
 

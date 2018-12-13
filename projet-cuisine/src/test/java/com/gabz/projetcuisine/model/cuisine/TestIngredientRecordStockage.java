@@ -1,6 +1,6 @@
 package com.gabz.projetcuisine.model.cuisine;
 
-import com.gabz.projetcuisine.model.cuisine.stockage.Stockage;
+import com.gabz.projetcuisine.model.cuisine.stockage.IngredientRecordStockage;
 import com.gabz.projetcuisine.repository.StockRepository;
 import org.junit.Assert;
 import org.junit.Test;
@@ -16,9 +16,9 @@ import javax.transaction.Transactional;
 @DataJpaTest
 @Transactional
 @AutoConfigureTestDatabase
-public class TestStockage {
+public class TestIngredientRecordStockage {
 
-    private Stockage stockage;
+    private IngredientRecordStockage ingredientRecordStockage;
 
     @Autowired
     private StockRepository stockRepository;
@@ -27,26 +27,20 @@ public class TestStockage {
     @Test
     public void testAddIngredientRecordToStockage(){
 
-        stockage = new Stockage();
-        stockage.addIngredientRecordToStockage(new IngredientRecordEtapeRecette(new Ingredient("carotte", TypeIngredient.LEGUME), 4, 20), stockRepository);
-        Assert.assertEquals(4, stockage.getIngredients().size());
+        ingredientRecordStockage = new IngredientRecordStockage();
+        ingredientRecordStockage.addIngredientRecordToStockage(new IngredientRecordEtapeRecette(new Ingredient("carotte", TypeIngredient.LEGUME), 4, 20), stockRepository);
+        Assert.assertEquals(4, ingredientRecordStockage.getIngredients().size());
 
     }
 
     @Test
     public void testGetIngredients(){
 
-        stockage = new Stockage();
-        stockage.addIngredientRecordToStockage(new IngredientRecordEtapeRecette(new Ingredient("carotte", TypeIngredient.LEGUME), 4, 20), stockRepository);
-        Assert.assertNotNull(stockage.getIngredients());
+        ingredientRecordStockage = new IngredientRecordStockage();
+        ingredientRecordStockage.addIngredientRecordToStockage(new IngredientRecordEtapeRecette(new Ingredient("carotte", TypeIngredient.LEGUME), 4, 20), stockRepository);
+        Assert.assertNotNull(ingredientRecordStockage.getIngredients());
     }
 */
-    @Test
-    public void testGetTempsStockage(){
-
-        stockage = new Stockage();
-        Assert.assertNotNull(stockage.getTempsStockage());
-    }
 
     @Test
     public void testBDD(){

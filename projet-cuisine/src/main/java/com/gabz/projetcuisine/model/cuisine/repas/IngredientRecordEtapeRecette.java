@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
+@Table(name = "ingredient_recette")
 public class IngredientRecordEtapeRecette {
 
     @Id
@@ -12,16 +13,14 @@ public class IngredientRecordEtapeRecette {
     @ManyToOne(cascade = CascadeType.ALL)
     private Ingredient ingredient;
     private int quantité;
-    private int joursAvantPeremption;
 
     public int getId() {
         return id;
     }
 
-    public IngredientRecordEtapeRecette(Ingredient ingredient1, int quantité, int joursAvantPeremption) {
+    public IngredientRecordEtapeRecette(Ingredient ingredient1, int quantité) {
         this.ingredient = ingredient1;
         this.quantité = quantité;
-        this.joursAvantPeremption = joursAvantPeremption;
     }
 
     public Ingredient getIngredient() {
@@ -30,10 +29,6 @@ public class IngredientRecordEtapeRecette {
 
     public int getQuantité() {
         return quantité;
-    }
-
-    public int getJoursAvantPeremption() {
-        return joursAvantPeremption;
     }
 
 }

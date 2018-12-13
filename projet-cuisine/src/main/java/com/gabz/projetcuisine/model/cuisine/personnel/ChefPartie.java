@@ -27,8 +27,8 @@ public class ChefPartie extends Cuisinier {
         if (commis == null) {
 
             commis = new ArrayList<>();
-            commis.add(Commis.getFirstCommis(new ArrayList<>()));
-            commis.add(Commis.getSecondCommis(new ArrayList<>()));
+            commis.add(Commis.getFirstCommis());
+            commis.add(Commis.getSecondCommis());
         }
 
     }
