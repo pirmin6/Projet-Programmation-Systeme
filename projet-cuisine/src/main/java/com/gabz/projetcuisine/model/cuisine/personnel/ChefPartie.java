@@ -2,9 +2,8 @@ package com.gabz.projetcuisine.model.cuisine.personnel;
 
 import com.gabz.projetcuisine.exception.InstanciationNotAllowedException;
 import com.gabz.projetcuisine.model.common.repas.Plat;
-import com.gabz.projetcuisine.model.cuisine.materiel.MaterielFactory;
 import com.gabz.projetcuisine.model.cuisine.repas.EtapeRecette;
-import com.gabz.projetcuisine.model.cuisine.repas.IngredientRecord;
+import com.gabz.projetcuisine.model.cuisine.repas.IngredientRecordEtapeRecette;
 import com.gabz.projetcuisine.model.cuisine.repas.Recette;
 
 import java.util.*;
@@ -63,7 +62,7 @@ public class ChefPartie extends Cuisinier {
         Recette recette = plat.getRecette();
         this.available = false;
         List<EtapeRecette> etapes = recette.getEtapes();
-        List<IngredientRecord> recipeIngredients = recette.getIngredients();
+        List<IngredientRecordEtapeRecette> recipeIngredients = recette.getIngredients();
 
         // recup tout les ingredients pour la recette
 

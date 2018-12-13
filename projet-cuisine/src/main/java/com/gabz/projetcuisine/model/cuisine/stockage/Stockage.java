@@ -1,9 +1,6 @@
 package com.gabz.projetcuisine.model.cuisine.stockage;
 
-import com.gabz.projetcuisine.model.cuisine.repas.IngredientRecord;
-import com.gabz.projetcuisine.repository.IngredientRepository;
-import com.gabz.projetcuisine.repository.StockRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.gabz.projetcuisine.model.cuisine.repas.IngredientRecordEtapeRecette;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -17,7 +14,7 @@ public class Stockage {
     private int id;
     private int tempsStockage;
     @OneToMany
-    private List<IngredientRecord> ingredients;
+    private List<IngredientRecordEtapeRecette> ingredients;
 
     public Stockage() {
         this.ingredients = new ArrayList<>();
@@ -27,12 +24,12 @@ public class Stockage {
         return tempsStockage;
     }
 
-    public List<IngredientRecord> getIngredients() {
+    public List<IngredientRecordEtapeRecette> getIngredients() {
         return ingredients;
     }
 
-    public void addIngredientRecordToStockage(IngredientRecord ingredientRecord) {
-        this.ingredients.add(ingredientRecord);
+    public void addIngredientRecordToStockage(IngredientRecordEtapeRecette ingredientRecordEtapeRecette) {
+        this.ingredients.add(ingredientRecordEtapeRecette);
     }
 
 }

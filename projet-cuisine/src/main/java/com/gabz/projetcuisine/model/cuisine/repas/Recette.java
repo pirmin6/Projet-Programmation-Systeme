@@ -1,7 +1,5 @@
 package com.gabz.projetcuisine.model.cuisine.repas;
 
-import com.gabz.projetcuisine.model.common.repas.Plat;
-
 import javax.persistence.*;
 import java.util.List;
 
@@ -15,7 +13,7 @@ public class Recette {
     @OneToMany(cascade = CascadeType.ALL)
     private List<EtapeRecette> etapes;
     @OneToMany(cascade = CascadeType.ALL)
-    private List<IngredientRecord> ingredients;
+    private List<IngredientRecordEtapeRecette> ingredients;
     private boolean prepEnAmont;
     private TypeRecette typeRecette;
 
@@ -31,7 +29,7 @@ public class Recette {
         return etapes;
     }
 
-    public List<IngredientRecord> getIngredients() {
+    public List<IngredientRecordEtapeRecette> getIngredients() {
         return ingredients;
     }
 
@@ -44,7 +42,7 @@ public class Recette {
     }
 
 
-    public Recette(String nom, List<EtapeRecette> etapes, List<IngredientRecord> ingredients,
+    public Recette(String nom, List<EtapeRecette> etapes, List<IngredientRecordEtapeRecette> ingredients,
                    boolean prepEnAmont, TypeRecette typeRecette) {
         this.nom = nom;
         this.etapes = etapes;

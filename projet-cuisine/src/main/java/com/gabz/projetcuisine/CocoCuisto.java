@@ -22,10 +22,10 @@ public class CocoCuisto {
         List<EtapeRecette> listeEtapesRecette = new ArrayList<>();
 
         //ON CREEE LA LISTE DES INGREDIENTS POUR LA RECETTE ESPECE DE GROS DEBILE
-        List<IngredientRecord> ingredientRecords = new ArrayList<>();
+        List<IngredientRecordEtapeRecette> ingredientRecordEtapeRecettes = new ArrayList<>();
 
-        ingredientRecords.add(new IngredientRecord(new Ingredient("Poulet", TypeIngredient.VIANDE),1,1));
-        ingredientRecords.add(new IngredientRecord(new Ingredient("huile OLIVE", TypeIngredient.AUTRE), 1, 1));
+        ingredientRecordEtapeRecettes.add(new IngredientRecordEtapeRecette(new Ingredient("Poulet", TypeIngredient.VIANDE),1,1));
+        ingredientRecordEtapeRecettes.add(new IngredientRecordEtapeRecette(new Ingredient("huile OLIVE", TypeIngredient.AUTRE), 1, 1));
 
         //Etape 1
         //DABORD LE MATERIEL
@@ -46,7 +46,7 @@ public class CocoCuisto {
         listeEtapesRecette.add(etape2);
 
         // GNEUFDSFDSFS ET ENSUITE ON CREEE LA RECETTE
-        Recette recette = new Recette("Poulet à la poele", listeEtapesRecette, ingredientRecords, false, TypeRecette.PLAT);
+        Recette recette = new Recette("Poulet à la poele", listeEtapesRecette, ingredientRecordEtapeRecettes, false, TypeRecette.PLAT);
 
         // HOHOHO ON SAUVEGARDE LA RECETTE
 //        recetteRepository.save(recette);
@@ -57,17 +57,17 @@ public class CocoCuisto {
 
         List<EtapeRecette> listeEtapesRecette = new ArrayList<>();
 
-        List<IngredientRecord> IngredientRecords = new ArrayList<>();
+        List<IngredientRecordEtapeRecette> ingredientRecordEtapeRecettes = new ArrayList<>();
 
-        IngredientRecords.add(new IngredientRecord(new Ingredient("crabe", TypeIngredient.AUTRE), 1, 10));
-        IngredientRecords.add(new IngredientRecord(new Ingredient("piment", TypeIngredient.LEGUME), 1, 20));
-        IngredientRecords.add(new IngredientRecord(new Ingredient("persil", TypeIngredient.AUTRE), 1, 20));
-        IngredientRecords.add(new IngredientRecord(new Ingredient("oeufs", TypeIngredient.AUTRE), 2, 20));
-        IngredientRecords.add(new IngredientRecord(new Ingredient("pate feuilleté", TypeIngredient.AUTRE), 4, 20));
-        IngredientRecords.add(new IngredientRecord(new Ingredient("huile", TypeIngredient.AUTRE), 1, 20));
-        IngredientRecords.add(new IngredientRecord(new Ingredient("oignons", TypeIngredient.LEGUME), 1, 20));
-        IngredientRecords.add(new IngredientRecord(new Ingredient("citron", TypeIngredient.FRUIT), 1, 20));
-        IngredientRecords.add(new IngredientRecord(new Ingredient("crème fraiche", TypeIngredient.AUTRE), 1, 20));
+        ingredientRecordEtapeRecettes.add(new IngredientRecordEtapeRecette(new Ingredient("crabe", TypeIngredient.AUTRE), 1, 10));
+        ingredientRecordEtapeRecettes.add(new IngredientRecordEtapeRecette(new Ingredient("piment", TypeIngredient.LEGUME), 1, 20));
+        ingredientRecordEtapeRecettes.add(new IngredientRecordEtapeRecette(new Ingredient("persil", TypeIngredient.AUTRE), 1, 20));
+        ingredientRecordEtapeRecettes.add(new IngredientRecordEtapeRecette(new Ingredient("oeufs", TypeIngredient.AUTRE), 2, 20));
+        ingredientRecordEtapeRecettes.add(new IngredientRecordEtapeRecette(new Ingredient("pate feuilleté", TypeIngredient.AUTRE), 4, 20));
+        ingredientRecordEtapeRecettes.add(new IngredientRecordEtapeRecette(new Ingredient("huile", TypeIngredient.AUTRE), 1, 20));
+        ingredientRecordEtapeRecettes.add(new IngredientRecordEtapeRecette(new Ingredient("oignons", TypeIngredient.LEGUME), 1, 20));
+        ingredientRecordEtapeRecettes.add(new IngredientRecordEtapeRecette(new Ingredient("citron", TypeIngredient.FRUIT), 1, 20));
+        ingredientRecordEtapeRecettes.add(new IngredientRecordEtapeRecette(new Ingredient("crème fraiche", TypeIngredient.AUTRE), 1, 20));
 
 
         List<String> materielEtape1 = new ArrayList<>();
@@ -94,18 +94,18 @@ public class CocoCuisto {
         listeEtapesRecette.add(etape4);
         listeEtapesRecette.add(etape5);
 
-        Recette recette = new Recette("Feuilleté de crabe", listeEtapesRecette, IngredientRecords, false, TypeRecette.ENTREE);
+        Recette recette = new Recette("Feuilleté de crabe", listeEtapesRecette, ingredientRecordEtapeRecettes, false, TypeRecette.ENTREE);
         //recetteRepository.save(recette);
         return recette;
     }
 
     public static Recette oeufscocotte() throws InterruptedException{
         List<EtapeRecette> listeEtapesRecette = new ArrayList<>();
-        List<IngredientRecord> IngredientRecords = new ArrayList<>();
+        List<IngredientRecordEtapeRecette> ingredientRecordEtapeRecettes = new ArrayList<>();
 
-        IngredientRecords.add(new IngredientRecord(new Ingredient("oeuf", TypeIngredient.AUTRE), 4, 15));
-        IngredientRecords.add(new IngredientRecord(new Ingredient("gruyère", TypeIngredient.AUTRE), 1, 15));
-        IngredientRecords.add(new IngredientRecord(new Ingredient("crème fraiche", TypeIngredient.AUTRE), 1, 15));
+        ingredientRecordEtapeRecettes.add(new IngredientRecordEtapeRecette(new Ingredient("oeuf", TypeIngredient.AUTRE), 4, 15));
+        ingredientRecordEtapeRecettes.add(new IngredientRecordEtapeRecette(new Ingredient("gruyère", TypeIngredient.AUTRE), 1, 15));
+        ingredientRecordEtapeRecettes.add(new IngredientRecordEtapeRecette(new Ingredient("crème fraiche", TypeIngredient.AUTRE), 1, 15));
 
         EtapeRecette etape1 = new EtapeRecette("Séparer les blancs des jaunes et laisser ces derniers dans une demi-coquille", true, 3000, 1, new ArrayList<>(), false);
         EtapeRecette etape2 = new EtapeRecette("Monter les blancs en neige et incorporer un sachet de râpé", false, 6000, 2, new ArrayList<>(), false);
@@ -122,22 +122,22 @@ public class CocoCuisto {
         listeEtapesRecette.add(etape4);
         listeEtapesRecette.add(etape5);
 
-        Recette recette = new Recette("oeufs cocotte", listeEtapesRecette, IngredientRecords, false, TypeRecette.ENTREE);
+        Recette recette = new Recette("oeufs cocotte", listeEtapesRecette, ingredientRecordEtapeRecettes, false, TypeRecette.ENTREE);
         //recetteRepository.save(recette);
         return recette;
     }
 
     public static Recette gaspacho() throws InterruptedException{
         List<EtapeRecette> listeEtapesRecette = new ArrayList<>();
-        List<IngredientRecord> IngredientRecords = new ArrayList<>();
+        List<IngredientRecordEtapeRecette> ingredientRecordEtapeRecettes = new ArrayList<>();
 
-        IngredientRecords.add(new IngredientRecord(new Ingredient("tomate", TypeIngredient.LEGUME), 3, 30));
-        IngredientRecords.add(new IngredientRecord(new Ingredient("oignon", TypeIngredient.LEGUME), 1, 60));
-        IngredientRecords.add(new IngredientRecord(new Ingredient("concombre", TypeIngredient.LEGUME), 1, 30));
-        IngredientRecords.add(new IngredientRecord(new Ingredient("pain rassi", TypeIngredient.AUTRE), 1, 60));
-        IngredientRecords.add(new IngredientRecord(new Ingredient("huile d'olive", TypeIngredient.AUTRE), 1, 365));
-        IngredientRecords.add(new IngredientRecord(new Ingredient("vinaigre", TypeIngredient.AUTRE), 1, 365));
-        IngredientRecords.add(new IngredientRecord(new Ingredient("poivron", TypeIngredient.LEGUME), 1, 30));
+        ingredientRecordEtapeRecettes.add(new IngredientRecordEtapeRecette(new Ingredient("tomate", TypeIngredient.LEGUME), 3, 30));
+        ingredientRecordEtapeRecettes.add(new IngredientRecordEtapeRecette(new Ingredient("oignon", TypeIngredient.LEGUME), 1, 60));
+        ingredientRecordEtapeRecettes.add(new IngredientRecordEtapeRecette(new Ingredient("concombre", TypeIngredient.LEGUME), 1, 30));
+        ingredientRecordEtapeRecettes.add(new IngredientRecordEtapeRecette(new Ingredient("pain rassi", TypeIngredient.AUTRE), 1, 60));
+        ingredientRecordEtapeRecettes.add(new IngredientRecordEtapeRecette(new Ingredient("huile d'olive", TypeIngredient.AUTRE), 1, 365));
+        ingredientRecordEtapeRecettes.add(new IngredientRecordEtapeRecette(new Ingredient("vinaigre", TypeIngredient.AUTRE), 1, 365));
+        ingredientRecordEtapeRecettes.add(new IngredientRecordEtapeRecette(new Ingredient("poivron", TypeIngredient.LEGUME), 1, 30));
 
         List<String> materielEtape1 = new ArrayList<>();
         materielEtape1.add(CouteauCuisine.class.getName());
@@ -151,7 +151,7 @@ public class CocoCuisto {
         listeEtapesRecette.add(etape2);
         listeEtapesRecette.add(etape3);
 
-        Recette recette = new Recette("gaspacho", listeEtapesRecette, IngredientRecords, true, TypeRecette.ENTREE);
+        Recette recette = new Recette("gaspacho", listeEtapesRecette, ingredientRecordEtapeRecettes, true, TypeRecette.ENTREE);
 
         //recetteRepository.save(recette);
         return recette;
@@ -160,13 +160,13 @@ public class CocoCuisto {
     public static Recette patedesanglier() throws InterruptedException {
 
         List<EtapeRecette> listeEtapesRecette = new ArrayList<>();
-        List<IngredientRecord> IngredientRecords = new ArrayList<>();
+        List<IngredientRecordEtapeRecette> ingredientRecordEtapeRecettes = new ArrayList<>();
 
-        IngredientRecords.add(new IngredientRecord(new Ingredient("ventreche", TypeIngredient.VIANDE), 1, 10));
-        IngredientRecords.add(new IngredientRecord(new Ingredient("sanglier", TypeIngredient.VIANDE), 1, 10));
-        IngredientRecords.add(new IngredientRecord(new Ingredient("chaire à saucisse", TypeIngredient.VIANDE), 1, 10));
-        IngredientRecords.add(new IngredientRecord(new Ingredient("gorge de porc", TypeIngredient.VIANDE), 1, 10));
-        IngredientRecords.add(new IngredientRecord(new Ingredient("truffe", TypeIngredient.AUTRE),1, 30));
+        ingredientRecordEtapeRecettes.add(new IngredientRecordEtapeRecette(new Ingredient("ventreche", TypeIngredient.VIANDE), 1, 10));
+        ingredientRecordEtapeRecettes.add(new IngredientRecordEtapeRecette(new Ingredient("sanglier", TypeIngredient.VIANDE), 1, 10));
+        ingredientRecordEtapeRecettes.add(new IngredientRecordEtapeRecette(new Ingredient("chaire à saucisse", TypeIngredient.VIANDE), 1, 10));
+        ingredientRecordEtapeRecettes.add(new IngredientRecordEtapeRecette(new Ingredient("gorge de porc", TypeIngredient.VIANDE), 1, 10));
+        ingredientRecordEtapeRecettes.add(new IngredientRecordEtapeRecette(new Ingredient("truffe", TypeIngredient.AUTRE),1, 30));
 
         List<String> materielEtape1 = new ArrayList<>();
         materielEtape1.add(CouteauCuisine.class.getName());
@@ -178,7 +178,7 @@ public class CocoCuisto {
         listeEtapesRecette.add(etape2);
         listeEtapesRecette.add(etape3);
 
-        Recette recette = new Recette("pâté de sanglier", listeEtapesRecette, IngredientRecords, true, TypeRecette.ENTREE);
+        Recette recette = new Recette("pâté de sanglier", listeEtapesRecette, ingredientRecordEtapeRecettes, true, TypeRecette.ENTREE);
 
         //recetteRepository.save(recette);
         return recette;
@@ -188,15 +188,15 @@ public class CocoCuisto {
     public static Recette tartethon() throws InterruptedException {
 
         List<EtapeRecette> listeEtapesRecette = new ArrayList<>();
-        List<IngredientRecord> IngredientRecords = new ArrayList<>();
+        List<IngredientRecordEtapeRecette> ingredientRecordEtapeRecettes = new ArrayList<>();
 
-        IngredientRecords.add(new IngredientRecord(new Ingredient("farine", TypeIngredient.AUTRE), 1, 365));
-        IngredientRecords.add(new IngredientRecord(new Ingredient("lait", TypeIngredient.AUTRE), 1, 20));
-        IngredientRecords.add(new IngredientRecord(new Ingredient("champignon", TypeIngredient.LEGUME), 1, 20));
-        IngredientRecords.add(new IngredientRecord(new Ingredient("thon", TypeIngredient.POISSON), 1, 20));
-        IngredientRecords.add(new IngredientRecord(new Ingredient("gruyère", TypeIngredient.AUTRE), 1, 25));
-        IngredientRecords.add(new IngredientRecord(new Ingredient("pate feuilleté", TypeIngredient.AUTRE), 1, 10));
-        IngredientRecords.add(new IngredientRecord(new Ingredient("beurre", TypeIngredient.AUTRE), 1, 20));
+        ingredientRecordEtapeRecettes.add(new IngredientRecordEtapeRecette(new Ingredient("farine", TypeIngredient.AUTRE), 1, 365));
+        ingredientRecordEtapeRecettes.add(new IngredientRecordEtapeRecette(new Ingredient("lait", TypeIngredient.AUTRE), 1, 20));
+        ingredientRecordEtapeRecettes.add(new IngredientRecordEtapeRecette(new Ingredient("champignon", TypeIngredient.LEGUME), 1, 20));
+        ingredientRecordEtapeRecettes.add(new IngredientRecordEtapeRecette(new Ingredient("thon", TypeIngredient.POISSON), 1, 20));
+        ingredientRecordEtapeRecettes.add(new IngredientRecordEtapeRecette(new Ingredient("gruyère", TypeIngredient.AUTRE), 1, 25));
+        ingredientRecordEtapeRecettes.add(new IngredientRecordEtapeRecette(new Ingredient("pate feuilleté", TypeIngredient.AUTRE), 1, 10));
+        ingredientRecordEtapeRecettes.add(new IngredientRecordEtapeRecette(new Ingredient("beurre", TypeIngredient.AUTRE), 1, 20));
 
         EtapeRecette etape1 = new EtapeRecette("Etaler la pate dans un moule, Faire fondre le beurre, y ajouter la farine et le lait petit à petit, Bien mélanger à l'aide d'un fouet jusqu’à épaississement, saler et poivrer. Egoutter le thon et les champignons puis les ajouter à la béchamelle, Mettre l'appareil sur la pate et parsemer de gruyère", false, 600, 1, new ArrayList<>(), false);
         List<String> materielEtape2 = new ArrayList<>();
@@ -207,7 +207,7 @@ public class CocoCuisto {
         listeEtapesRecette.add(etape1);
         listeEtapesRecette.add(etape1);
 
-        Recette recette = new Recette("tarte au thon", listeEtapesRecette, IngredientRecords, false, TypeRecette.ENTREE);
+        Recette recette = new Recette("tarte au thon", listeEtapesRecette, ingredientRecordEtapeRecettes, false, TypeRecette.ENTREE);
         //recetteRepository.save(recette);
         return recette;
 
@@ -216,14 +216,14 @@ public class CocoCuisto {
     public static Recette quichelorraineaupoulet() throws InterruptedException {
 
         List<EtapeRecette> listeEtapesRecette = new ArrayList<>();
-        List<IngredientRecord> IngredientRecords = new ArrayList<>();
+        List<IngredientRecordEtapeRecette> ingredientRecordEtapeRecettes = new ArrayList<>();
 
-        IngredientRecords.add(new IngredientRecord(new Ingredient("pate feuilleté", TypeIngredient.AUTRE), 1, 10));
-        IngredientRecords.add(new IngredientRecord(new Ingredient("oeuf", TypeIngredient.AUTRE), 3, 15));
-        IngredientRecords.add(new IngredientRecord(new Ingredient("creme fraiche", TypeIngredient.AUTRE), 1, 10));
-        IngredientRecords.add(new IngredientRecord(new Ingredient("lait", TypeIngredient.AUTRE), 1, 10));
-        IngredientRecords.add(new IngredientRecord(new Ingredient("poulet", TypeIngredient.VIANDE), 1, 5));
-        IngredientRecords.add(new IngredientRecord(new Ingredient("gruyere", TypeIngredient.AUTRE), 1, 10));
+        ingredientRecordEtapeRecettes.add(new IngredientRecordEtapeRecette(new Ingredient("pate feuilleté", TypeIngredient.AUTRE), 1, 10));
+        ingredientRecordEtapeRecettes.add(new IngredientRecordEtapeRecette(new Ingredient("oeuf", TypeIngredient.AUTRE), 3, 15));
+        ingredientRecordEtapeRecettes.add(new IngredientRecordEtapeRecette(new Ingredient("creme fraiche", TypeIngredient.AUTRE), 1, 10));
+        ingredientRecordEtapeRecettes.add(new IngredientRecordEtapeRecette(new Ingredient("lait", TypeIngredient.AUTRE), 1, 10));
+        ingredientRecordEtapeRecettes.add(new IngredientRecordEtapeRecette(new Ingredient("poulet", TypeIngredient.VIANDE), 1, 5));
+        ingredientRecordEtapeRecettes.add(new IngredientRecordEtapeRecette(new Ingredient("gruyere", TypeIngredient.AUTRE), 1, 10));
 
         EtapeRecette etape1 = new EtapeRecette("Mettez la pâte dans le moule dans le four chaud pendant 10 min le temps que la pâte dore très légèrement.\n" +
                 "Sortez la pâte et laissez la reposer pendant que vous préparez l’appareil.", true, 180000, 1, new ArrayList<>(), true);
@@ -243,7 +243,7 @@ public class CocoCuisto {
         materielEtape4.add(Four.class.getName());
         EtapeRecette etape4 = new EtapeRecette("Enfournez la Quiche Lorraine durant 30 minutes à 250°C", false, 240000, 4, materielEtape4, true);
 
-        Recette recette = new Recette("quichelorrainepoulet", listeEtapesRecette, IngredientRecords, false, TypeRecette.ENTREE);
+        Recette recette = new Recette("quichelorrainepoulet", listeEtapesRecette, ingredientRecordEtapeRecettes, false, TypeRecette.ENTREE);
         //recetteRepository.save(recette);
         return recette;
     }

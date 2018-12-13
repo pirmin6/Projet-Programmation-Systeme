@@ -2,8 +2,9 @@ package com.gabz.projetcuisine.model.cuisine.personnel;
 
 import com.gabz.projetcuisine.model.common.repas.Plat;
 import com.gabz.projetcuisine.model.common.repas.ComptoirPlatAttente;
-import com.gabz.projetcuisine.model.cuisine.repas.IngredientRecord;
+import com.gabz.projetcuisine.model.cuisine.repas.IngredientRecordEtapeRecette;
 import com.gabz.projetcuisine.model.cuisine.stockage.Stockage;
+import com.gabz.projetcuisine.repository.StockRepository;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +16,7 @@ public class Commis extends Cuisinier {
     private static List<Stockage> stockages = new ArrayList<>();
     private static ComptoirPlatAttente comptoirPlats;
     private boolean isAvailable = true;
+    private StockRepository stockRepository;
 
     private Commis(List<Stockage> stockage) {
         this.stockages = stockage;
@@ -62,12 +64,12 @@ public class Commis extends Cuisinier {
     }
 
 
-    public void chercherIngredients(List<IngredientRecord> ingredients) {
+    public void chercherIngredients(List<IngredientRecordEtapeRecette> ingredients) {
 
 
     }
 
-    public void jeterIngredient(IngredientRecord ingredients) {
+    public void jeterIngredient(IngredientRecordEtapeRecette ingredients) {
 
     }
 

@@ -25,17 +25,17 @@ public class TestCommis {
     public void initTest() throws InterruptedException {
 
         Stockage zoneDenree = new Stockage();
-        zoneDenree.addIngredientRecordToStockage(new IngredientRecord(
+        zoneDenree.addIngredientRecordToStockage(new IngredientRecordEtapeRecette(
                 new Ingredient("poisson", TypeIngredient.VIANDE), 3, 3));
         List<Stockage> stockages = new ArrayList<>();
 
         commis = new Commis(stockages);
         List<EtapeRecette> listeEtapesRecette = new ArrayList<>();
-        List<IngredientRecord> ingredientRecords = new ArrayList<>();
+        List<IngredientRecordEtapeRecette> ingredientRecords = new ArrayList<>();
 
-        ingredientRecords.add(new IngredientRecord(
+        ingredientRecords.add(new IngredientRecordEtapeRecette(
                 new Ingredient("Poulet", TypeIngredient.VIANDE),1,1));
-        ingredientRecords.add(new IngredientRecord(
+        ingredientRecords.add(new IngredientRecordEtapeRecette(
                 new Ingredient("huile OLIVE", TypeIngredient.AUTRE), 1, 1));
 
         List<String> materielEtape1 = new ArrayList<>();
@@ -86,7 +86,7 @@ public class TestCommis {
     public void testJeterIngredient() {
         this.carotte = new Ingredient("carotte", TypeIngredient.LEGUME);
         this.commis = new Commis(new ArrayList<>());
-        commis.jeterIngredient(new IngredientRecord(carotte, 1, 1));
+        commis.jeterIngredient(new IngredientRecordEtapeRecette(carotte, 1, 1));
         Assert.assertEquals(null, carotte);
     }
 */

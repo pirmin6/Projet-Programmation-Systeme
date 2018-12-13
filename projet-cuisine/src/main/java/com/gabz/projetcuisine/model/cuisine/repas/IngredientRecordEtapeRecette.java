@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-public class IngredientRecord {
+public class IngredientRecordEtapeRecette {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -18,7 +18,7 @@ public class IngredientRecord {
         return id;
     }
 
-    public IngredientRecord(Ingredient ingredient1, int quantité, int joursAvantPeremption) {
+    public IngredientRecordEtapeRecette(Ingredient ingredient1, int quantité, int joursAvantPeremption) {
         this.ingredient = ingredient1;
         this.quantité = quantité;
         this.joursAvantPeremption = joursAvantPeremption;
